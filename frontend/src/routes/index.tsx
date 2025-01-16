@@ -20,7 +20,7 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="z-0 absolute top-28 md:top-56 left-0">
-        <div className="relative pt-80 w-screen">
+        <div className="relative pt-80 w-screen md:w-[99vw]">
           <img src={ship1} alt="" className="mx-auto w-[40px] md:w-auto" />
           <img
             src={largePlanet}
