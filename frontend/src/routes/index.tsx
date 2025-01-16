@@ -41,8 +41,8 @@ function RouteComponent() {
           </div>
           <div className="flex flex-col mx-auto">
             <div className="md:flex mx-auto tracking-widest">
-              <div className="rounded bg-gradient-to-r from-[#6754B7] to-[#B754B3] py-2 w-[250px] m-3">
-                SIGN UP
+              <div className="rounded bg-gradient-to-r from-[#6754B7] to-[#B754B3] py-2 w-[250px] m-3 z-40">
+                <a href="https://arkhet-pilot.fly.dev/signup">SIGN UP</a>
               </div>
               <div className="border py-2 w-[250px] m-3">SCHEDULE A DEMO</div>
             </div>
