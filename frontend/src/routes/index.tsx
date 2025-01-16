@@ -1,9 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import largePlanet from "/largeplanet.svg";
 import ship1 from "/ship1.svg";
+import image23 from "/image23.svg";
 import greenPlanet from "/greenplanet.svg";
 import blueCommet from "/bluecommet.svg";
 import blueCommet2 from "/bluecommet2.svg";
+import frame14 from "/frame14.svg";
+import frame15 from "/frame15.svg";
+import frame17 from "/frame17.svg";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
@@ -24,7 +28,7 @@ function RouteComponent() {
       </div>
       <div className="z-40">
         <div className="text-center pb-96">
-          <div className="text-3xl md:text-8xl font-bold py-10">
+          <div className="text-3xl md:text-8xl font-bold py-10 pt-16">
             <div>From idea to prototype, in</div>
             <div>moments</div>
           </div>
@@ -41,12 +45,12 @@ function RouteComponent() {
             </div>
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center pb-32">
           <div className="text-2xl md:text-6xl font-bold">
             <div>Faster experiments, more time with</div>
             <div>customers</div>
           </div>
-          <div className="py-5 md:text-2xl">
+          <div className="py-7 md:text-2xl">
             <div className="">
               Prototype more ideas and find better signals, all in a fraction of
               the time. The
@@ -56,8 +60,109 @@ function RouteComponent() {
               validation process.
             </div>
           </div>
+          <img
+            src={image23}
+            alt=""
+            className="mx-auto border-t-2 border-r-2 border-l-2 border-[#635998] rounded-xl"
+          />
         </div>
         <div className="text-center">
+          <div className="text-2xl md:text-6xl font-bold">
+            <div>Prototypes that accurately simulate</div>
+            <div>the product experience</div>
+          </div>
+          <div className="py-7 md:text-2xl">
+            <div className="">
+              Type into a text field or interact with a chatbot. Our prototypes
+              feel like the real thing.
+            </div>
+          </div>
+          <div className="grid grid-cols-3 mx-auto">
+            <img src={frame14} alt="" className="" />
+            <img src={frame15} alt="" className="pt-3" />
+            <img src={frame17} alt="" className="pt-16" />
+          </div>
+        </div>
+        <div className="text-center">
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
+          <div>More content</div>
           <div>More content</div>
           <div>More content</div>
           <div>More content</div>
