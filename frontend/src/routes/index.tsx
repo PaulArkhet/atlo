@@ -8,6 +8,9 @@ import blueCommet2 from "/bluecommet2.svg";
 import frame14 from "/frame14.svg";
 import frame15 from "/frame15.svg";
 import frame17 from "/frame17.svg";
+import fadingborder from "/fadingborder.svg";
+import frame from "/frame.svg";
+import banner from "/banner.svg";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
@@ -16,9 +19,9 @@ export const Route = createFileRoute("/")({
 function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
-      <div className="z-0 absolute top-56 left-0">
+      <div className="z-0 absolute top-28 md:top-56 left-0">
         <div className="relative pt-80 w-screen">
-          <img src={ship1} alt="" className="mx-auto" />
+          <img src={ship1} alt="" className="mx-auto w-[40px] md:w-auto" />
           <img
             src={largePlanet}
             alt=""
@@ -27,8 +30,8 @@ function RouteComponent() {
         </div>
       </div>
       <div className="z-40">
-        <div className="text-center pb-96">
-          <div className="text-3xl md:text-8xl font-bold py-10 pt-16">
+        <div className="text-center pb-40 md:pb-96">
+          <div className="text-3xl md:text-8xl font-bold py-5 md:py-10 md:pt-16">
             <div>From idea to prototype, in</div>
             <div>moments</div>
           </div>
@@ -45,7 +48,7 @@ function RouteComponent() {
             </div>
           </div>
         </div>
-        <div className="text-center pb-32">
+        <div className="text-center pb-20">
           <div className="text-2xl md:text-6xl font-bold">
             <div>Faster experiments, more time with</div>
             <div>customers</div>
@@ -66,7 +69,7 @@ function RouteComponent() {
             className="mx-auto border-t-2 border-r-2 border-l-2 border-[#635998] rounded-xl"
           />
         </div>
-        <div className="text-center">
+        <div className="text-center pb-20">
           <div className="text-2xl md:text-6xl font-bold">
             <div>Prototypes that accurately simulate</div>
             <div>the product experience</div>
@@ -77,124 +80,69 @@ function RouteComponent() {
               feel like the real thing.
             </div>
           </div>
-          <div className="grid grid-cols-3 mx-auto">
-            <img src={frame14} alt="" className="" />
-            <img src={frame15} alt="" className="pt-3" />
-            <img src={frame17} alt="" className="pt-16" />
+          <div className="md:grid grid-cols-3 mx-auto">
+            <img src={frame14} alt="" className="w-[300px] md:w-auto mx-auto" />
+            <img
+              src={frame15}
+              alt=""
+              className="w-[300px] md:w-auto mx-auto md:pt-3"
+            />
+            <img
+              src={frame17}
+              alt=""
+              className="w-[300px] md:w-auto mx-auto md:pt-16"
+            />
           </div>
         </div>
-        <div className="text-center">
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
-          <div>More content</div>
+        <div className="text-center pb-20">
+          <div className="text-2xl md:text-6xl font-bold">
+            <div>Generate highly accurate prototypes that </div>
+            <div>look like your product</div>
+          </div>
+          <div className="py-7 md:text-2xl">
+            <div className="">
+              Upload or create your style guide to ensure every prototype
+              generated matches your product’s look and feel perfectly.
+            </div>
+            <div>look and feel perfectly.</div>
+          </div>
+          <img src={fadingborder} alt="" className="mx-auto" />
+        </div>
+        <div className="text-center pb-20">
+          <div className="text-2xl md:text-6xl font-bold">
+            <div>Build the wireframe. We take care of the rest</div>
+          </div>
+          <div className="py-7 md:text-2xl">
+            <div className="">
+              No need to move every single pixel. We translate your lo-fi ideas
+              to high-fi prototypes
+            </div>
+          </div>
+          <img src={frame} alt="" className="mx-auto" />
+        </div>
+        <div className="text-center pb-20">
+          <div className="text-2xl md:text-6xl font-bold">
+            <div>Increase your team's design capacity and output</div>
+          </div>
+          <div className="py-7 md:text-2xl">
+            <div className="">
+              By reducing design barriers and the time it takes to create
+              high-quality prototypes, we help teams accomplish more with less.
+            </div>
+            <div>more with less.</div>
+          </div>
+          <img src={banner} alt="" className="mx-auto" />
+        </div>
+        <div className="text-center pb-20">
+          <div className="text-2xl md:text-6xl font-bold">
+            <div>Start prototyping with Arkhet </div>
+          </div>
+          <div className="py-7 md:text-2xl">
+            <div className="">Ready to start building? Register today.</div>
+          </div>
+          <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] py-3 w-[300px] rounded mx-auto">
+            R E G I S T E R
+          </div>
         </div>
       </div>
     </main>
