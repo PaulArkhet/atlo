@@ -1,10 +1,11 @@
+import { Link } from "@tanstack/react-router";
 import logo from "/arkhet-logo-white.png";
 
 export default function Footer() {
   return (
     <footer className="bg-black opacity-90 text-white p-10 text-center xl:text-left">
       <div className="xl:flex">
-        <div className="">
+        <div className="pb-10 md:pb-0">
           <div className="flex">
             <img
               src={logo}
@@ -20,20 +21,30 @@ export default function Footer() {
           </div>
           <div>Register now</div>
         </div>
-        <div className="xl:px-20">
+        <div className="pb-10 md:pb-0 xl:px-20">
           <div className="font-bold py-2">Product</div>
-          <div className="py-2">How it works</div>
+          <div className="py-2">
+            <Link to="/howitworks">How it works</Link>
+          </div>
           <div className="py-2">Book a Demo</div>
-          <div className="py-2">Pricing</div>
+          <div className="py-2">
+            <Link to="/pricing" className="py-2">
+              Pricing
+            </Link>
+          </div>
         </div>
-        <div className="xl:px-20">
+        <div className="pb-10 md:pb-0 xl:px-20">
           <div className="font-bold py-2">Resources</div>
           <div className="py-2">FAQ</div>
           <div className="py-2">Blog</div>
-          <div className="py-2">About</div>
+          <div className="py-2">
+            <Link to="/about" className="py-2">
+              About
+            </Link>
+          </div>
           <div className="py-2">Join</div>
         </div>
-        <div className="xl:px-20">
+        <div className="pb-10 md:pb-0 xl:px-20">
           <div className="font-bold py-2">Privacy</div>
           <div className="py-2">Privacy Policy</div>
           <div className="py-2">Terms and Conditions</div>
