@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import largePlanet from "/largeplanet.svg";
-import ship1 from "/ship1.svg";
-import image23 from "/image23.svg";
-import greenPlanet from "/greenplanet.svg";
-import blueCommet from "/bluecommet.svg";
-import blueCommet2 from "/bluecommet2.svg";
-import frame14 from "/frame14.svg";
-import frame15 from "/frame15.svg";
-import frame17 from "/frame17.svg";
-import fadingborder from "/fadingborder.svg";
-import frame from "/frame.svg";
-import banner from "/banner.svg";
+import largePlanet from "/homelargeplanet.svg";
+import ship1 from "/homeship1.svg";
+import image23 from "/homeimage23.svg";
+import greenPlanet from "/homegreenplanet.svg";
+import blueCommet from "/homebluecommet.svg";
+import blueCommet2 from "/homebluecommet2.svg";
+import frame14 from "/homeframe14.svg";
+import frame15 from "/homeframe15.svg";
+import frame17 from "/homeframe17.svg";
+import fadingborder from "/homefadingborder.svg";
+import frame from "/homeframe.svg";
+import banner from "/homebanner.svg";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
