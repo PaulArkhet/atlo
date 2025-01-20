@@ -11,6 +11,7 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ScheduleImport } from './routes/schedule'
 import { Route as ResourcesImport } from './routes/resources'
 import { Route as PricingImport } from './routes/pricing'
 import { Route as LoginImport } from './routes/login'
@@ -20,6 +21,12 @@ import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const ScheduleRoute = ScheduleImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ResourcesRoute = ResourcesImport.update({
   id: '/resources',
@@ -116,6 +123,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResourcesImport
       parentRoute: typeof rootRoute
     }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -129,6 +143,7 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
+  '/schedule': typeof ScheduleRoute
 }
 
 export interface FileRoutesByTo {
@@ -139,6 +154,7 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
+  '/schedule': typeof ScheduleRoute
 }
 
 export interface FileRoutesById {
@@ -150,6 +166,7 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
+  '/schedule': typeof ScheduleRoute
 }
 
 export interface FileRouteTypes {
@@ -162,6 +179,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/pricing'
     | '/resources'
+    | '/schedule'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -171,6 +189,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/pricing'
     | '/resources'
+    | '/schedule'
   id:
     | '__root__'
     | '/'
@@ -180,6 +199,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/pricing'
     | '/resources'
+    | '/schedule'
   fileRoutesById: FileRoutesById
 }
 
@@ -191,6 +211,7 @@ export interface RootRouteChildren {
   LoginRoute: typeof LoginRoute
   PricingRoute: typeof PricingRoute
   ResourcesRoute: typeof ResourcesRoute
+  ScheduleRoute: typeof ScheduleRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -201,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   LoginRoute: LoginRoute,
   PricingRoute: PricingRoute,
   ResourcesRoute: ResourcesRoute,
+  ScheduleRoute: ScheduleRoute,
 }
 
 export const routeTree = rootRoute
@@ -219,7 +241,8 @@ export const routeTree = rootRoute
         "/howitworks",
         "/login",
         "/pricing",
-        "/resources"
+        "/resources",
+        "/schedule"
       ]
     },
     "/": {
@@ -242,6 +265,9 @@ export const routeTree = rootRoute
     },
     "/resources": {
       "filePath": "resources.tsx"
+    },
+    "/schedule": {
+      "filePath": "schedule.tsx"
     }
   }
 }

@@ -21,6 +21,7 @@ export default function Header() {
 
   function slideToggle() {
     if (window.innerWidth < 700) setNavVisible(!navVisible);
+    console.log("toggle running");
   }
 
   return (
