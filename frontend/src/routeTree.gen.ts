@@ -16,6 +16,7 @@ import { Route as ResourcesImport } from './routes/resources'
 import { Route as PricingImport } from './routes/pricing'
 import { Route as LoginImport } from './routes/login'
 import { Route as HowitworksImport } from './routes/howitworks'
+import { Route as FaqImport } from './routes/faq'
 import { Route as BenefitsImport } from './routes/benefits'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
@@ -49,6 +50,12 @@ const LoginRoute = LoginImport.update({
 const HowitworksRoute = HowitworksImport.update({
   id: '/howitworks',
   path: '/howitworks',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const FaqRoute = FaqImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -95,6 +102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BenefitsImport
       parentRoute: typeof rootRoute
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqImport
+      parentRoute: typeof rootRoute
+    }
     '/howitworks': {
       id: '/howitworks'
       path: '/howitworks'
@@ -139,6 +153,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/benefits': typeof BenefitsRoute
+  '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
@@ -150,6 +165,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/benefits': typeof BenefitsRoute
+  '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
@@ -162,6 +178,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/benefits': typeof BenefitsRoute
+  '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
@@ -175,6 +192,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/benefits'
+    | '/faq'
     | '/howitworks'
     | '/login'
     | '/pricing'
@@ -185,6 +203,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/benefits'
+    | '/faq'
     | '/howitworks'
     | '/login'
     | '/pricing'
@@ -195,6 +214,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/benefits'
+    | '/faq'
     | '/howitworks'
     | '/login'
     | '/pricing'
@@ -207,6 +227,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BenefitsRoute: typeof BenefitsRoute
+  FaqRoute: typeof FaqRoute
   HowitworksRoute: typeof HowitworksRoute
   LoginRoute: typeof LoginRoute
   PricingRoute: typeof PricingRoute
@@ -218,6 +239,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BenefitsRoute: BenefitsRoute,
+  FaqRoute: FaqRoute,
   HowitworksRoute: HowitworksRoute,
   LoginRoute: LoginRoute,
   PricingRoute: PricingRoute,
@@ -238,6 +260,7 @@ export const routeTree = rootRoute
         "/",
         "/about",
         "/benefits",
+        "/faq",
         "/howitworks",
         "/login",
         "/pricing",
@@ -253,6 +276,9 @@ export const routeTree = rootRoute
     },
     "/benefits": {
       "filePath": "benefits.tsx"
+    },
+    "/faq": {
+      "filePath": "faq.tsx"
     },
     "/howitworks": {
       "filePath": "howitworks.tsx"

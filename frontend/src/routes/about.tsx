@@ -39,12 +39,12 @@ function RouteComponent() {
         </div>
       </div>
       <div className="flex flex-col mx-auto">
-        <div className="flex mx-auto">
-          <div className="text-4xl font-bold text-white mr-10">
+        <div className="md:flex mx-auto">
+          <div className="text-4xl font-bold text-white md:mr-10">
             Product leaders can now <br /> design and build <br /> software
             products like <br /> never before
           </div>
-          <div className="w-[550px] ml-10">
+          <div className="md:w-[550px] md:ml-10">
             <div className="mb-10">
               Arkhet products empower product teams to build great products.
               Have an idea for great software? Now you can bring it to life in
@@ -67,14 +67,14 @@ function RouteComponent() {
         Building great software is easier with better tools. <br /> Arkhet
         builds tools for builders.
       </div>
-      <div className="h-[1px] bg-white w-[500px] mx-auto mb-20"></div>
+      <div className="h-[1px] bg-white md:w-[500px] mx-auto mb-20"></div>
       <div className="nunitofont text-center py-10 tracking-widest">TEAM</div>
       <div className="text-2xl md:text-6xl font-bold text-white text-center mb-20">
         We’re shaping the future of generative <br />
         software design with a mission-driven team
       </div>
       <div className="flex flex-col mx-auto pb-32">
-        <div className="grid grid-cols-3 gap-6 mx-auto">
+        <div className="md:grid grid-cols-3 gap-6 mx-auto">
           <img src={nate} alt="" />
           <img src={randall} alt="" />
           <img src={vitor} alt="" />

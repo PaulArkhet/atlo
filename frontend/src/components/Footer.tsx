@@ -35,7 +35,11 @@ export default function Footer() {
         </div>
         <div className="pb-10 md:pb-0 xl:px-20">
           <div className="font-bold py-2">Resources</div>
-          <div className="py-2">FAQ</div>
+          <div className="py-2">
+            <Link to="/faq" className="py-2">
+              FAQ
+            </Link>
+          </div>
           <div className="py-2">Blog</div>
           <div className="py-2">
             <Link to="/about" className="py-2">
