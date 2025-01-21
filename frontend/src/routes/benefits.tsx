@@ -13,9 +13,9 @@ export const Route = createFileRoute("/benefits")({
 
 function RouteComponent() {
   return (
-    <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+    <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px] ">
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0">
+        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
           BENEFITS
         </div>
       </div>

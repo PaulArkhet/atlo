@@ -11,7 +11,7 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-20">
+        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-20 text-[#D9D9D9]">
           HOW IT WORKS
         </div>
         <img src={step1} alt="" />
