@@ -15,6 +15,7 @@ import { Route as ScheduleImport } from './routes/schedule'
 import { Route as ResourcesImport } from './routes/resources'
 import { Route as PricingImport } from './routes/pricing'
 import { Route as LoginImport } from './routes/login'
+import { Route as JoinImport } from './routes/join'
 import { Route as HowitworksImport } from './routes/howitworks'
 import { Route as FaqImport } from './routes/faq'
 import { Route as BenefitsImport } from './routes/benefits'
@@ -44,6 +45,12 @@ const PricingRoute = PricingImport.update({
 const LoginRoute = LoginImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const JoinRoute = JoinImport.update({
+  id: '/join',
+  path: '/join',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -116,6 +123,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HowitworksImport
       parentRoute: typeof rootRoute
     }
+    '/join': {
+      id: '/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof JoinImport
+      parentRoute: typeof rootRoute
+    }
     '/login': {
       id: '/login'
       path: '/login'
@@ -155,6 +169,7 @@ export interface FileRoutesByFullPath {
   '/benefits': typeof BenefitsRoute
   '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
+  '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
@@ -167,6 +182,7 @@ export interface FileRoutesByTo {
   '/benefits': typeof BenefitsRoute
   '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
+  '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
@@ -180,6 +196,7 @@ export interface FileRoutesById {
   '/benefits': typeof BenefitsRoute
   '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
+  '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
@@ -194,6 +211,7 @@ export interface FileRouteTypes {
     | '/benefits'
     | '/faq'
     | '/howitworks'
+    | '/join'
     | '/login'
     | '/pricing'
     | '/resources'
@@ -205,6 +223,7 @@ export interface FileRouteTypes {
     | '/benefits'
     | '/faq'
     | '/howitworks'
+    | '/join'
     | '/login'
     | '/pricing'
     | '/resources'
@@ -216,6 +235,7 @@ export interface FileRouteTypes {
     | '/benefits'
     | '/faq'
     | '/howitworks'
+    | '/join'
     | '/login'
     | '/pricing'
     | '/resources'
@@ -229,6 +249,7 @@ export interface RootRouteChildren {
   BenefitsRoute: typeof BenefitsRoute
   FaqRoute: typeof FaqRoute
   HowitworksRoute: typeof HowitworksRoute
+  JoinRoute: typeof JoinRoute
   LoginRoute: typeof LoginRoute
   PricingRoute: typeof PricingRoute
   ResourcesRoute: typeof ResourcesRoute
@@ -241,6 +262,7 @@ const rootRouteChildren: RootRouteChildren = {
   BenefitsRoute: BenefitsRoute,
   FaqRoute: FaqRoute,
   HowitworksRoute: HowitworksRoute,
+  JoinRoute: JoinRoute,
   LoginRoute: LoginRoute,
   PricingRoute: PricingRoute,
   ResourcesRoute: ResourcesRoute,
@@ -262,6 +284,7 @@ export const routeTree = rootRoute
         "/benefits",
         "/faq",
         "/howitworks",
+        "/join",
         "/login",
         "/pricing",
         "/resources",
@@ -282,6 +305,9 @@ export const routeTree = rootRoute
     },
     "/howitworks": {
       "filePath": "howitworks.tsx"
+    },
+    "/join": {
+      "filePath": "join.tsx"
     },
     "/login": {
       "filePath": "login.tsx"

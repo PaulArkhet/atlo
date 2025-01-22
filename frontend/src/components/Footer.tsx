@@ -40,13 +40,21 @@ export default function Footer() {
               FAQ
             </Link>
           </div>
-          <div className="py-2">Blog</div>
+          <div className="py-2">
+            <Link to="/resources" className="py-2">
+              Blog
+            </Link>
+          </div>
           <div className="py-2">
             <Link to="/about" className="py-2">
               About
             </Link>
           </div>
-          <div className="py-2">Join</div>
+          <div className="py-2">
+            <Link to="/join" className="py-2">
+              Join
+            </Link>
+          </div>
         </div>
         <div className="pb-10 md:pb-0 xl:px-20">
           <div className="font-bold py-2">Privacy</div>
