@@ -26,7 +26,11 @@ export default function Footer() {
           <div className="py-2">
             <Link to="/howitworks">How it works</Link>
           </div>
-          <div className="py-2">Book a Demo</div>
+          <div className="py-2">
+            <Link to="/schedule" className="py-2">
+              Book a Demo
+            </Link>
+          </div>
           <div className="py-2">
             <Link to="/pricing" className="py-2">
               Pricing
@@ -65,7 +69,11 @@ export default function Footer() {
           <div className="font-bold py-2">Connect</div>
           <div className="py-2">Contact us</div>
           <div className="py-2">LinkedIn</div>
-          <div className="py-2">Mailing list</div>
+          <div className="py-2">
+            <Link to="/subscribe" className="py-2">
+              Mailing list
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import frame54 from "/joinframe54.svg";
 import externalLink from "/joinexternallink.svg";
 
@@ -28,7 +28,7 @@ function RouteComponent() {
               <div className="flex">
                 <div>
                   Thank you for your interest. Inquire at{" "}
-                  <span className="font-bold">investment@arkhet.com</span>
+                  <span className="font-bold">invest@arkhet.com</span>
                 </div>
                 <img src={externalLink} alt="" className="ml-2 pt-2 w-[17px]" />
               </div>
@@ -48,9 +48,9 @@ function RouteComponent() {
               </div>
               <div>
                 Get the latest news and updates on Arkhet.{" "}
-                <span className="font-bold">
+                <Link to="/subscribe" className="font-bold">
                   Subscribe to our mailing list.
-                </span>
+                </Link>
               </div>
             </div>
           </div>
