@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import planet from "/scheduleplanet.svg";
 import checkmark from "/schedulecheckmark.svg";
 
@@ -36,10 +36,7 @@ function RouteComponent() {
             <img src={planet} alt="" />
           </div>
           <div className="md:ml-10 ">
-            <form
-              action=""
-              className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[350px] md:w-[400px] mx-auto bg-gradient-to-br from-[#6454B7] to-[#1F164E] bg-opacity-50"
-            >
+            <form className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[350px] md:w-[400px] mx-auto bg-gradient-to-br from-[#6454B7] to-[#1F164E] bg-opacity-50">
               <input
                 type="text"
                 className="border border-[#8778D7] bg-[#242424] py-1 px-2 my-2"
@@ -66,9 +63,9 @@ function RouteComponent() {
                 cols={50}
                 placeholder="Please share any info that will help us prepare for the demo"
               />
-              <button className="px-5 py-3 bg-[#9253E4] tracking-widest my-2">
-                BOOK A DEMO
-              </button>
+              <div className="px-5 py-3 bg-[#9253E4] tracking-widest my-2 text-center">
+                <Link to="/thankyoudemo">BOOK A DEMO</Link>
+              </div>
               <div className="text-xl text-center">Ready to buy instead?</div>
             </form>
           </div>
