@@ -39,7 +39,9 @@ function RouteComponent() {
               </div>
               <div>
                 Start building with Arkhet.{" "}
-                <span className="font-bold">Register now.</span>
+                <Link to="/register" className="font-bold">
+                  Register now.
+                </Link>
               </div>
             </div>
             <div className="md:pb-20">

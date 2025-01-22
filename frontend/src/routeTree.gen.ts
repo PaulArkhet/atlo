@@ -11,9 +11,12 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ThankyouregisterImport } from './routes/thankyouregister'
+import { Route as ThankyoudemoImport } from './routes/thankyoudemo'
 import { Route as SubscribeImport } from './routes/subscribe'
 import { Route as ScheduleImport } from './routes/schedule'
 import { Route as ResourcesImport } from './routes/resources'
+import { Route as RegisterImport } from './routes/register'
 import { Route as PricingImport } from './routes/pricing'
 import { Route as LoginImport } from './routes/login'
 import { Route as JoinImport } from './routes/join'
@@ -24,6 +27,18 @@ import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const ThankyouregisterRoute = ThankyouregisterImport.update({
+  id: '/thankyouregister',
+  path: '/thankyouregister',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ThankyoudemoRoute = ThankyoudemoImport.update({
+  id: '/thankyoudemo',
+  path: '/thankyoudemo',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const SubscribeRoute = SubscribeImport.update({
   id: '/subscribe',
@@ -40,6 +55,12 @@ const ScheduleRoute = ScheduleImport.update({
 const ResourcesRoute = ResourcesImport.update({
   id: '/resources',
   path: '/resources',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const RegisterRoute = RegisterImport.update({
+  id: '/register',
+  path: '/register',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -151,6 +172,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingImport
       parentRoute: typeof rootRoute
     }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterImport
+      parentRoute: typeof rootRoute
+    }
     '/resources': {
       id: '/resources'
       path: '/resources'
@@ -172,6 +200,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SubscribeImport
       parentRoute: typeof rootRoute
     }
+    '/thankyoudemo': {
+      id: '/thankyoudemo'
+      path: '/thankyoudemo'
+      fullPath: '/thankyoudemo'
+      preLoaderRoute: typeof ThankyoudemoImport
+      parentRoute: typeof rootRoute
+    }
+    '/thankyouregister': {
+      id: '/thankyouregister'
+      path: '/thankyouregister'
+      fullPath: '/thankyouregister'
+      preLoaderRoute: typeof ThankyouregisterImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -186,9 +228,12 @@ export interface FileRoutesByFullPath {
   '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
+  '/register': typeof RegisterRoute
   '/resources': typeof ResourcesRoute
   '/schedule': typeof ScheduleRoute
   '/subscribe': typeof SubscribeRoute
+  '/thankyoudemo': typeof ThankyoudemoRoute
+  '/thankyouregister': typeof ThankyouregisterRoute
 }
 
 export interface FileRoutesByTo {
@@ -200,9 +245,12 @@ export interface FileRoutesByTo {
   '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
+  '/register': typeof RegisterRoute
   '/resources': typeof ResourcesRoute
   '/schedule': typeof ScheduleRoute
   '/subscribe': typeof SubscribeRoute
+  '/thankyoudemo': typeof ThankyoudemoRoute
+  '/thankyouregister': typeof ThankyouregisterRoute
 }
 
 export interface FileRoutesById {
@@ -215,9 +263,12 @@ export interface FileRoutesById {
   '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
+  '/register': typeof RegisterRoute
   '/resources': typeof ResourcesRoute
   '/schedule': typeof ScheduleRoute
   '/subscribe': typeof SubscribeRoute
+  '/thankyoudemo': typeof ThankyoudemoRoute
+  '/thankyouregister': typeof ThankyouregisterRoute
 }
 
 export interface FileRouteTypes {
@@ -231,9 +282,12 @@ export interface FileRouteTypes {
     | '/join'
     | '/login'
     | '/pricing'
+    | '/register'
     | '/resources'
     | '/schedule'
     | '/subscribe'
+    | '/thankyoudemo'
+    | '/thankyouregister'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -244,9 +298,12 @@ export interface FileRouteTypes {
     | '/join'
     | '/login'
     | '/pricing'
+    | '/register'
     | '/resources'
     | '/schedule'
     | '/subscribe'
+    | '/thankyoudemo'
+    | '/thankyouregister'
   id:
     | '__root__'
     | '/'
@@ -257,9 +314,12 @@ export interface FileRouteTypes {
     | '/join'
     | '/login'
     | '/pricing'
+    | '/register'
     | '/resources'
     | '/schedule'
     | '/subscribe'
+    | '/thankyoudemo'
+    | '/thankyouregister'
   fileRoutesById: FileRoutesById
 }
 
@@ -272,9 +332,12 @@ export interface RootRouteChildren {
   JoinRoute: typeof JoinRoute
   LoginRoute: typeof LoginRoute
   PricingRoute: typeof PricingRoute
+  RegisterRoute: typeof RegisterRoute
   ResourcesRoute: typeof ResourcesRoute
   ScheduleRoute: typeof ScheduleRoute
   SubscribeRoute: typeof SubscribeRoute
+  ThankyoudemoRoute: typeof ThankyoudemoRoute
+  ThankyouregisterRoute: typeof ThankyouregisterRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -286,9 +349,12 @@ const rootRouteChildren: RootRouteChildren = {
   JoinRoute: JoinRoute,
   LoginRoute: LoginRoute,
   PricingRoute: PricingRoute,
+  RegisterRoute: RegisterRoute,
   ResourcesRoute: ResourcesRoute,
   ScheduleRoute: ScheduleRoute,
   SubscribeRoute: SubscribeRoute,
+  ThankyoudemoRoute: ThankyoudemoRoute,
+  ThankyouregisterRoute: ThankyouregisterRoute,
 }
 
 export const routeTree = rootRoute
@@ -309,9 +375,12 @@ export const routeTree = rootRoute
         "/join",
         "/login",
         "/pricing",
+        "/register",
         "/resources",
         "/schedule",
-        "/subscribe"
+        "/subscribe",
+        "/thankyoudemo",
+        "/thankyouregister"
       ]
     },
     "/": {
@@ -338,6 +407,9 @@ export const routeTree = rootRoute
     "/pricing": {
       "filePath": "pricing.tsx"
     },
+    "/register": {
+      "filePath": "register.tsx"
+    },
     "/resources": {
       "filePath": "resources.tsx"
     },
@@ -346,6 +418,12 @@ export const routeTree = rootRoute
     },
     "/subscribe": {
       "filePath": "subscribe.tsx"
+    },
+    "/thankyoudemo": {
+      "filePath": "thankyoudemo.tsx"
+    },
+    "/thankyouregister": {
+      "filePath": "thankyouregister.tsx"
     }
   }
 }
