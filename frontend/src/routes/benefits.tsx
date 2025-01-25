@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import benefits from "/benefits.png";
+import benefits from "/benefits.svg";
 import video1 from "/benefitsvideo1.svg";
 import video2 from "/benefitsvideo2.svg";
 import interactive from "/benefitsinteractive.svg";
 import frame14 from "/benefitsframe14.svg";
 import frame15 from "/benefitsframe15.svg";
 import frame17 from "/benefitsframe17.svg";
+import background1 from "/background1.svg";
 
 export const Route = createFileRoute("/benefits")({
   component: RouteComponent,
@@ -29,7 +30,23 @@ function RouteComponent() {
             design, Arkhet makes it easier to validate product ideas.
           </div>
         </div>
-        <img src={benefits} alt="" className="mx-auto" />
+        <div className="relative">
+          <img src={background1} alt="" className="mx-auto" />
+          <img
+            src={benefits}
+            alt=""
+            className="absolute top-5 right-44 mx-auto"
+          />
+          <div className="absolute top-20 left-32 text-5xl font-bold">
+            Benefits
+          </div>
+          <div className="absolute top-40 left-32 text-left text-xl">
+            Produce higher quality prototypes in significantly less <br /> time
+            in a shift for the entire industry. Arkhet makes it <br /> easier to
+            conduct rapid prototyping with higher quality <br /> and fewer
+            resources.
+          </div>
+        </div>
       </div>
       <div className="flex flex-col mx-auto">
         <div className="md:flex mx-auto">

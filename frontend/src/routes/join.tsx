@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import frame54 from "/joinframe54.svg";
 import externalLink from "/joinexternallink.svg";
+import background from "/joinbg.svg";
 
 export const Route = createFileRoute("/join")({
   component: RouteComponent,
@@ -9,8 +10,8 @@ export const Route = createFileRoute("/join")({
 function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] p-3 pt-[100px] text-[#D9D9D9] md:text-2xl">
-      <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0">
+      <div className="md:p-10 z-10">
+        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0 z-10">
           JOIN
         </div>
       </div>

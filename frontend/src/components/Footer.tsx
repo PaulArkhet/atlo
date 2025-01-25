@@ -3,7 +3,7 @@ import logo from "/arkhet-logo-white.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-black opacity-90 text-white p-10 text-center xl:text-left">
+    <footer className="bg-black opacity-90 text-white p-10 text-center xl:text-left z-50">
       <div className="xl:flex">
         <div className="pb-10 md:pb-0">
           <div className="flex">

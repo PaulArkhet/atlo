@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import planet from "/scheduleplanet.svg";
-import checkmark from "/schedulecheckmark.svg";
+import checkmark from "/checkmark.svg";
 
 export const Route = createFileRoute("/schedule")({
   component: RouteComponent,
