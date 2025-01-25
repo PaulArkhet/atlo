@@ -58,8 +58,8 @@ function RouteComponent() {
               <div className="rounded bg-gradient-to-r from-[#6754B7] to-[#B754B3] py-2 w-[250px] m-3 z-40">
                 <a href="https://arkhet-pilot.fly.dev/signup">SIGN UP</a>
               </div>
-              <Link to="/schedule" className="border py-2 w-[250px] m-3">
-                SCHEDULE A DEMO
+              <Link to="/schedule">
+                <div className="border py-2 w-[250px] m-3">SCHEDULE A DEMO</div>
               </Link>
             </div>
           </div>
@@ -160,7 +160,7 @@ function RouteComponent() {
             <img
               src={styleguide}
               alt=""
-              className="absolute top-9 md:left-[9.5rem]"
+              className="absolute top-3 left-3 md:top-9 md:left-[9.5rem] w-[92%] md:w-auto"
             />
           </div>
         </div>
@@ -189,15 +189,17 @@ function RouteComponent() {
           </div>
           <img src={floatingCubes} alt="" className="mx-auto" />
         </div>
-        <div className="text-center pb-40">
-          <div className="text-2xl md:text-6xl font-bold">
+        <div className="text-center pb-40 z-30">
+          <div className="text-2xl md:text-6xl font-bold z-30">
             <div>Start prototyping with Arkhet </div>
           </div>
           <div className="py-7 md:text-2xl">
-            <div className="">Ready to start building? Register today.</div>
+            <div className=" z-30">
+              Ready to start building? Register today.
+            </div>
           </div>
-          <Link to="/register">
-            <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] py-3 w-[300px] rounded mx-auto">
+          <Link to="/register" className="z-30">
+            <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] py-3 w-[300px] rounded mx-auto z-30">
               R E G I S T E R
             </div>
           </Link>
@@ -205,7 +207,7 @@ function RouteComponent() {
         <img
           src={ship2}
           alt=""
-          className="absolute bottom-0 md:bottom-0 md:right-20"
+          className="absolute bottom-0 md:bottom-0 md:right-20 z-0"
         />
         <img
           src={bluePlanet2}

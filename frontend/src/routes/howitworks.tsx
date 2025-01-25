@@ -54,10 +54,14 @@ function RouteComponent() {
               <div className="ml-2 my-3">All you need is an idea.</div>
             </div>
           </div>
-          <div className="lg:absolute top-[-5%] right-10">
-            <div className="lg:relative top-0 right-0">
+          <div className="lg:absolute top-[-5%] right-10 mb-40 md:mb-0">
+            <div className="relative top-0 right-0">
               <img src={fadingborder} alt="" className="w-[1050px]" />
-              <img src={capy1} alt="" className="lg:absolute top-6 left-5" />
+              <img
+                src={capy1}
+                alt=""
+                className="absolute top-6 left-0 md:left-5"
+              />
             </div>
           </div>
         </div>

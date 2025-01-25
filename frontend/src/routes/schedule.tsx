@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import planet from "/scheduleplanet.svg";
 import checkmark from "/checkmark.svg";
+import blueCloud from "/schedulebluecloud.svg";
+import greenCloud from "/schedulegreencloud.svg";
+import purpleCloud from "/schedulepurplecloud.svg";
 
 export const Route = createFileRoute("/schedule")({
   component: RouteComponent,
@@ -9,8 +12,19 @@ export const Route = createFileRoute("/schedule")({
 function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
-      <div className="flex flex-col mx-auto md:p-10">
-        <div className="md:flex mx-auto">
+      <img src={blueCloud} alt="" className="absolute top-0 right-0 z-0" />
+      <img
+        src={purpleCloud}
+        alt=""
+        className="absolute bottom-0 right-40 z-0"
+      />
+      <img
+        src={greenCloud}
+        alt=""
+        className="absolute bottom-[-10%] left-10 z-0"
+      />
+      <div className="flex flex-col mx-auto md:p-10 z-20">
+        <div className="md:flex mx-auto z-20">
           <div className="md:mr-20">
             <div className="text-5xl font-bold">
               Want to see it in <br /> action?
@@ -35,7 +49,7 @@ function RouteComponent() {
             </div>
             <img src={planet} alt="" />
           </div>
-          <div className="md:ml-10 ">
+          <div className="md:ml-10 z-20">
             <form className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[350px] md:w-[400px] mx-auto bg-gradient-to-br from-[#6454B7] to-[#1F164E] bg-opacity-50">
               <input
                 type="text"
