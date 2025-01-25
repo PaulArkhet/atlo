@@ -50,7 +50,7 @@ function RouteComponent() {
             <img src={planet} alt="" />
           </div>
           <div className="md:ml-10 z-20">
-            <form className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[350px] md:w-[400px] mx-auto bg-gradient-to-br from-[#6454B7] to-[#1F164E] bg-opacity-50">
+            <form className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[350px] md:w-[400px] mx-auto bg-gradient-to-br from-[#5B4874] via-[#42476D] to-[#45406D] bg-opacity-50">
               <input
                 type="text"
                 className="border border-[#8778D7] bg-[#242424] py-1 px-2 my-2"
