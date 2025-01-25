@@ -1,5 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-import step1 from "/hiwstep1.png";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import step2 from "/hiwstep2.png";
 import step3 from "/hiwstep3.png";
 import background1 from "/background1.svg";
@@ -7,6 +6,10 @@ import checkmark from "/checkmark.svg";
 import capy1 from "/howscapy1.svg";
 import fadingborder from "/fadingborder.svg";
 import fadingbackground2 from "/fadingbackground2.svg";
+import ellipse from "/ellipse.png";
+import layers from "/homelayers.png";
+import cube from "/homecube.png";
+import homecubes from "/homecubes.png";
 
 export const Route = createFileRoute("/howitworks")({
   component: RouteComponent,
@@ -65,9 +68,11 @@ function RouteComponent() {
         <div className="text-2xl md:text-6xl font-bold md:pb-10">
           <div>Start prototyping today</div>
         </div>
-        <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] text-xl py-5 my-10 w-[300px] rounded mx-auto">
-          R E G I S T E R
-        </div>
+        <Link to="/register">
+          <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] text-xl py-5 my-10 w-[300px] rounded mx-auto">
+            R E G I S T E R
+          </div>
+        </Link>
       </div>
     </main>
   );

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import largePlanet from "/homelargeplanet.svg";
 import ship1 from "/homeship1.svg";
 import purplePlanet from "/homepurpleplanet.png";
@@ -58,7 +58,9 @@ function RouteComponent() {
               <div className="rounded bg-gradient-to-r from-[#6754B7] to-[#B754B3] py-2 w-[250px] m-3 z-40">
                 <a href="https://arkhet-pilot.fly.dev/signup">SIGN UP</a>
               </div>
-              <div className="border py-2 w-[250px] m-3">SCHEDULE A DEMO</div>
+              <Link to="/schedule" className="border py-2 w-[250px] m-3">
+                SCHEDULE A DEMO
+              </Link>
             </div>
           </div>
         </div>
@@ -194,9 +196,11 @@ function RouteComponent() {
           <div className="py-7 md:text-2xl">
             <div className="">Ready to start building? Register today.</div>
           </div>
-          <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] py-3 w-[300px] rounded mx-auto">
-            R E G I S T E R
-          </div>
+          <Link to="/register">
+            <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] py-3 w-[300px] rounded mx-auto">
+              R E G I S T E R
+            </div>
+          </Link>
         </div>
         <img
           src={ship2}
