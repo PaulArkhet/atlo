@@ -36,7 +36,11 @@ function RouteComponent() {
             className="absolute top-96 w-screen z-90"
           />
           <img src={purplePlanet} alt="" className="absolute top-72 right-96" />
-          <img src={bluePlanet} alt="" className="absolute top-80 md:left-96" />
+          <img
+            src={bluePlanet}
+            alt=""
+            className="hidden md:block absolute top-80 md:left-96"
+          />
         </div>
       </div>
       <div className="z-40 relative">
@@ -91,7 +95,7 @@ function RouteComponent() {
           </div>
           <div className="flex flex-col">
             <div className="md:flex mx-auto pt-10">
-              <div className="relative mx-5">
+              <div className="relative mx-5 mb-5 md:mb-0">
                 <img src={fadingbackground2} alt="" />
                 <img
                   src={ellipse}
@@ -99,12 +103,12 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={layers} alt="" className="absolute bottom-0 left-0" />
-                <div className="nunitofont text-[28px] absolute bottom-10 left-5">
+                <div className="nunitofont md:text-[28px] absolute bottom-10 left-5">
                   Test real functionality that represents <br />
                   how the real interaction should work
                 </div>
               </div>
-              <div className="relative mx-5">
+              <div className="relative mx-5 mb-5 md:mb-0">
                 <img src={fadingbackground2} alt="" />
                 <img
                   src={ellipse}
@@ -114,9 +118,9 @@ function RouteComponent() {
                 <img
                   src={cube}
                   alt=""
-                  className="absolute bottom-36 left-36 w-[200px] md:w-auto"
+                  className="absolute bottom-24 left-24 md:bottom-36 md:left-36 w-[170px] md:w-auto"
                 />
-                <div className="nunitofont text-[28px] absolute bottom-10 left-5">
+                <div className="nunitofont md:text-[28px] absolute bottom-10 left-5">
                   Identifying pain points or friction in <br />
                   the prototype
                 </div>
@@ -129,7 +133,7 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={homecubes} alt="" className="absolute top-0 left-0" />
-                <div className="nunitofont text-[28px] absolute bottom-10 left-5">
+                <div className="nunitofont md:text-[28px] absolute bottom-10 left-5">
                   Communicate the actual experience <br /> to get actionable
                   feedback
                 </div>
@@ -194,11 +198,15 @@ function RouteComponent() {
             R E G I S T E R
           </div>
         </div>
-        <img src={ship2} alt="" className="absolute bottom-0 right-20" />
+        <img
+          src={ship2}
+          alt=""
+          className="absolute bottom-0 md:bottom-0 md:right-20"
+        />
         <img
           src={bluePlanet2}
           alt=""
-          className="absolute bottom-[-4%] left-[-2%] z-0"
+          className="hidden md:block absolute bottom-[-4%] left-[-2%] z-0"
         />
       </div>
     </main>
