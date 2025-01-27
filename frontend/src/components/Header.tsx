@@ -25,7 +25,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50">
+    <header className="fixed top-0 left-0 z-[99]">
       <div className="bg-gradient-to-r from-[#8778D7] via-[#2F5D5D] to-[#2A3349] h-[70px] w-screen">
         <div className="bg-[#242424] text-white p-3 xl:flex justify-between tracking-widest text-center">
           <div className="flex justify-between xl:block">

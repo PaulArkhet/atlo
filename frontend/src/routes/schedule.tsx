@@ -21,7 +21,7 @@ function RouteComponent() {
       <img
         src={greenCloud}
         alt=""
-        className="absolute bottom-[-10%] left-10 z-0"
+        className="absolute bottom-[-10%] left-10 z-0 w-[90%] md:w-auto"
       />
       <div className="flex flex-col mx-auto md:p-10 z-20">
         <div className="md:flex mx-auto z-20">

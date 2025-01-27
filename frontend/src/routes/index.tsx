@@ -79,9 +79,11 @@ function RouteComponent() {
               validation process.
             </div>
           </div>
-          <div className="relative">
-            <img src={fadingborder} alt="" className="mx-auto" />
-            <img src={canvas} alt="" className="absolute top-8 md:left-36" />
+          <div className="flex flex-col">
+            <div className="relative mx-auto">
+              <img src={fadingborder} alt="" className="mx-auto" />
+              <img src={canvas} alt="" className="absolute top-9 md:left-8" />
+            </div>
           </div>
         </div>
         <div className="pb-20">
@@ -155,13 +157,15 @@ function RouteComponent() {
             </div>
             <div>look and feel perfectly.</div>
           </div>
-          <div className="relative">
-            <img src={fadingborder} alt="" className="mx-auto" />
-            <img
-              src={styleguide}
-              alt=""
-              className="absolute top-3 left-3 md:top-9 md:left-[9.5rem] w-[92%] md:w-auto"
-            />
+          <div className="flex flex-col mx-auto">
+            <div className="relative mx-auto">
+              <img src={fadingborder} alt="" className="mx-auto" />
+              <img
+                src={styleguide}
+                alt=""
+                className="absolute top-3 left-3 md:top-9 md:left-10 w-[92%] md:w-auto"
+              />
+            </div>
           </div>
         </div>
         <div className="text-center pb-20">
@@ -207,7 +211,7 @@ function RouteComponent() {
         <img
           src={ship2}
           alt=""
-          className="absolute bottom-0 md:bottom-0 md:right-20 z-0"
+          className="absolute bottom-[-2%] left-0 md:bottom-0 md:left-auto md:right-20 z-0"
         />
         <img
           src={bluePlanet2}

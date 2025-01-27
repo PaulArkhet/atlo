@@ -14,7 +14,7 @@ function RouteComponent() {
       <img
         src={rectangle}
         alt=""
-        className="z-0 absolute top-[-10] left-[33%] opacity-40"
+        className="z-0 absolute top-16 left-0 md:top-[-10] md:left-[33%] opacity-40"
       />
       <div className="z-10 pb-20">
         <img src={logo} alt="" className="mx-auto pt-32" />

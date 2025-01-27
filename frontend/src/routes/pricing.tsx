@@ -22,13 +22,13 @@ function RouteComponent() {
             Choose the plan that works best for you
           </div>
           <div
-            className="relative w-[400px] h-[70px] rounded-full cursor-pointer bg-[#DCDCDC]
+            className="relative md:w-[400px] h-[70px] rounded-full cursor-pointer bg-[#DCDCDC]
              mx-auto m-10"
             onClick={() => setisMonthly(!isMonthly)}
           >
             <span
               className={`absolute top-0 left-0 w-[200px] h-[70px] bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] rounded-full transition-transform ${
-                isMonthly ? "translate-x-[200px]" : ""
+                isMonthly ? "translate-x-[190px] md:translate-x-[200px]" : ""
               }`}
             ></span>
             <span

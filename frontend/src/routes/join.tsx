@@ -22,8 +22,8 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto mb-32">
         <div className="mx-auto md:flex">
           <div className="md:mr-10">
-            <div className="md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white pb-10">
+            <div className="pb-10 md:pb-20">
+              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Invest
               </div>
               <div className="flex">
@@ -34,8 +34,8 @@ function RouteComponent() {
                 <img src={externalLink} alt="" className="ml-2 pt-2 w-[17px]" />
               </div>
             </div>
-            <div className="md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white pb-10">
+            <div className="pb-10 md:pb-20">
+              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Register
               </div>
               <div>
@@ -45,8 +45,8 @@ function RouteComponent() {
                 </Link>
               </div>
             </div>
-            <div className="md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white pb-10">
+            <div className="pb-10 md:pb-20">
+              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Mailing list
               </div>
               <div>
@@ -57,9 +57,9 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="md:ml-10">
+          <div className="pb-10 md:ml-10">
             <div className="md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white pb-10">
+              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Media
               </div>
               <div className="flex">
@@ -71,7 +71,7 @@ function RouteComponent() {
               </div>
             </div>
             <div className="md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white pb-10">
+              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Work at Arkhet
               </div>
               <div className="flex">
