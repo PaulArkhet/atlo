@@ -6,6 +6,13 @@ import vitor from "/aboutvitor.png";
 import paul from "/aboutpaul.png";
 import selina from "/aboutselina.png";
 import steph from "/aboutsteph.png";
+import frame from "/aboutteammateframe.svg";
+import nateImg from "/aboutnateimg.png";
+import randallImg from "/aboutrandallimg.png";
+import vitorImg from "/aboutvitorimg.png";
+import paulImg from "/aboutpaulimg.png";
+import selinaImg from "/aboutselinaimg.png";
+import stephImg from "/aboutstephimg.png";
 
 export const Route = createFileRoute("/about")({
   component: RouteComponent,
@@ -72,6 +79,14 @@ function RouteComponent() {
       <div className="text-2xl md:text-6xl font-bold text-white text-center mb-20">
         We’re shaping the future of generative <br />
         software design with a mission-driven team
+      </div>
+      <div className="flex flex-col mx-auto pb-32">
+        <div className="md:grid grid-cols-3 gap-6 mx-auto">
+          <div className="relative">
+            <img src={frame} alt="" />
+            <img src={nateImg} alt="" className="absolute top-10 left-32" />
+          </div>
+        </div>
       </div>
       <div className="flex flex-col mx-auto pb-32">
         <div className="md:grid grid-cols-3 gap-6 mx-auto">

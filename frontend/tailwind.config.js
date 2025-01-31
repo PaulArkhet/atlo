@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
   	extend: {
+		keyframes:{
+			"rectangle-in":{
+				'0%':{transform: 'translateY(-100px)'},
+				'100%':{transform: 'translateY(0)'}
+			},
+		},
+		animation:{
+			"rectangle-in": "rectangle-in 0.5s ease-in "
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
