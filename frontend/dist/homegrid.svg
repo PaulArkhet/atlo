@@ -1,0 +1,35 @@
+<svg width="550" height="532" viewBox="0 0 550 532" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<mask id="mask0_1907_2891" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-6" y="-25" width="556" height="557">
+<circle cx="272.036" cy="253.405" r="277.872" fill="url(#paint0_radial_1907_2891)"/>
+</mask>
+<g mask="url(#mask0_1907_2891)">
+<line x1="396.176" y1="1.32629" x2="0.896127" y2="211.5" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="415.502" y1="37.6739" x2="20.2223" y2="247.848" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="434.829" y1="74.0216" x2="39.549" y2="284.196" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="454.155" y1="110.369" x2="58.8751" y2="320.543" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="473.482" y1="146.717" x2="78.2018" y2="356.891" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="492.808" y1="183.064" x2="97.528" y2="393.238" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="512.134" y1="219.412" x2="116.854" y2="429.586" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="531.461" y1="255.759" x2="136.181" y2="465.934" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="550.787" y1="292.107" x2="155.507" y2="502.281" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="570.113" y1="328.455" x2="174.833" y2="538.629" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="567.861" y1="206.552" x2="168.973" y2="3.30894" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="549.172" y1="243.232" x2="150.284" y2="39.9881" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="530.483" y1="279.911" x2="131.595" y2="76.6678" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="511.793" y1="316.591" x2="112.906" y2="113.347" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="493.104" y1="353.27" x2="94.2166" y2="150.026" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="474.415" y1="389.949" x2="75.5276" y2="186.705" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="455.727" y1="426.629" x2="56.8386" y2="223.385" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="437.038" y1="463.308" x2="38.1497" y2="260.064" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="418.348" y1="499.987" x2="19.4602" y2="296.743" stroke="#FFBEFC" stroke-width="2.57289"/>
+<line x1="399.66" y1="536.667" x2="0.771728" y2="333.423" stroke="#FFBEFC" stroke-width="2.57289"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1907_2891" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(272.036 253.405) rotate(90) scale(218.695)">
+<stop stop-color="#D9D9D9"/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

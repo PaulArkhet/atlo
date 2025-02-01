@@ -132,16 +132,16 @@ function RouteComponent() {
               alt=""
               className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
             />
-            <div className="nunitofont absolute bottom-56 left-28 md:text-[32px] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-32 left-[5.5rem] md:bottom-56 md:left-28 text-2xl md:text-[32px] font-bold tracking-wider">
               VITOR AKIYAMA
             </div>
-            <div className="nunitofont absolute bottom-44 left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-[6.5rem] left-28 md:bottom-44 md:left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
               Founding Engineer
             </div>
-            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-20 left-28 md:bottom-[8rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
               Favourite question:
             </div>
-            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-16 left-28 md:bottom-[5.5rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
               Answer to question
             </div>
             <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
@@ -153,16 +153,16 @@ function RouteComponent() {
               alt=""
               className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
             />
-            <div className="nunitofont absolute bottom-56 left-40 md:text-[32px] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-32 left-[8.5rem] md:bottom-56 md:left-40 text-2xl md:text-[32px] font-bold tracking-wider">
               PAUL KIM
             </div>
-            <div className="nunitofont absolute bottom-44 left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-[6.5rem] left-[7.5rem] md:bottom-44 md:left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
               Founding Engineer
             </div>
-            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-20 left-28 md:bottom-[8rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
               Favourite question:
             </div>
-            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-16 left-28 md:bottom-[5.5rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
               Answer to question
             </div>
             <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
@@ -174,16 +174,16 @@ function RouteComponent() {
               alt=""
               className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
             />
-            <div className="nunitofont absolute bottom-56 left-[8.5rem] md:text-[32px] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-32 left-28 text-2xl md:bottom-56 md:left-[8.5rem] md:text-[32px] font-bold tracking-wider">
               SELINA PARK
             </div>
-            <div className="nunitofont absolute bottom-44 left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-[6.5rem] left-28 md:bottom-44 md:left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
               Founding Engineer
             </div>
-            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-20 left-28 md:bottom-[8rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
               Favourite question:
             </div>
-            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-16 left-28 md:bottom-[5.5rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
               Answer to question
             </div>
             <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
@@ -195,16 +195,16 @@ function RouteComponent() {
               alt=""
               className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
             />
-            <div className="nunitofont absolute bottom-56 left-24 md:text-[32px] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-32 left-20 text-2xl md:bottom-56 md:left-24 md:text-[32px] font-bold tracking-wider">
               STEPHANIE LOUIE
             </div>
-            <div className="nunitofont absolute bottom-44 left-40 md:text-[22px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-[6.5rem] left-[7.5rem] md:bottom-44 md:left-40 md:text-[22px] text-[#B2B2B2] tracking-wider">
               Product Designer
             </div>
-            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+            <div className="nunitofont absolute bottom-20 left-28 md:bottom-[8rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
               Favourite question:
             </div>
-            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+            <div className="nunitofont absolute bottom-16 left-28 md:bottom-[5.5rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
               Answer to question
             </div>
             <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
