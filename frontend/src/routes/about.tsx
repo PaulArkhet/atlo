@@ -13,6 +13,7 @@ import vitorImg from "/aboutvitorimg.png";
 import paulImg from "/aboutpaulimg.png";
 import selinaImg from "/aboutselinaimg.png";
 import stephImg from "/aboutstephimg.png";
+import linkedIn from "/aboutlinkedin.svg";
 
 export const Route = createFileRoute("/about")({
   component: RouteComponent,
@@ -84,18 +85,130 @@ function RouteComponent() {
         <div className="md:grid grid-cols-3 gap-6 mx-auto">
           <div className="relative">
             <img src={frame} alt="" />
-            <img src={nateImg} alt="" className="absolute top-10 left-32" />
+            <img
+              src={nateImg}
+              alt=""
+              className="absolute top-2 left-[4.5rem] md:top-10 md:left-32"
+            />
+            <div className="nunitofont absolute bottom-36 left-[6.5rem] md:bottom-56 md:left-32 text-2xl md:text-[32px] font-bold tracking-wider">
+              NATHAN NGAI
+            </div>
+            <div className="nunitofont absolute bottom-[7.5rem] left-32 md:bottom-44 md:left-40 md:text-[22px] text-[#B2B2B2] tracking-wider">
+              Founder & CEO
+            </div>
+            <div className="nunitofont absolute bottom-24 left-28 md:bottom-[8rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+              Favourite question:
+            </div>
+            <div className="nunitofont absolute bottom-20 left-28 md:bottom-[5.5rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+              Answer to question
+            </div>
+            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
           </div>
-        </div>
-      </div>
-      <div className="flex flex-col mx-auto pb-32">
-        <div className="md:grid grid-cols-3 gap-6 mx-auto">
-          <img src={nate} alt="" />
-          <img src={randall} alt="" />
-          <img src={vitor} alt="" />
-          <img src={paul} alt="" />
-          <img src={selina} alt="" />
-          <img src={steph} alt="" />
+          <div className="relative">
+            <img src={frame} alt="" />
+            <img
+              src={randallImg}
+              alt=""
+              className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
+            />
+            <div className="nunitofont absolute bottom-32 left-[6rem] md:bottom-56 md:left-32 text-2xl md:text-[32px] font-bold tracking-wider">
+              RANDALL HERD
+            </div>
+            <div className="nunitofont absolute bottom-[6.5rem] left-32 md:bottom-44 md:left-40 md:text-[22px] text-[#B2B2B2] tracking-wider">
+              VP of Marketing
+            </div>
+            <div className="nunitofont absolute bottom-20 left-28 md:bottom-[8rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+              Favourite question:
+            </div>
+            <div className="nunitofont absolute bottom-16 left-28 md:bottom-[5.5rem] md:left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+              Answer to question
+            </div>
+            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+          </div>
+          <div className="relative">
+            <img src={frame} alt="" />
+            <img
+              src={vitorImg}
+              alt=""
+              className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
+            />
+            <div className="nunitofont absolute bottom-56 left-28 md:text-[32px] font-bold tracking-wider">
+              VITOR AKIYAMA
+            </div>
+            <div className="nunitofont absolute bottom-44 left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
+              Founding Engineer
+            </div>
+            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+              Favourite question:
+            </div>
+            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+              Answer to question
+            </div>
+            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+          </div>
+          <div className="relative">
+            <img src={frame} alt="" />
+            <img
+              src={paulImg}
+              alt=""
+              className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
+            />
+            <div className="nunitofont absolute bottom-56 left-40 md:text-[32px] font-bold tracking-wider">
+              PAUL KIM
+            </div>
+            <div className="nunitofont absolute bottom-44 left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
+              Founding Engineer
+            </div>
+            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+              Favourite question:
+            </div>
+            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+              Answer to question
+            </div>
+            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+          </div>
+          <div className="relative">
+            <img src={frame} alt="" />
+            <img
+              src={selinaImg}
+              alt=""
+              className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
+            />
+            <div className="nunitofont absolute bottom-56 left-[8.5rem] md:text-[32px] font-bold tracking-wider">
+              SELINA PARK
+            </div>
+            <div className="nunitofont absolute bottom-44 left-36 md:text-[22px] text-[#B2B2B2] tracking-wider">
+              Founding Engineer
+            </div>
+            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+              Favourite question:
+            </div>
+            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+              Answer to question
+            </div>
+            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+          </div>
+          <div className="relative">
+            <img src={frame} alt="" />
+            <img
+              src={stephImg}
+              alt=""
+              className="absolute top-5 left-[4.5rem] md:top-10 md:left-32"
+            />
+            <div className="nunitofont absolute bottom-56 left-24 md:text-[32px] font-bold tracking-wider">
+              STEPHANIE LOUIE
+            </div>
+            <div className="nunitofont absolute bottom-44 left-40 md:text-[22px] text-[#B2B2B2] tracking-wider">
+              Product Designer
+            </div>
+            <div className="nunitofont absolute bottom-[8rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] font-bold tracking-wider">
+              Favourite question:
+            </div>
+            <div className="nunitofont absolute bottom-[5.5rem] left-[8.5rem] md:text-[24px] text-[#B2B2B2] tracking-wider">
+              Answer to question
+            </div>
+            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+          </div>
         </div>
       </div>
     </main>

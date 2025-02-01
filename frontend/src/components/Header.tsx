@@ -29,7 +29,7 @@ export default function Header() {
       <div className="bg-gradient-to-r from-[#8778D7] via-[#2F5D5D] to-[#2A3349] h-[70px] w-screen">
         <div className="bg-[#242424] text-white p-3 xl:flex justify-between tracking-widest text-center">
           <div className="flex justify-between xl:block">
-            <Link to="/" className="flex">
+            <Link to="/" className="flex" onClick={slideToggle}>
               <img
                 src={logo}
                 alt="Arkhet logo"
@@ -78,18 +78,13 @@ export default function Header() {
               PRICING
             </Link>
             <div className="flex flex-col">
-              <a
-                href="https://arkhet-pilot.fly.dev/"
-                className="xl:hidden nunitofont p-2"
-              >
-                LOGIN
-              </a>
-              <a
-                href="https://arkhet-pilot.fly.dev/signup"
+              <Link
+                to="/register"
                 className="xl:hidden nunitofont py-2 px-10 mx-10 rounded bg-[#9253E4]"
+                onClick={slideToggle}
               >
                 SIGN UP
-              </a>
+              </Link>
             </div>
           </div>
           <div className="xl:flex">
@@ -99,12 +94,12 @@ export default function Header() {
             >
               LOGIN
             </a>
-            <a
-              href="https://arkhet-pilot.fly.dev/signup"
+            <Link
+              to="/register"
               className="hidden xl:block nunitofont py-2 px-10 mx-10 rounded bg-[#9253E4]"
             >
               SIGN UP
-            </a>
+            </Link>
           </div>
         </div>
       </div>
