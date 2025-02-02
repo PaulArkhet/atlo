@@ -43,7 +43,7 @@ function RouteComponent() {
             <img
               src={benefits}
               alt=""
-              className="absolute top-40 right-5 md:top-5 md:right-24 mx-auto"
+              className="absolute top-40 right-5 lg:top-4 lg:right-[4.3rem] 2xl:top-5 2xl:right-24 mx-auto"
             />
             <div className="absolute top-5 left-5 md:top-20 md:left-11 text-xl md:text-5xl font-bold">
               Benefits
@@ -69,21 +69,21 @@ function RouteComponent() {
             <img
               src={ellipse}
               alt=""
-              className="absolute top-5 left-20 md:bottom-40 md:left-32 w-[200px] md:w-auto"
+              className="absolute top-5 left-20 2xl:bottom-40 2xl:left-32 w-[200px] lg:w-[400px] 2xl:w-auto"
             />
             <img
               src={layersVertical}
               alt=""
-              className="absolute top-0 left-32 md:bottom-40 md:left-60 w-[100px] md:w-auto"
+              className="absolute top-0 left-32 2xl:bottom-40 2xl:left-60 w-[100px] lg:w-[250px] 2xl:w-auto"
             />
-            <div className="md:text-[40px] absolute bottom-20 md:bottom-28 left-5 font-semibold">
+            <div className="2xl:text-[40px] absolute bottom-20 2xl:bottom-28 left-2 lg:left-5 font-semibold">
               100% accurate to your design
             </div>
-            <div className="hidden md:block absolute bottom-5 left-5 md:text-[28px] text-[#D9D9D9]">
+            <div className="hidden md:block absolute bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
               Prototypes adhere to the requirements of your design, <br /> every
               time. Import your own or try something new.
             </div>
-            <div className="md:hidden absolute bottom-2 left-5 ">
+            <div className="md:hidden absolute bottom-2 left-2 ">
               Prototypes adhere to the requirements of your design, every time.
               Import your own or try something new.
             </div>
@@ -93,17 +93,17 @@ function RouteComponent() {
             <img
               src={ellipse}
               alt=""
-              className="absolute top-5 left-20 md:bottom-40 md:left-32 w-[200px] md:w-auto"
+              className="absolute top-5 left-20 2xl:bottom-40 2xl:left-32 w-[200px] lg:w-[400px] 2xl:w-auto"
             />
             <img
               src={calibrate}
               alt=""
-              className="absolute top-5 left-20 md:left-28 w-[200px] md:w-auto"
+              className="absolute top-5 left-20 2xl:left-28 w-[200px] lg:w-[400px] 2xl:w-auto"
             />
-            <div className="md:text-[40px] absolute bottom-[5rem] md:bottom-28 left-5 font-semibold">
+            <div className="2xl:text-[40px] absolute bottom-16 lg:bottom-[5rem] 2xl:bottom-28 left-5 font-semibold">
               Calibrate, visually
             </div>
-            <div className="absolute bottom-5 left-5 md:text-[28px] text-[#D9D9D9]">
+            <div className="absolute bottom-3 lg:bottom-12 2xl:bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
               Modify components, colours, and layout at any time. Then test
               again.
             </div>
@@ -111,20 +111,20 @@ function RouteComponent() {
         </div>
       </div>
       <div className="flex flex-col mx-auto">
-        <div className="relative pt-10 mx-auto mb-52 md:mb-0">
+        <div className="relative pt-10 mx-auto mb-52 lg:mb-16 2xl:mb-0">
           <img src={background2} alt="" className="mx-auto" />
           <img
             src={interactiveImg}
             alt=""
-            className="absolute top-44 right-24 md:top-14 md:right-[12rem] w-[200px] md:w-auto"
+            className="absolute top-48 right-16 lg:right-24 md:top-14 2xl:right-[12rem] w-[200px] lg:w-[500px] 2xl:w-auto"
           />
-          <div className="absolute top-14 left-5 md:top-20 md:left-14 text-xl md:text-[64px] font-bold">
+          <div className="absolute top-14 left-5 lg:top-20 md:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
             Interactive
           </div>
-          <div className="absolute top-14 left-32 md:top-40 md:left-14 text-xl md:text-[64px] font-bold">
+          <div className="absolute top-14 left-32 lg:top-36 2xl:top-40 lg:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
             Prototyping
           </div>
-          <div className="absolute top-24 left-5 md:top-64 md:left-14 md:text-[28px] md:w-[650px]">
+          <div className="absolute top-24 left-5 lg:top-56 2xl:top-64 md:left-14 lg: text-lg 2xl:text-[28px] lg:w-[420px] 2xl:w-[650px]">
             Design your user experience, visually. An intuitive drag-and-drop
             interface makes it easy to turn your ideas into an interactive
             prototype, in minutes.
@@ -143,12 +143,12 @@ function RouteComponent() {
             <img
               src={realistic}
               alt=""
-              className="absolute top-0 left-20 md:top-[-5%] md:left-20 w-[200px] md:w-auto"
+              className="absolute top-0 left-14 lg:left-0 lg:top-[-5%] 2xl:top-[-5%] 2xl:left-20 w-[200px] lg:w-auto"
             />
-            <div className="absolute bottom-36 md:bottom-56 left-7 text-[20px] md:left-7 md:text-[40px] font-semibold">
+            <div className="absolute bottom-32 lg:bottom-24 left-4 2xl:bottom-56 lg:left-7 text-[20px] md:left-7 2xl:text-[40px] font-semibold">
               Realistic experiments provide better data
             </div>
-            <div className="absolute bottom-10 left-7 md:text-[28px]">
+            <div className="absolute bottom-6 left-4 lg:left-7 2xl:text-[28px]">
               Interactive prototypes are no longer exclusive to teams that can
               afford to navigate the demands of regular prototyping.
             </div>
@@ -159,12 +159,12 @@ function RouteComponent() {
             <img
               src={database}
               alt=""
-              className="absolute top-7 left-14 md:left-24 w-[250px] md:w-auto"
+              className="absolute top-7 left-6 lg:left-9 2xl:left-24 w-[250px] md:w-auto"
             />
-            <div className="absolute bottom-32 md:bottom-56 left-7 text-[20px] md:text-[40px] font-semibold">
+            <div className="absolute bottom-32 2xl:bottom-56 left-7 text-[20px] 2xl:text-[40px] font-semibold">
               Your Data, Your Experiment
             </div>
-            <div className="absolute bottom-20 md:bottom-32 left-7 md:text-[28px]">
+            <div className="absolute bottom-20 2xl:bottom-32 left-7 2xl:text-[28px]">
               Import and test with your data during development, not after.
             </div>
           </div>
@@ -174,12 +174,12 @@ function RouteComponent() {
             <img
               src={visual}
               alt=""
-              className="absolute top-4 left-10 md:left-28 w-[250px] md:w-auto"
+              className="absolute top-4 left-10 2xl:left-28 w-[250px] lg:w-auto"
             />
-            <div className="absolute bottom-32 md:bottom-56 left-7 text-[20px] md:text-[40px] font-semibold">
+            <div className="absolute bottom-32 2xl:bottom-56 left-7 text-[20px] 2xl:text-[40px] font-semibold">
               Drag-and-Drop visual interface
             </div>
-            <div className="absolute bottom-20 left-7 md:text-[28px]">
+            <div className="absolute bottom-20 left-7 2xl:text-[28px]">
               Generate interactive prototypes without writing (or rewriting) a
               single prompt.
             </div>

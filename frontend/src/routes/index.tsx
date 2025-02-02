@@ -34,7 +34,7 @@ function RouteComponent() {
       <img src={blueCloud} alt="" className="absolute top-0 right-0" />
       <img src={purpleCloud} alt="" className="absolute top-0 left-0" />
       <div className="z-0 absolute top-28 md:top-56 left-0">
-        <div className="relative pt-80 w-screen md:w-[98vw]">
+        <div className="relative pt-80 w-screen sm:w-[98vw]">
           <img src={ship1} alt="" className="mx-auto w-[40px] md:w-auto" />
           <img
             src={largePlanet}
@@ -169,7 +169,6 @@ function RouteComponent() {
               Upload or create your style guide to ensure every prototype
               generated matches your product’s look and feel perfectly.
             </div>
-            <div>look and feel perfectly.</div>
           </div>
           <div className="flex flex-col mx-auto">
             <div className="relative mx-auto">
@@ -212,7 +211,7 @@ function RouteComponent() {
             <div>Start prototyping with Arkhet </div>
           </div>
           <div className="py-7 md:text-2xl">
-            <div className=" z-30">
+            <div className=" z-20">
               Ready to start building? Register today.
             </div>
           </div>
@@ -225,7 +224,7 @@ function RouteComponent() {
         <img
           src={ship2}
           alt=""
-          className="absolute bottom-[-2%] left-0 md:bottom-0 md:left-auto md:right-20 z-0"
+          className="absolute bottom-[-2%] sm:bottom-[-4%] lg:right-0 2xl:bottom-0 2xl:right-20 z-0"
         />
         <img
           src={bluePlanet2}

@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   function slideToggle() {
-    if (window.innerWidth < 700) setNavVisible(!navVisible);
+    if (window.innerWidth < 721) setNavVisible(!navVisible);
     console.log("toggle running");
   }
 
@@ -32,7 +32,7 @@ export default function Header() {
             <Link
               to="/"
               className="flex"
-              onClick={() => window.innerWidth < 700 && setNavVisible(false)}
+              onClick={() => window.innerWidth < 721 && setNavVisible(false)}
             >
               <img
                 src={logo}
