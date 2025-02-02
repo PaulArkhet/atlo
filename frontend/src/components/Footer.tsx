@@ -15,11 +15,14 @@ export default function Footer() {
             <div className="nunitofont p-2 text-xl">A R K H E T</div>
           </div>
           <div className="py-2">
-            <div>Create software prototypes in minutes using </div>
-            <div>generative AI—no design or technical expertise</div>
-            <div> required.</div>
+            <div className="lg:w-[250px] 2xl:w-[350px]">
+              Create software prototypes in minutes using generative AI—no
+              design or technical expertise required.
+            </div>
           </div>
-          <div>Register now</div>
+          <Link to="/register" className="font-bold">
+            Register now
+          </Link>
         </div>
         <div className="pb-10 md:pb-0 lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Product</div>

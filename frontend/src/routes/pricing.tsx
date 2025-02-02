@@ -65,7 +65,7 @@ function RouteComponent() {
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">Another line of info</div>
             </div>
-            <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest">
+            <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
               GET STARTED
             </div>
           </div>
@@ -93,7 +93,7 @@ function RouteComponent() {
                 <img src={rectangle} alt="" className="mr-2 w-[15px]" />
                 <div className="py-2">Downloadable react files</div>
               </div>
-              <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest">
+              <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
                 GET STARTED
               </div>
             </div>
@@ -117,7 +117,7 @@ function RouteComponent() {
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">Downloadable react files</div>
             </div>
-            <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest">
+            <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
               GET STARTED
             </div>
           </div>
