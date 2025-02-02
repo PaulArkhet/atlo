@@ -80,7 +80,9 @@ function RouteComponent() {
               <div className="px-5 py-3 bg-[#9253E4] tracking-widest my-2 text-center">
                 <Link to="/thankyoudemo">BOOK A DEMO</Link>
               </div>
-              <div className="text-xl text-center">Ready to buy instead?</div>
+              <Link to="/pricing" className="text-xl text-center">
+                Ready to buy instead?
+              </Link>
             </form>
           </div>
         </div>

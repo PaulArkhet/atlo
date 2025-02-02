@@ -63,9 +63,13 @@ function RouteComponent() {
           </div>
           <div className="flex flex-col mx-auto">
             <div className="md:flex mx-auto tracking-widest">
-              <div className="rounded bg-gradient-to-r from-[#6754B7] to-[#B754B3] py-2 w-[250px] m-3 z-40">
-                <Link to="/register">SIGN UP</Link>
-              </div>
+              <Link
+                to="/register"
+                className="rounded bg-gradient-to-r from-[#6754B7] to-[#B754B3] py-2 px-[90px] m-3 z-40"
+              >
+                SIGN UP
+              </Link>
+              <div className="my-5 md:my-0"></div>
               <Link to="/schedule">
                 <div className="border py-2 w-[250px] m-3">SCHEDULE A DEMO</div>
               </Link>

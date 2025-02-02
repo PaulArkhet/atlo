@@ -37,26 +37,28 @@ function RouteComponent() {
             design, Arkhet makes it easier to validate product ideas.
           </div>
         </div>
-        <div className="relative">
-          <img src={background1} alt="" className="mx-auto mb-40 md:mb-0" />
-          <img
-            src={benefits}
-            alt=""
-            className="absolute top-40 right-5 md:top-5 md:right-44 mx-auto"
-          />
-          <div className="absolute top-5 left-5 md:top-20 md:left-32 text-xl md:text-5xl font-bold">
-            Benefits
-          </div>
-          <div className="hidden md:block absolute top-10 left-5 md:top-40 md:left-32 text-left md:text-xl">
-            Produce higher quality prototypes in significantly less <br /> time
-            in a shift for the entire industry. Arkhet makes it <br /> easier to
-            conduct rapid prototyping with higher quality <br /> and fewer
-            resources.
-          </div>
-          <div className="md:hidden absolute top-14 left-5 text-left">
-            Produce higher quality prototypes in significantly less time in a
-            shift for the entire industry. Arkhet makes it easier to conduct
-            rapid prototyping with higher quality and fewer resources.
+        <div className="flex flex-col mx-auto">
+          <div className="relative mx-auto">
+            <img src={background1} alt="" className="mx-auto mb-40 md:mb-0" />
+            <img
+              src={benefits}
+              alt=""
+              className="absolute top-40 right-5 md:top-5 md:right-24 mx-auto"
+            />
+            <div className="absolute top-5 left-5 md:top-20 md:left-11 text-xl md:text-5xl font-bold">
+              Benefits
+            </div>
+            <div className="hidden md:block absolute top-10 left-5 md:top-40 md:left-11 text-left md:text-xl">
+              Produce higher quality prototypes in significantly less <br />{" "}
+              time in a shift for the entire industry. Arkhet makes it <br />{" "}
+              easier to conduct rapid prototyping with higher quality <br /> and
+              fewer resources.
+            </div>
+            <div className="md:hidden absolute top-14 left-5 text-left">
+              Produce higher quality prototypes in significantly less time in a
+              shift for the entire industry. Arkhet makes it easier to conduct
+              rapid prototyping with higher quality and fewer resources.
+            </div>
           </div>
         </div>
       </div>
@@ -108,23 +110,25 @@ function RouteComponent() {
           </div>
         </div>
       </div>
-      <div className="relative pt-10 mx-auto mb-52 md:mb-0">
-        <img src={background2} alt="" className="mx-auto" />
-        <img
-          src={interactiveImg}
-          alt=""
-          className="absolute top-44 right-24 md:top-14 md:right-[21rem] w-[200px] md:w-auto"
-        />
-        <div className="absolute top-14 left-5 md:top-20 md:left-48 text-xl md:text-[64px] font-bold">
-          Interactive
-        </div>
-        <div className="absolute top-14 left-32 md:top-40 md:left-48 text-xl md:text-[64px] font-bold">
-          Prototyping
-        </div>
-        <div className="absolute top-24 left-5 md:top-64 md:left-48 md:text-[28px] md:w-[650px]">
-          Design your user experience, visually. An intuitive drag-and-drop
-          interface makes it easy to turn your ideas into an interactive
-          prototype, in minutes.
+      <div className="flex flex-col mx-auto">
+        <div className="relative pt-10 mx-auto mb-52 md:mb-0">
+          <img src={background2} alt="" className="mx-auto" />
+          <img
+            src={interactiveImg}
+            alt=""
+            className="absolute top-44 right-24 md:top-14 md:right-[12rem] w-[200px] md:w-auto"
+          />
+          <div className="absolute top-14 left-5 md:top-20 md:left-14 text-xl md:text-[64px] font-bold">
+            Interactive
+          </div>
+          <div className="absolute top-14 left-32 md:top-40 md:left-14 text-xl md:text-[64px] font-bold">
+            Prototyping
+          </div>
+          <div className="absolute top-24 left-5 md:top-64 md:left-14 md:text-[28px] md:w-[650px]">
+            Design your user experience, visually. An intuitive drag-and-drop
+            interface makes it easy to turn your ideas into an interactive
+            prototype, in minutes.
+          </div>
         </div>
       </div>
       <div className="flex flex-col mx-auto">

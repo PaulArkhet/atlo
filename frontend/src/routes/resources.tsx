@@ -125,32 +125,35 @@ function RouteComponent() {
           </div>
         </div>
       </div>
-      <div className="hidden md:block relative mb-20">
-        <img src={background1} alt="" className="mx-auto" />
-        <div className="nunitofont tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-14 lg:left-32 lg:text-3xl text-[#D9D9D9]">
-          DECEMBER 11, 2024
-        </div>
-        <div className="lg:block absolute top-32 left-32 text-6xl font-bold w-[550px]">
-          Blog title, latest post featured here.
-        </div>
-        <div className="lg:absolute top-72 left-32 text-left lg:text-3xl text-[#D9D9D9] lg:w-[500px]">
-          <div className="ml-2 mb-3 w-[650px]">
-            Add a quick summary of what the blog post is about. Clicking this
-            whole section takes user to the full blog post. Keep this 2-4 lines.
+      <div className="flex flex-col mx-auto">
+        <div className="hidden md:block relative mb-20 mx-auto">
+          <img src={background1} alt="" className="mx-auto" />
+          <div className="nunitofont tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-14 lg:left-11 lg:text-3xl text-[#D9D9D9]">
+            DECEMBER 11, 2024
           </div>
-          <div className="flex mt-5">
-            <img src={clock} alt="" />
-            <div className="text-[24px]">3 minute read</div>
+          <div className="lg:block absolute top-32 left-11 text-6xl font-bold w-[550px]">
+            Blog title, latest post featured here.
           </div>
-        </div>
-        <div className="lg:absolute top-[-5%] right-44 mb-40 md:mb-0">
-          <div className="relative top-2 right-0">
-            <img src={fadingBorder} alt="" className="" />
-            <img
-              src={blogImg}
-              alt=""
-              className="absolute top-4 left-0 md:left-4 w-[90%] md:w-auto"
-            />
+          <div className="lg:absolute top-72 left-11 text-left lg:text-3xl text-[#D9D9D9] lg:w-[500px]">
+            <div className="ml-2 mb-3 w-[650px]">
+              Add a quick summary of what the blog post is about. Clicking this
+              whole section takes user to the full blog post. Keep this 2-4
+              lines.
+            </div>
+            <div className="flex mt-5">
+              <img src={clock} alt="" />
+              <div className="text-[24px]">3 minute read</div>
+            </div>
+          </div>
+          <div className="lg:absolute top-[-5%] right-20 mb-40 md:mb-0">
+            <div className="relative top-2 right-0">
+              <img src={fadingBorder} alt="" className="" />
+              <img
+                src={blogImg}
+                alt=""
+                className="absolute top-4 left-0 md:left-4 w-[90%] md:w-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

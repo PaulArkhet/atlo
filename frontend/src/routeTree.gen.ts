@@ -11,6 +11,7 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ThankyousubscribeImport } from './routes/thankyousubscribe'
 import { Route as ThankyouregisterImport } from './routes/thankyouregister'
 import { Route as ThankyoudemoImport } from './routes/thankyoudemo'
 import { Route as SubscribeImport } from './routes/subscribe'
@@ -27,6 +28,12 @@ import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const ThankyousubscribeRoute = ThankyousubscribeImport.update({
+  id: '/thankyousubscribe',
+  path: '/thankyousubscribe',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ThankyouregisterRoute = ThankyouregisterImport.update({
   id: '/thankyouregister',
@@ -214,6 +221,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThankyouregisterImport
       parentRoute: typeof rootRoute
     }
+    '/thankyousubscribe': {
+      id: '/thankyousubscribe'
+      path: '/thankyousubscribe'
+      fullPath: '/thankyousubscribe'
+      preLoaderRoute: typeof ThankyousubscribeImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -234,6 +248,7 @@ export interface FileRoutesByFullPath {
   '/subscribe': typeof SubscribeRoute
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
+  '/thankyousubscribe': typeof ThankyousubscribeRoute
 }
 
 export interface FileRoutesByTo {
@@ -251,6 +266,7 @@ export interface FileRoutesByTo {
   '/subscribe': typeof SubscribeRoute
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
+  '/thankyousubscribe': typeof ThankyousubscribeRoute
 }
 
 export interface FileRoutesById {
@@ -269,6 +285,7 @@ export interface FileRoutesById {
   '/subscribe': typeof SubscribeRoute
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
+  '/thankyousubscribe': typeof ThankyousubscribeRoute
 }
 
 export interface FileRouteTypes {
@@ -288,6 +305,7 @@ export interface FileRouteTypes {
     | '/subscribe'
     | '/thankyoudemo'
     | '/thankyouregister'
+    | '/thankyousubscribe'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -304,6 +322,7 @@ export interface FileRouteTypes {
     | '/subscribe'
     | '/thankyoudemo'
     | '/thankyouregister'
+    | '/thankyousubscribe'
   id:
     | '__root__'
     | '/'
@@ -320,6 +339,7 @@ export interface FileRouteTypes {
     | '/subscribe'
     | '/thankyoudemo'
     | '/thankyouregister'
+    | '/thankyousubscribe'
   fileRoutesById: FileRoutesById
 }
 
@@ -338,6 +358,7 @@ export interface RootRouteChildren {
   SubscribeRoute: typeof SubscribeRoute
   ThankyoudemoRoute: typeof ThankyoudemoRoute
   ThankyouregisterRoute: typeof ThankyouregisterRoute
+  ThankyousubscribeRoute: typeof ThankyousubscribeRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -355,6 +376,7 @@ const rootRouteChildren: RootRouteChildren = {
   SubscribeRoute: SubscribeRoute,
   ThankyoudemoRoute: ThankyoudemoRoute,
   ThankyouregisterRoute: ThankyouregisterRoute,
+  ThankyousubscribeRoute: ThankyousubscribeRoute,
 }
 
 export const routeTree = rootRoute
@@ -380,7 +402,8 @@ export const routeTree = rootRoute
         "/schedule",
         "/subscribe",
         "/thankyoudemo",
-        "/thankyouregister"
+        "/thankyouregister",
+        "/thankyousubscribe"
       ]
     },
     "/": {
@@ -424,6 +447,9 @@ export const routeTree = rootRoute
     },
     "/thankyouregister": {
       "filePath": "thankyouregister.tsx"
+    },
+    "/thankyousubscribe": {
+      "filePath": "thankyousubscribe.tsx"
     }
   }
 }

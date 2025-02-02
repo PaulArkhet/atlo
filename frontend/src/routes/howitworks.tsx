@@ -68,29 +68,29 @@ function RouteComponent() {
                 <img
                   src={capy1}
                   alt=""
-                  className="absolute top-6 left-0 md:left-5 w-[90%] md:w-auto"
+                  className="absolute top-3 left-4 md:left-5 md:top-6 w-[90%] md:w-auto"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="md:p-10">
-        <div className="relative md:mb-20">
+      <div className="flex flex-col mx-auto z-10 md:p-10">
+        <div className="relative md:mb-20 mx-auto">
           <img src={background2} alt="" className="mx-auto" />
-          <div className="nunitofont tracking-[0.4rem] absolute top-5 right-[18rem] md:right-5 text-sm lg:top-14 lg:right-[34rem] lg:text-3xl text-[#D9D9D9]">
+          <div className="nunitofont tracking-[0.4rem] absolute top-5 right-[18rem] md:right-5 text-sm lg:top-14 lg:right-[29rem] lg:text-3xl text-[#D9D9D9]">
             STEP 2
           </div>
-          <div className="hidden lg:block absolute top-32 right-[17rem] text-6xl font-bold">
+          <div className="hidden lg:block absolute top-32 right-[12rem] text-6xl font-bold">
             Add your style{" "}
           </div>
-          <div className="hidden lg:block absolute top-48 right-[33rem] text-6xl font-bold">
+          <div className="hidden lg:block absolute top-48 right-[28rem] text-6xl font-bold">
             guide{" "}
           </div>
           <div className="lg:hidden absolute top-12 left-5 font-bold">
             Add your styleguide
           </div>
-          <div className="lg:absolute top-72 right-48 text-left lg:text-3xl text-[#D9D9D9] lg:w-[500px]">
+          <div className="lg:absolute top-72 right-[7rem] text-left lg:text-3xl text-[#D9D9D9] lg:w-[500px]">
             <div className="flex">
               <img src={checkmark} alt="" className="" />
               <div className="ml-2 mb-3">
@@ -110,20 +110,20 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute top-[-5%] left-10 mb-20 md:mb-0">
+          <div className="lg:absolute top-[-5%] left-10 md:left-[-5%] mb-20 md:mb-0">
             <div className="relative top-0 right-0">
               <img src={fadingborder} alt="" className="md:w-[1050px]" />
               <img
                 src={step2img}
                 alt=""
-                className="absolute top-6 left-0 md:left-5 w-[90%] md:w-auto"
+                className="absolute top-3 left-4 md:left-5 md:top-6 w-[90%] md:w-auto"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="md:p-10">
-        <div className="relative mb-20">
+      <div className="flex flex-col mx-auto z-10 md:p-10">
+        <div className="relative mb-20 mx-auto">
           <img src={background1} alt="" className="mx-auto" />
           <div className="nunitofont tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-14 lg:left-24 lg:text-3xl text-[#D9D9D9]">
             STEP 3
@@ -159,12 +159,12 @@ function RouteComponent() {
             </div>
           </div>
           <div className="lg:absolute top-[-5%] right-10 mb-40 md:mb-0">
-            <div className="relative top-0 right-0">
+            <div className="relative top-0 md:right-[-5%]">
               <img src={fadingborder} alt="" className="md:w-[1050px]" />
               <img
                 src={step3img}
                 alt=""
-                className="absolute top-6 left-0 md:left-5 w-[90%] md:w-auto"
+                className="absolute top-3 left-4 md:top-6 md:left-5 w-[90%] md:w-auto"
               />
             </div>
           </div>
