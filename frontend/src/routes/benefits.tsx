@@ -43,7 +43,7 @@ function RouteComponent() {
             <img
               src={benefits}
               alt=""
-              className="absolute top-40 right-5 lg:top-4 lg:right-[4.3rem] 2xl:top-5 2xl:right-24 mx-auto"
+              className="absolute top-44 right-5 lg:top-4 lg:right-[4.3rem] 2xl:top-5 2xl:right-24 mx-auto"
             />
             <div className="absolute top-5 left-5 md:top-20 md:left-11 text-xl md:text-5xl font-bold">
               Benefits
@@ -116,7 +116,7 @@ function RouteComponent() {
           <img
             src={interactiveImg}
             alt=""
-            className="absolute top-48 right-16 lg:right-24 md:top-14 2xl:right-[12rem] w-[200px] lg:w-[500px] 2xl:w-auto"
+            className="absolute top-[12.5rem] right-16 lg:right-24 md:top-14 2xl:right-[12rem] w-[200px] lg:w-[500px] 2xl:w-auto"
           />
           <div className="absolute top-14 left-5 lg:top-20 md:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
             Interactive
@@ -161,10 +161,10 @@ function RouteComponent() {
               alt=""
               className="absolute top-7 left-6 lg:left-9 2xl:left-24 w-[250px] md:w-auto"
             />
-            <div className="absolute bottom-32 2xl:bottom-56 left-7 text-[20px] 2xl:text-[40px] font-semibold">
+            <div className="absolute bottom-20 left-3 lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
               Your Data, Your Experiment
             </div>
-            <div className="absolute bottom-20 2xl:bottom-32 left-7 2xl:text-[28px]">
+            <div className="absolute bottom-6 left-3 lg:bottom-20 2xl:bottom-32 lg:left-7 2xl:text-[28px]">
               Import and test with your data during development, not after.
             </div>
           </div>
@@ -176,10 +176,10 @@ function RouteComponent() {
               alt=""
               className="absolute top-4 left-10 2xl:left-28 w-[250px] lg:w-auto"
             />
-            <div className="absolute bottom-32 2xl:bottom-56 left-7 text-[20px] 2xl:text-[40px] font-semibold">
+            <div className="absolute bottom-20 left-2 lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
               Drag-and-Drop visual interface
             </div>
-            <div className="absolute bottom-20 left-7 2xl:text-[28px]">
+            <div className="absolute bottom-6 left-2 lg:bottom-20 lg:left-7 2xl:text-[28px]">
               Generate interactive prototypes without writing (or rewriting) a
               single prompt.
             </div>

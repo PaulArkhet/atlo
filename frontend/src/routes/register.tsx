@@ -44,9 +44,14 @@ function RouteComponent() {
           >
             CREATE
           </Link>
-          <div className="text-xl text-center py-3">
-            Already have an account? <span className="font-bold">Log in</span>
-          </div>
+          {window.innerWidth > 600 && (
+            <div className="text-xl text-center py-3 z-20">
+              Already have an account?{" "}
+              <a href="https://arkhet-pilot.fly.dev/" className="font-bold">
+                Log in
+              </a>
+            </div>
+          )}
         </form>
       </div>
     </main>

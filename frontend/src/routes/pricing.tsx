@@ -27,8 +27,8 @@ function RouteComponent() {
             onClick={() => setisMonthly(!isMonthly)}
           >
             <span
-              className={`absolute top-0 left-0 w-[200px] h-[70px] bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] rounded-full transition-transform ${
-                isMonthly ? "translate-x-[190px] md:translate-x-[200px]" : ""
+              className={`absolute top-0 left-0 w-[175px] sm:w-[200px] h-[70px] bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] rounded-full transition-transform ${
+                isMonthly ? "translate-x-[160px] md:translate-x-[200px]" : ""
               }`}
             ></span>
             <span
@@ -37,7 +37,7 @@ function RouteComponent() {
               Monthly
             </span>
             <span
-              className={`absolute top-[20px] right-[20px] text-xl ${isMonthly ? "text-black font-bold" : "text-[#6454B7]"}`}
+              className={`absolute top-[20px] right-[4px] md:right-[20px] text-xl ${isMonthly ? "text-black font-bold" : "text-[#6454B7]"}`}
             >
               Yearly (save 20%)
             </span>
