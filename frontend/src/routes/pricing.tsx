@@ -46,7 +46,7 @@ function RouteComponent() {
       </div>
       <div className="flex flex-col mx-auto">
         <div className="md:flex mx-auto">
-          <div className="p-5 m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
+          <div className="p-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
             <div className="nunitofont tracking-widest pb-2">STARTER</div>
             <div className="py-2 text-white">
               <span className="text-5xl font-bold">$50</span>* /month per user
@@ -70,10 +70,10 @@ function RouteComponent() {
             </div>
           </div>
           <div>
-            <div className="mx-5 bg-gradient-to-r from-[#FFB04F] to-[#8778D7] border-t border-l border-r rounded-t text-black text-center tracking-widest pt-1 font-semibold">
+            <div className="md:mx-5 bg-gradient-to-r from-[#FFB04F] to-[#8778D7] border-t border-l border-r rounded-t text-black text-center tracking-widest pt-1 font-semibold">
               MOST POPULAR
             </div>
-            <div className="p-5 mb-5 mx-5 text-xl border-l border-r border-b rounded-b-lg bg-gradient-to-br from-[#545AB5] via-[#475DA0] via-55% to-[#423449] text-[#D9D9D9]">
+            <div className="p-5 mb-5 md:mx-5 text-xl border-l border-r border-b rounded-b-lg bg-gradient-to-br from-[#545AB5] via-[#475DA0] via-55% to-[#423449] text-[#D9D9D9]">
               <div className="nunitofont tracking-widest pb-2">STANDARD</div>
               <div className="py-2 text-white">
                 <span className="text-5xl font-bold">$100</span>* /month per
@@ -98,7 +98,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="p-5 m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
+          <div className="p-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
             <div className="nunitofont tracking-widest pb-2">BUSINESS</div>
             <div className="py-2 text-white">
               <span className="text-5xl font-bold">$600</span>* /month per user

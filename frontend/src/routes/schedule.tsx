@@ -12,16 +12,20 @@ export const Route = createFileRoute("/schedule")({
 function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
-      <img src={blueCloud} alt="" className="absolute top-0 right-0 z-0" />
+      <img
+        src={blueCloud}
+        alt=""
+        className="hidden md:block absolute top-0 right-0 z-0"
+      />
       <img
         src={purpleCloud}
         alt=""
-        className="absolute bottom-0 right-40 z-0"
+        className="hidden md:block absolute bottom-0 right-40 z-0"
       />
       <img
         src={greenCloud}
         alt=""
-        className="absolute bottom-[-10%] left-10 z-0 w-[90%] md:w-auto"
+        className="hidden 2xl:block absolute bottom-[-10%] left-10 z-0 w-[90%] md:w-auto"
       />
       <div className="flex flex-col mx-auto md:p-10 z-20">
         <div className="md:flex mx-auto z-20">
@@ -47,10 +51,10 @@ function RouteComponent() {
               <img src={checkmark} alt="" className="mr-2" />
               <div className="text-xl my-3">Ideate, explore, and iterate.</div>
             </div>
-            <img src={planet} alt="" />
+            <img src={planet} alt="" className="" />
           </div>
           <div className="md:ml-10 z-20">
-            <form className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[350px] md:w-[400px] mx-auto bg-gradient-to-br from-[#5B4874] via-[#42476D] to-[#45406D] bg-opacity-50">
+            <form className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[300px] md:w-[400px] mx-auto bg-gradient-to-br from-[#5B4874] via-[#42476D] to-[#45406D] bg-opacity-50">
               <input
                 type="text"
                 className="border border-[#8778D7] bg-[#242424] py-1 px-2 my-2"
