@@ -9,20 +9,20 @@ export const Route = createFileRoute("/register")({
 
 function RouteComponent() {
   return (
-    <main className="flex-1 bg-[#242424] text-white p-3 pt-[70px] relative overflow-hidden">
+    <main className="flex-1 bg-[#242424] text-white p-3 md:pt-[70px] relative overflow-hidden">
       <img src={group17} alt="" className="absolute bottom-0 right-0 z-0" />
       <img
         src={rectangle}
         alt=""
-        className="z-0 absolute top-16 left-0 lg:left-[24%] 2xl:top-[-10] 2xl:left-[33%] opacity-40"
+        className="hidden md:block z-0 absolute top-0 md:top-0 left-0 lg:left-[24%] 2xl:top-[-10] 2xl:left-[33%] opacity-40"
       />
       <div className="z-10 pb-20">
-        <img src={logo} alt="" className="mx-auto pt-32" />
+        <img src={logo} alt="" className="mx-auto md:pt-32" />
         <div className="text-center text-5xl py-2 z-20">Create an account</div>
         <div className="text-center py-2">
           Accelerated Experimentation starts today
         </div>
-        <form className="flex flex-col p-2 pb-32 b w-[350px] md:w-[400px] mx-auto">
+        <form className="flex flex-col p-2 pb-32 b w-[300px] md:w-[400px] mx-auto">
           <input
             type="text"
             className="border border-[#8778D7] bg-[#242424] py-2 px-2 my-2 z-20"

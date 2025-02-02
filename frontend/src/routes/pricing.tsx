@@ -46,7 +46,7 @@ function RouteComponent() {
       </div>
       <div className="flex flex-col mx-auto">
         <div className="md:flex mx-auto">
-          <div className="p-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
+          <div className="p-5 mb-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
             <div className="nunitofont tracking-widest pb-2">STARTER</div>
             <div className="py-2 text-white">
               <span className="text-5xl font-bold">$50</span>* /month per user
