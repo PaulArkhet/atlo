@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           <div>Register now</div>
         </div>
-        <div className="pb-10 md:pb-0 xl:px-20">
+        <div className="pb-10 md:pb-0 lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Product</div>
           <div className="py-2">
             <Link to="/howitworks">How it works</Link>
@@ -37,7 +37,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="pb-10 md:pb-0 xl:px-20">
+        <div className="pb-10 md:pb-0 lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Resources</div>
           <div className="py-2">
             <Link to="/faq" className="py-2">
@@ -60,12 +60,12 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="pb-10 md:pb-0 xl:px-20">
+        <div className="pb-10 md:pb-0 lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Privacy</div>
           <div className="py-2">Privacy Policy</div>
           <div className="py-2">Terms and Conditions</div>
         </div>
-        <div className="xl:px-20">
+        <div className="lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Connect</div>
           <div className="py-2">Contact us</div>
           <div className="py-2">LinkedIn</div>

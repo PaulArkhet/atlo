@@ -28,15 +28,13 @@ export const Route = createFileRoute("/")({
   component: RouteComponent,
 });
 
-const marginBetweenRects = -150;
-
 function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <img src={blueCloud} alt="" className="absolute top-0 right-0" />
       <img src={purpleCloud} alt="" className="absolute top-0 left-0" />
       <div className="z-0 absolute top-28 md:top-56 left-0">
-        <div className="relative pt-80 w-screen md:w-[99vw]">
+        <div className="relative pt-80 w-screen md:w-[98vw]">
           <img src={ship1} alt="" className="mx-auto w-[40px] md:w-auto" />
           <img
             src={largePlanet}
@@ -94,7 +92,11 @@ function RouteComponent() {
           <div className="flex flex-col">
             <div className="relative mx-auto">
               <img src={fadingborder} alt="" className="mx-auto" />
-              <img src={canvas} alt="" className="absolute top-9 md:left-8" />
+              <img
+                src={canvas}
+                alt=""
+                className="absolute top-3 left-3 md:top-9 md:left-8 w-[92%] 2xl:w-auto"
+              />
             </div>
           </div>
         </div>
@@ -119,7 +121,7 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={layers} alt="" className="absolute bottom-0 left-0" />
-                <div className="nunitofont md:text-[28px] absolute bottom-10 left-5 ">
+                <div className="nunitofont lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
                   Test real functionality that represents <br />
                   how the real interaction should work
                 </div>
@@ -134,9 +136,9 @@ function RouteComponent() {
                 <img
                   src={cube}
                   alt=""
-                  className="absolute bottom-24 left-24 md:bottom-36 md:left-36 w-[170px] md:w-auto"
+                  className="absolute bottom-24 left-24 md:left-28 md:bottom-36 2xl:left-36 w-[40%] 2xl:w-auto"
                 />
-                <div className="nunitofont md:text-[28px] absolute bottom-10 left-5">
+                <div className="nunitofont lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
                   Identifying pain points or friction in <br />
                   the prototype
                 </div>
@@ -149,7 +151,7 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={homecubes} alt="" className="absolute top-0 left-0" />
-                <div className="nunitofont md:text-[28px] absolute bottom-10 left-5">
+                <div className="nunitofont lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
                   Communicate the actual experience <br /> to get actionable
                   feedback
                 </div>
@@ -175,7 +177,7 @@ function RouteComponent() {
               <img
                 src={styleguide}
                 alt=""
-                className="absolute top-3 left-3 md:top-9 md:left-10 w-[92%] md:w-auto"
+                className="absolute top-3 left-3 md:top-9 md:left-10 w-[92%] 2xl:w-auto"
               />
             </div>
           </div>
