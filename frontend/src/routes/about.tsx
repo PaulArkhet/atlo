@@ -104,7 +104,13 @@ function RouteComponent() {
                 Answer to question
               </div>
             </div>
-            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+            <a href="https://www.linkedin.com/in/ngainathan/" target="_blank">
+              <img
+                src={linkedIn}
+                alt=""
+                className="absolute bottom-7 right-6"
+              />
+            </a>
           </div>
           <div className="relative">
             <img src={frame} alt="" />
@@ -127,7 +133,13 @@ function RouteComponent() {
                 Answer to question
               </div>
             </div>
-            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+            <a href="https://www.linkedin.com/in/randallherd/" target="_blank">
+              <img
+                src={linkedIn}
+                alt=""
+                className="absolute bottom-7 right-6"
+              />
+            </a>
           </div>
           <div className="relative">
             <img src={frame} alt="" />
@@ -150,7 +162,16 @@ function RouteComponent() {
                 Answer to question
               </div>
             </div>
-            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+            <a
+              href="https://www.linkedin.com/in/vitor-akiyama/"
+              target="_blank"
+            >
+              <img
+                src={linkedIn}
+                alt=""
+                className="absolute bottom-7 right-6"
+              />
+            </a>
           </div>
           <div className="relative">
             <img src={frame} alt="" />
@@ -173,7 +194,16 @@ function RouteComponent() {
                 Answer to question
               </div>
             </div>
-            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+            <a
+              href="https://www.linkedin.com/in/paul-sunghun-kim/"
+              target="_blank"
+            >
+              <img
+                src={linkedIn}
+                alt=""
+                className="absolute bottom-7 right-6"
+              />
+            </a>
           </div>
           <div className="relative">
             <img src={frame} alt="" />
@@ -196,7 +226,13 @@ function RouteComponent() {
                 Answer to question
               </div>
             </div>
-            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+            <a href="https://www.linkedin.com/in/selinasein/" target="_blank">
+              <img
+                src={linkedIn}
+                alt=""
+                className="absolute bottom-7 right-6"
+              />
+            </a>
           </div>
           <div className="relative">
             <img src={frame} alt="" />
@@ -219,7 +255,16 @@ function RouteComponent() {
                 Answer to question
               </div>
             </div>
-            <img src={linkedIn} alt="" className="absolute bottom-7 right-6" />
+            <a
+              href="https://www.linkedin.com/in/stephanie-louie-71178a25/"
+              target="_blank"
+            >
+              <img
+                src={linkedIn}
+                alt=""
+                className="absolute bottom-7 right-6"
+              />
+            </a>
           </div>
         </div>
       </div>

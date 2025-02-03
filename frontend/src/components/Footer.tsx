@@ -71,7 +71,11 @@ export default function Footer() {
         <div className="lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Connect</div>
           <div className="py-2">Contact us</div>
-          <div className="py-2">LinkedIn</div>
+          <div className="py-2">
+            <a href="https://www.linkedin.com/company/arkhet/" target="_blank">
+              LinkedIn
+            </a>
+          </div>
           <div className="py-2">
             <Link to="/subscribe" className="py-2">
               Mailing list
