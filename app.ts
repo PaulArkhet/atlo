@@ -3,6 +3,7 @@ import { logger } from "hono/logger";
 import { serveStatic } from "hono/bun";
 import { subscriptionRouter } from "./routes/subscriptions";
 import { cors } from "hono/cors";
+import { registrationRouter } from "./routes/registrations";
 
 const app = new Hono();
 
@@ -11,7 +12,8 @@ app.use("*", cors());
 
 const apiRoutes = app
   .basePath("/api/v0")
-  .route("/subscriptions", subscriptionRouter);
+  .route("/subscriptions", subscriptionRouter)
+  .route("/registrations", registrationRouter);
 
 app.use("/*", serveStatic({ root: "./frontend/dist" }));
 app.get("/*", async (c) => {

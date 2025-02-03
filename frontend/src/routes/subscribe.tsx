@@ -21,6 +21,7 @@ function RouteComponent() {
       }
     );
   }
+
   return (
     <main className="flex-1 bg-[#242424] p-3 pt-[100px] text-[#D9D9D9] md:text-2xl overflow-hidden">
       <img src={group17} alt="" className="absolute bottom-0 right-0 z-0" />
