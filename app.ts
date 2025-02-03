@@ -2,10 +2,12 @@ import { Hono } from "hono";
 import { logger } from "hono/logger";
 import { serveStatic } from "hono/bun";
 import { subscriptionRouter } from "./routes/subscriptions";
+import { cors } from "hono/cors";
 
 const app = new Hono();
 
 app.use("*", logger());
+app.use("*", cors());
 
 const apiRoutes = app
   .basePath("/api/v0")

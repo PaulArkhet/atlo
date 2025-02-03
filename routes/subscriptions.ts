@@ -42,6 +42,7 @@ export const subscriptionRouter = new Hono()
       );
 
       if (subscriptionInsertError) {
+        console.log("Error while creating subscription");
         throw new HTTPException(500, {
           message: "Error while creating subscription",
           cause: subscriptionInsertResult,
