@@ -69,21 +69,21 @@ function RouteComponent() {
             <img
               src={ellipse}
               alt=""
-              className="absolute top-5 left-20 2xl:bottom-40 2xl:left-32 w-[200px] lg:w-[400px] 2xl:w-auto"
+              className="absolute top-5 left-12 2xl:bottom-40 2xl:left-32 w-[200px] sm:w-[400px] 2xl:w-auto"
             />
             <img
               src={layersVertical}
               alt=""
-              className="absolute top-0 left-32 2xl:bottom-40 2xl:left-60 w-[100px] lg:w-[250px] 2xl:w-auto"
+              className="absolute top-0 left-24 sm:left-32 2xl:bottom-40 2xl:left-60 w-[100px] sm:w-[250px] 2xl:w-auto"
             />
-            <div className="2xl:text-[40px] absolute bottom-20 2xl:bottom-28 left-2 lg:left-5 font-semibold">
+            <div className="sm:text-2xl 2xl:text-[40px] absolute bottom-20 2xl:bottom-28 left-2 sm:left-5 font-semibold">
               100% accurate to your design
             </div>
-            <div className="hidden md:block absolute bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
+            <div className="hidden 2xl:block absolute bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
               Prototypes adhere to the requirements of your design, <br /> every
               time. Import your own or try something new.
             </div>
-            <div className="md:hidden absolute bottom-2 left-2 ">
+            <div className="2xl:hidden absolute bottom-2 left-2 sm:left-5 sm:bottom-5">
               Prototypes adhere to the requirements of your design, every time.
               Import your own or try something new.
             </div>
@@ -93,17 +93,17 @@ function RouteComponent() {
             <img
               src={ellipse}
               alt=""
-              className="absolute top-5 left-20 2xl:bottom-40 2xl:left-32 w-[200px] lg:w-[400px] 2xl:w-auto"
+              className="absolute top-5 left-20 2xl:bottom-40 2xl:left-32 w-[200px] sm:w-[400px] 2xl:w-auto"
             />
             <img
               src={calibrate}
               alt=""
-              className="absolute top-5 left-20 2xl:left-28 w-[200px] lg:w-[400px] 2xl:w-auto"
+              className="absolute top-5 left-20 sm:top-10 2xl:left-28 w-[200px] sm:w-[400px] 2xl:w-auto"
             />
-            <div className="2xl:text-[40px] absolute bottom-16 lg:bottom-[5rem] 2xl:bottom-28 left-5 font-semibold">
+            <div className="sm:text-2xl 2xl:text-[40px] absolute bottom-16 lg:bottom-[5rem] 2xl:bottom-28 left-5 font-semibold">
               Calibrate, visually
             </div>
-            <div className="absolute bottom-3 lg:bottom-12 2xl:bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
+            <div className="absolute bottom-3 sm:bottom-8 lg:bottom-12 2xl:bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
               Modify components, colours, and layout at any time. Then test
               again.
             </div>
@@ -143,12 +143,15 @@ function RouteComponent() {
             <img
               src={realistic}
               alt=""
-              className="absolute top-0 left-14 lg:left-0 lg:top-[-5%] 2xl:top-[-5%] 2xl:left-20 w-[200px] lg:w-auto"
+              className="absolute top-0 left-14 lg:left-0 lg:top-[-5%] 2xl:top-[-5%] 2xl:left-20 w-[200px] sm:w-auto"
             />
-            <div className="absolute bottom-32 lg:bottom-24 left-4 2xl:bottom-56 lg:left-7 text-[20px] md:left-7 2xl:text-[40px] font-semibold">
+            <div
+              className="absolute text-[20px] left-4 bottom-32 sm:text-[25px] sm:bottom-60 md:left-7 lg:text-[20px] lg:bottom-24 lg:left-3 
+              2xl:text-[40px] 2xl:left-7 2xl:bottom-56 font-semibold"
+            >
               Realistic experiments provide better data
             </div>
-            <div className="absolute bottom-6 left-4 lg:left-7 2xl:text-[28px]">
+            <div className="absolute bottom-6 left-4 sm:bottom-40 lg:bottom-6 lg:left-3 2xl:left-7 2xl:bottom-10 2xl:text-[28px]">
               Interactive prototypes are no longer exclusive to teams that can
               afford to navigate the demands of regular prototyping.
             </div>
@@ -159,12 +162,12 @@ function RouteComponent() {
             <img
               src={database}
               alt=""
-              className="absolute top-7 left-6 lg:left-9 2xl:left-24 w-[250px] md:w-auto"
+              className="absolute top-7 left-6 sm:left-28 sm:top-20 lg:left-9 lg:top-7 2xl:left-24 w-[250px] sm:w-auto"
             />
-            <div className="absolute bottom-20 left-3 lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
+            <div className="absolute bottom-20 left-3 sm:bottom-60 sm:text-[25px] lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
               Your Data, Your Experiment
             </div>
-            <div className="absolute bottom-6 left-3 lg:bottom-20 2xl:bottom-32 lg:left-7 2xl:text-[28px]">
+            <div className="absolute bottom-6 left-3 sm:bottom-52 lg:bottom-20 2xl:bottom-32 lg:left-7 2xl:text-[28px]">
               Import and test with your data during development, not after.
             </div>
           </div>
@@ -174,12 +177,12 @@ function RouteComponent() {
             <img
               src={visual}
               alt=""
-              className="absolute top-4 left-10 2xl:left-28 w-[250px] lg:w-auto"
+              className="absolute top-4 left-10 sm:left-28 sm:top-20 lg:top-4 lg:left-10 2xl:left-28 w-[250px] sm:w-auto"
             />
-            <div className="absolute bottom-20 left-2 lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
+            <div className="absolute bottom-20 left-2 sm:bottom-60 sm:text-[25px] lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
               Drag-and-Drop visual interface
             </div>
-            <div className="absolute bottom-6 left-2 lg:bottom-20 lg:left-7 2xl:text-[28px]">
+            <div className="absolute bottom-6 left-2 sm:bottom-44 lg:bottom-20 lg:left-7 2xl:text-[28px]">
               Generate interactive prototypes without writing (or rewriting) a
               single prompt.
             </div>

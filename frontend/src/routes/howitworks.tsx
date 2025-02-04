@@ -62,7 +62,7 @@ function RouteComponent() {
             <div className="workfont hidden lg:block absolute top-32 left-10 2xl:top-48 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
               interaction flow{" "}
             </div>
-            <div className="workfont lg:hidden absolute top-12 left-5 font-bold">
+            <div className="workfont sm:text-4xl lg:hidden absolute top-12 left-5 font-bold">
               Design the interaction flow
             </div>
             <div className="lg:absolute top-48 left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
@@ -99,7 +99,7 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto z-10 md:p-10">
         <div className="relative 2xl:mb-20 mx-auto">
           <img src={background2} alt="" className="mx-auto" />
-          <div className="tracking-[0.4rem] absolute top-5 right-[14.5rem] md:right-5 lg:top-10 text-sm 2xl:top-14 lg:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
+          <div className="tracking-[0.4rem] absolute top-5 right-[14.5rem] sm:right-[31rem] md:right-5 lg:top-10 text-sm 2xl:top-14 lg:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
             STEP 2
           </div>
           <div className="workfont hidden lg:block absolute top-20 right-[19rem] text-4xl 2xl:top-32 2xl:right-[12rem] 2xl:text-6xl font-bold">
@@ -108,7 +108,7 @@ function RouteComponent() {
           <div className="workfont hidden lg:block absolute top-32 right-[28.5rem] text-4xl 2xl:top-48 2xl:right-[28rem] 2xl:text-6xl font-bold">
             guide{" "}
           </div>
-          <div className="workfont lg:hidden absolute top-12 left-5 font-bold">
+          <div className="workfont sm:text-4xl lg:hidden absolute top-12 left-5 font-bold">
             Add your styleguide
           </div>
           <div className="lg:absolute top-48 right-[3rem] 2xl:right-[7rem] 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
@@ -159,7 +159,7 @@ function RouteComponent() {
           <div className="workfont hidden lg:block absolute top-32 left-10 2xl:top-48 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
             Prototype{" "}
           </div>
-          <div className="workfont lg:hidden absolute top-12 left-5 font-bold">
+          <div className="workfont sm:text-4xl lg:hidden absolute top-12 left-5 font-bold">
             Generate Prototype
           </div>
           <div className="lg:absolute top-48 left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
@@ -207,17 +207,17 @@ function RouteComponent() {
         <img
           src={bluePlanet}
           alt=""
-          className="absolute bottom-[-3%] lg:bottom-[-22%] lg:left-[-20%] 2xl:left-[-10%] z-0"
+          className="absolute bottom-[-3%] sm:bottom-[-35%] sm:left-[-50%] lg:bottom-[-22%] lg:left-[-20%] 2xl:left-[-10%] z-0"
         />
         <img
           src={ship}
           alt=""
-          className="absolute bottom-10 right-[7rem] lg:bottom-7 lg:right-[10rem] 2xl:bottom-5 2xl:right-[20rem] z-10"
+          className="absolute bottom-10 right-[7rem] sm:right-[2rem] lg:bottom-7 lg:right-[10rem] 2xl:bottom-5 2xl:right-[20rem] z-10"
         />
         <img
           src={eclipse}
           alt=""
-          className="absolute bottom-[-3%] right-2 xl:right-[3.5rem] 2xl:right-[13.5rem] z-0"
+          className="absolute bottom-[-3%] right-2 sm:right-[-12%] xl:right-[3.5rem] 2xl:right-[13.5rem] z-0"
         />
       </div>
     </main>

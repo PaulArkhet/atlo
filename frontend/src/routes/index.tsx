@@ -62,12 +62,12 @@ function RouteComponent() {
       <img src={blueCloud} alt="" className="absolute top-0 right-0" />
       <img src={purpleCloud} alt="" className="absolute top-0 left-0" />
       <div className="z-0 absolute top-28 md:top-56 left-0">
-        <div className="relative pt-80 w-screen sm:w-[98vw]">
+        <div className="relative pt-80 w-screen sm:w-[97vw] md:w-[98vw]">
           <img src={ship1} alt="" className="mx-auto w-[40px] md:w-auto" />
           <img
             src={largePlanet}
             alt=""
-            className="absolute top-96 w-screen z-90"
+            className="absolute top-96 w-screen z-90 sm:w-[98%]"
           />
           <img src={purplePlanet} alt="" className="absolute top-72 right-96" />
           <img
@@ -149,7 +149,7 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={layers} alt="" className="absolute bottom-0 left-0" />
-                <div className="lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
+                <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 sm:left-16 lg:bottom-10 lg:left-5 ">
                   Test real functionality that represents <br />
                   how the real interaction should work
                 </div>
@@ -164,9 +164,9 @@ function RouteComponent() {
                 <img
                   src={cube}
                   alt=""
-                  className="absolute bottom-24 left-24 md:left-28 md:bottom-36 2xl:left-36 w-[40%] 2xl:w-auto"
+                  className="absolute bottom-24 left-24 sm:left-36 md:left-28 sm:bottom-36 2xl:left-36 w-[40%] 2xl:w-auto"
                 />
-                <div className="lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
+                <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 sm:left-16 lg:bottom-10 lg:left-5 ">
                   Identifying pain points or friction in <br />
                   the prototype
                 </div>
@@ -179,7 +179,7 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={homecubes} alt="" className="absolute top-0 left-0" />
-                <div className="lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
+                <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 sm:left-16 lg:bottom-10 lg:left-5 ">
                   Communicate the actual experience <br /> to get actionable
                   feedback
                 </div>
