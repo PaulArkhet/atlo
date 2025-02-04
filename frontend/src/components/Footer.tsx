@@ -65,12 +65,22 @@ export default function Footer() {
         </div>
         <div className="pb-10 md:pb-0 lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Privacy</div>
-          <div className="py-2">Privacy Policy</div>
-          <div className="py-2">Terms and Conditions</div>
+          <div className="py-2">
+            <Link to="/privacypolicy" className="py-2">
+              Privacy Policy
+            </Link>
+          </div>
+          <div className="py-2">
+            <Link to="/terms" className="py-2">
+              Terms and Conditions
+            </Link>
+          </div>
         </div>
         <div className="lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Connect</div>
-          <div className="py-2">Contact us</div>
+          <div className="py-2">
+            <Link to="/join">Contact us</Link>
+          </div>
           <div className="py-2">
             <a href="https://www.linkedin.com/company/arkhet/" target="_blank">
               LinkedIn

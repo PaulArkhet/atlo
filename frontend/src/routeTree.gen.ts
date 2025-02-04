@@ -14,10 +14,12 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as ThankyousubscribeImport } from './routes/thankyousubscribe'
 import { Route as ThankyouregisterImport } from './routes/thankyouregister'
 import { Route as ThankyoudemoImport } from './routes/thankyoudemo'
+import { Route as TermsImport } from './routes/terms'
 import { Route as SubscribeImport } from './routes/subscribe'
 import { Route as ScheduleImport } from './routes/schedule'
 import { Route as ResourcesImport } from './routes/resources'
 import { Route as RegisterImport } from './routes/register'
+import { Route as PrivacypolicyImport } from './routes/privacypolicy'
 import { Route as PricingImport } from './routes/pricing'
 import { Route as LoginImport } from './routes/login'
 import { Route as JoinImport } from './routes/join'
@@ -47,6 +49,12 @@ const ThankyoudemoRoute = ThankyoudemoImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const TermsRoute = TermsImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const SubscribeRoute = SubscribeImport.update({
   id: '/subscribe',
   path: '/subscribe',
@@ -68,6 +76,12 @@ const ResourcesRoute = ResourcesImport.update({
 const RegisterRoute = RegisterImport.update({
   id: '/register',
   path: '/register',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PrivacypolicyRoute = PrivacypolicyImport.update({
+  id: '/privacypolicy',
+  path: '/privacypolicy',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -179,6 +193,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingImport
       parentRoute: typeof rootRoute
     }
+    '/privacypolicy': {
+      id: '/privacypolicy'
+      path: '/privacypolicy'
+      fullPath: '/privacypolicy'
+      preLoaderRoute: typeof PrivacypolicyImport
+      parentRoute: typeof rootRoute
+    }
     '/register': {
       id: '/register'
       path: '/register'
@@ -205,6 +226,13 @@ declare module '@tanstack/react-router' {
       path: '/subscribe'
       fullPath: '/subscribe'
       preLoaderRoute: typeof SubscribeImport
+      parentRoute: typeof rootRoute
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsImport
       parentRoute: typeof rootRoute
     }
     '/thankyoudemo': {
@@ -242,10 +270,12 @@ export interface FileRoutesByFullPath {
   '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
+  '/privacypolicy': typeof PrivacypolicyRoute
   '/register': typeof RegisterRoute
   '/resources': typeof ResourcesRoute
   '/schedule': typeof ScheduleRoute
   '/subscribe': typeof SubscribeRoute
+  '/terms': typeof TermsRoute
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
@@ -260,10 +290,12 @@ export interface FileRoutesByTo {
   '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
+  '/privacypolicy': typeof PrivacypolicyRoute
   '/register': typeof RegisterRoute
   '/resources': typeof ResourcesRoute
   '/schedule': typeof ScheduleRoute
   '/subscribe': typeof SubscribeRoute
+  '/terms': typeof TermsRoute
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
@@ -279,10 +311,12 @@ export interface FileRoutesById {
   '/join': typeof JoinRoute
   '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
+  '/privacypolicy': typeof PrivacypolicyRoute
   '/register': typeof RegisterRoute
   '/resources': typeof ResourcesRoute
   '/schedule': typeof ScheduleRoute
   '/subscribe': typeof SubscribeRoute
+  '/terms': typeof TermsRoute
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
@@ -299,10 +333,12 @@ export interface FileRouteTypes {
     | '/join'
     | '/login'
     | '/pricing'
+    | '/privacypolicy'
     | '/register'
     | '/resources'
     | '/schedule'
     | '/subscribe'
+    | '/terms'
     | '/thankyoudemo'
     | '/thankyouregister'
     | '/thankyousubscribe'
@@ -316,10 +352,12 @@ export interface FileRouteTypes {
     | '/join'
     | '/login'
     | '/pricing'
+    | '/privacypolicy'
     | '/register'
     | '/resources'
     | '/schedule'
     | '/subscribe'
+    | '/terms'
     | '/thankyoudemo'
     | '/thankyouregister'
     | '/thankyousubscribe'
@@ -333,10 +371,12 @@ export interface FileRouteTypes {
     | '/join'
     | '/login'
     | '/pricing'
+    | '/privacypolicy'
     | '/register'
     | '/resources'
     | '/schedule'
     | '/subscribe'
+    | '/terms'
     | '/thankyoudemo'
     | '/thankyouregister'
     | '/thankyousubscribe'
@@ -352,10 +392,12 @@ export interface RootRouteChildren {
   JoinRoute: typeof JoinRoute
   LoginRoute: typeof LoginRoute
   PricingRoute: typeof PricingRoute
+  PrivacypolicyRoute: typeof PrivacypolicyRoute
   RegisterRoute: typeof RegisterRoute
   ResourcesRoute: typeof ResourcesRoute
   ScheduleRoute: typeof ScheduleRoute
   SubscribeRoute: typeof SubscribeRoute
+  TermsRoute: typeof TermsRoute
   ThankyoudemoRoute: typeof ThankyoudemoRoute
   ThankyouregisterRoute: typeof ThankyouregisterRoute
   ThankyousubscribeRoute: typeof ThankyousubscribeRoute
@@ -370,10 +412,12 @@ const rootRouteChildren: RootRouteChildren = {
   JoinRoute: JoinRoute,
   LoginRoute: LoginRoute,
   PricingRoute: PricingRoute,
+  PrivacypolicyRoute: PrivacypolicyRoute,
   RegisterRoute: RegisterRoute,
   ResourcesRoute: ResourcesRoute,
   ScheduleRoute: ScheduleRoute,
   SubscribeRoute: SubscribeRoute,
+  TermsRoute: TermsRoute,
   ThankyoudemoRoute: ThankyoudemoRoute,
   ThankyouregisterRoute: ThankyouregisterRoute,
   ThankyousubscribeRoute: ThankyousubscribeRoute,
@@ -397,10 +441,12 @@ export const routeTree = rootRoute
         "/join",
         "/login",
         "/pricing",
+        "/privacypolicy",
         "/register",
         "/resources",
         "/schedule",
         "/subscribe",
+        "/terms",
         "/thankyoudemo",
         "/thankyouregister",
         "/thankyousubscribe"
@@ -430,6 +476,9 @@ export const routeTree = rootRoute
     "/pricing": {
       "filePath": "pricing.tsx"
     },
+    "/privacypolicy": {
+      "filePath": "privacypolicy.tsx"
+    },
     "/register": {
       "filePath": "register.tsx"
     },
@@ -441,6 +490,9 @@ export const routeTree = rootRoute
     },
     "/subscribe": {
       "filePath": "subscribe.tsx"
+    },
+    "/terms": {
+      "filePath": "terms.tsx"
     },
     "/thankyoudemo": {
       "filePath": "thankyoudemo.tsx"
