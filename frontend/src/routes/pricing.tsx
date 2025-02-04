@@ -45,7 +45,7 @@ function RouteComponent() {
         </div>
       </div>
       <div className="flex flex-col mx-auto">
-        <div className="md:flex mx-auto">
+        <div className="lg:flex mx-auto">
           <div className="p-5 mb-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
             <div className=" tracking-widest pb-2">STARTER</div>
             <div className="py-2 text-white">

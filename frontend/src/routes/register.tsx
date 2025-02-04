@@ -30,14 +30,18 @@ function RouteComponent() {
   }
 
   return (
-    <main className="flex-1 bg-[#242424] text-white p-3 md:pt-[70px] relative overflow-hidden">
-      <img src={group17} alt="" className="absolute bottom-0 right-0 z-0" />
+    <main className="flex-1 bg-[#242424] text-white p-3 md:pt-[70px] relative overflow-hidden h-screen">
+      <img
+        src={group17}
+        alt=""
+        className="w-auto absolute bottom-0 right-0 z-0"
+      />
       <img
         src={rectangle}
         alt=""
-        className="hidden md:block z-0 absolute top-0 md:top-0 left-0 lg:left-[24%] 2xl:top-[-10] 2xl:left-[33%] opacity-40"
+        className="hidden lg:block z-0 absolute top-0 md:top-0 left-0 lg:left-[24%] 2xl:top-[-10] 2xl:left-[33%] opacity-40"
       />
-      <div className="z-10 pb-20">
+      <div className="z-10 md:pb-20 pt-16 md:pt-0">
         <img src={logo} alt="" className="mx-auto md:pt-32" />
         <div className="workfont text-center text-5xl py-2 z-20">
           Create an account

@@ -43,7 +43,7 @@ export default function Header() {
             </Link>
             <button
               id="hamburger-menu"
-              className="text-3xl xl:hidden text-[#8778D7]"
+              className="text-3xl md:hidden text-[#8778D7]"
               onClick={slideToggle}
             >
               &#x2630;
