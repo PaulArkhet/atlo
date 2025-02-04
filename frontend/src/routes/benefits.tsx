@@ -23,12 +23,12 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px] ">
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
+        <div className=" tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
           BENEFITS
         </div>
       </div>
       <div className="text-center pb-20">
-        <div className="text-2xl md:text-6xl font-bold">
+        <div className="workfont text-2xl md:text-6xl font-bold">
           <div>Everyone has ideas. Now anyone can build.</div>
         </div>
         <div className="py-7 md:text-2xl pb-10">
@@ -45,7 +45,7 @@ function RouteComponent() {
               alt=""
               className="absolute top-44 right-5 lg:top-4 lg:right-[4.3rem] 2xl:top-5 2xl:right-24 mx-auto"
             />
-            <div className="absolute top-5 left-5 md:top-20 md:left-11 text-xl md:text-5xl font-bold">
+            <div className="workfont absolute top-5 left-5 md:top-20 md:left-11 text-xl md:text-5xl font-bold">
               Benefits
             </div>
             <div className="hidden md:block absolute top-10 left-5 md:top-40 md:left-11 text-left md:text-xl">
@@ -118,10 +118,10 @@ function RouteComponent() {
             alt=""
             className="absolute top-[12.5rem] right-16 lg:right-24 md:top-14 2xl:right-[12rem] w-[200px] lg:w-[500px] 2xl:w-auto"
           />
-          <div className="absolute top-14 left-5 lg:top-20 md:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
+          <div className="workfont absolute top-14 left-5 lg:top-20 md:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
             Interactive
           </div>
-          <div className="absolute top-14 left-32 lg:top-36 2xl:top-40 lg:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
+          <div className="workfont absolute top-14 left-32 lg:top-36 2xl:top-40 lg:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
             Prototyping
           </div>
           <div className="absolute top-24 left-5 lg:top-56 2xl:top-64 md:left-14 lg: text-lg 2xl:text-[28px] lg:w-[420px] 2xl:w-[650px]">
@@ -187,10 +187,10 @@ function RouteComponent() {
         </div>
       </div>
       <div className="text-center py-10 md:py-32 md:pb-48">
-        <div className="text-2xl md:text-6xl font-bold md:pb-10">
+        <div className="workfont text-2xl md:text-6xl font-bold md:pb-10">
           <div>Start prototyping today</div>
         </div>
-        <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] text-xl py-5 my-10 w-[300px] rounded mx-auto">
+        <div className=" bg-gradient-to-r from-[#6654B7] to-[#B754B3] text-xl py-5 my-10 w-[300px] rounded mx-auto">
           <Link to="/register">R E G I S T E R</Link>
         </div>
       </div>

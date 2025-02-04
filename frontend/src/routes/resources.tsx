@@ -20,12 +20,12 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
+        <div className=" tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
           RESOURCES
         </div>
       </div>
       <div className="text-center pb-10 md:pb-20">
-        <div className="text-2xl md:text-6xl font-bold">
+        <div className="workfont text-2xl md:text-6xl font-bold">
           <div>Blog</div>
         </div>
       </div>
@@ -35,10 +35,8 @@ function RouteComponent() {
       >
         <img src={blogImg} alt="" />
         <div className="p-5">
-          <div className="nunitofont tracking-[0.4rem] py-1">
-            DECEMBER 11, 2024
-          </div>
-          <div className="text-2xl py-1 font-bold">
+          <div className="tracking-[0.4rem] py-1">DECEMBER 11, 2024</div>
+          <div className="workfont text-2xl py-1 font-bold">
             Blog title, latest post featured here.
           </div>
           <div className="py-1">
@@ -55,10 +53,8 @@ function RouteComponent() {
       <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
         <img src={largeImage} alt="" />
         <div className="p-5">
-          <div className="nunitofont tracking-[0.4rem] py-1">
-            NOVEMBER 25, 2024
-          </div>
-          <div className="text-2xl py-1 font-bold">
+          <div className=" tracking-[0.4rem] py-1">NOVEMBER 25, 2024</div>
+          <div className="workfont text-2xl py-1 font-bold">
             Previous blog posts go here
           </div>
           <div className="py-1">
@@ -70,10 +66,8 @@ function RouteComponent() {
       <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
         <img src={largeImage2} alt="" />
         <div className="p-5">
-          <div className="nunitofont tracking-[0.4rem] py-1">
-            NOVEMBER 1, 2024
-          </div>
-          <div className="text-2xl py-1 font-bold">
+          <div className=" tracking-[0.4rem] py-1">NOVEMBER 1, 2024</div>
+          <div className="workfont text-2xl py-1 font-bold">
             Previous blog posts go here
           </div>
           <div className="py-1">
@@ -86,10 +80,8 @@ function RouteComponent() {
       <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
         <img src={smallImage} alt="" />
         <div className="p-5">
-          <div className="nunitofont tracking-[0.4rem] py-1">
-            OCTOBER 15, 2024
-          </div>
-          <div className="text-2xl py-1 font-bold">
+          <div className=" tracking-[0.4rem] py-1">OCTOBER 15, 2024</div>
+          <div className="workfont text-2xl py-1 font-bold">
             Previous blog posts go here
           </div>
           <div className="py-1">
@@ -101,10 +93,8 @@ function RouteComponent() {
       <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
         <img src={smallImage} alt="" />
         <div className="p-5">
-          <div className="nunitofont tracking-[0.4rem] py-1">
-            OCTOBER 12, 2024
-          </div>
-          <div className="text-2xl py-1 font-bold">
+          <div className=" tracking-[0.4rem] py-1">OCTOBER 12, 2024</div>
+          <div className="workfont text-2xl py-1 font-bold">
             Previous blog posts go here
           </div>
           <div className="py-1">
@@ -116,10 +106,8 @@ function RouteComponent() {
       <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
         <img src={smallImage} alt="" />
         <div className="p-5">
-          <div className="nunitofont tracking-[0.4rem] py-1">
-            OCTOBER 5, 2024
-          </div>
-          <div className="text-2xl py-1 font-bold">
+          <div className="tracking-[0.4rem] py-1">OCTOBER 5, 2024</div>
+          <div className="workfont text-2xl py-1 font-bold">
             Previous blog posts go here
           </div>
           <div className="py-1">
@@ -131,7 +119,7 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto">
         <div className="hidden md:block relative mb-20 mx-auto">
           <img src={background1} alt="" className="mx-auto" />
-          <div className="nunitofont tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-14 lg:left-11 2xl:text-3xl text-[#D9D9D9]">
+          <div className=" tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-14 lg:left-11 2xl:text-3xl text-[#D9D9D9]">
             DECEMBER 11, 2024
           </div>
           <div className="lg:block absolute lg:top-20 2xl:top-32 left-11 lg:text-4xl 2xl:text-6xl font-bold w-[550px]">
@@ -171,7 +159,7 @@ function RouteComponent() {
             <div className="relative mx-2">
               <img src={largeFrame} alt="" />
               <img src={largeImage} alt="" className="absolute top-1 left-1" />
-              <div className="absolute bottom-52 2xl:bottom-64 left-8 nunitofont tracking-[0.3rem] text-[24px]">
+              <div className="absolute bottom-52 2xl:bottom-64 left-8  tracking-[0.3rem] text-[24px]">
                 NOVEMBER 25, 2024
               </div>
               <div className="absolute bottom-40 2xl:bottom-44 left-8 text-[32px] 2xl:text-[48px] font-bold">
@@ -186,7 +174,7 @@ function RouteComponent() {
             <div className="relative mx-2">
               <img src={largeFrame} alt="" />
               <img src={largeImage2} alt="" className="absolute top-1 left-1" />
-              <div className="absolute bottom-52 2xl:bottom-64 left-8 nunitofont tracking-[0.3rem] text-[24px]">
+              <div className="absolute bottom-52 2xl:bottom-64 left-8  tracking-[0.3rem] text-[24px]">
                 NOVEMBER 25, 2024
               </div>
               <div className="absolute bottom-40 2xl:bottom-44 left-8 text-[32px] 2xl:text-[48px] font-bold">
@@ -210,13 +198,13 @@ function RouteComponent() {
                 alt=""
                 className="absolute top-[0.15rem] left-[0.15rem]"
               />
-              <div className="absolute bottom-36 2xl:bottom-48 left-5 nunitofont tracking-[0.3rem] text-xl 2xl:text-[24px]">
+              <div className="absolute bottom-36 2xl:bottom-48 left-5  tracking-[0.3rem] text-xl 2xl:text-[24px]">
                 OCTOBER 15, 2024
               </div>
               <div className="absolute bottom-28 2xl:bottom-20 left-5 lg:text-[23px] 2xl:text-[40px] font-bold">
                 Previous blog posts go here
               </div>
-              <div className="absolute bottom-20 2xl:bottom-10 left-5 2xl:text-[20px] ">
+              <div className="absolute bottom-20 md:bottom-16 2xl:bottom-10 left-5 2xl:text-[20px] ">
                 Add a quick summary of what the blog post is about.
               </div>
             </div>
@@ -227,13 +215,13 @@ function RouteComponent() {
                 alt=""
                 className="absolute top-[0.15rem] left-[0.15rem]"
               />
-              <div className="absolute bottom-36 2xl:bottom-48 left-5 nunitofont tracking-[0.3rem] text-xl 2xl:text-[24px]">
+              <div className="absolute bottom-36 2xl:bottom-48 left-5  tracking-[0.3rem] text-xl 2xl:text-[24px]">
                 OCTOBER 15, 2024
               </div>
               <div className="absolute bottom-28 2xl:bottom-20 left-5 lg:text-[23px] 2xl:text-[40px] font-bold">
                 Previous blog posts go here
               </div>
-              <div className="absolute bottom-20 2xl:bottom-10 left-5 2xl:text-[20px] ">
+              <div className="absolute bottom-20 md:bottom-16 2xl:bottom-10 left-5 2xl:text-[20px] ">
                 Add a quick summary of what the blog post is about.
               </div>
             </div>
@@ -244,13 +232,13 @@ function RouteComponent() {
                 alt=""
                 className="absolute top-[0.15rem] left-[0.15rem]"
               />
-              <div className="absolute bottom-36 2xl:bottom-48 left-5 nunitofont tracking-[0.3rem] text-xl 2xl:text-[24px]">
+              <div className="absolute bottom-36 2xl:bottom-48 left-5  tracking-[0.3rem] text-xl 2xl:text-[24px]">
                 OCTOBER 15, 2024
               </div>
               <div className="absolute bottom-28 2xl:bottom-20 left-5 lg:text-[23px] 2xl:text-[40px] font-bold">
                 Previous blog posts go here
               </div>
-              <div className="absolute bottom-20 2xl:bottom-10 left-5 2xl:text-[20px] ">
+              <div className="absolute bottom-20 md:bottom-16 2xl:bottom-10 left-5 2xl:text-[20px] ">
                 Add a quick summary of what the blog post is about.
               </div>
             </div>

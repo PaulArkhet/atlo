@@ -25,7 +25,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-[99]">
+    <header className="fixed top-0 left-0 z-[99] nunitofont">
       <div className="bg-gradient-to-r from-[#8778D7] via-[#2F5D5D] to-[#2A3349] h-[70px] w-screen">
         <div className="bg-[#242424] text-white p-3 xl:flex justify-between tracking-widest text-center">
           <div className="flex justify-between xl:block">
@@ -39,7 +39,7 @@ export default function Header() {
                 alt="Arkhet logo"
                 className="w-[30px] h-[30px] mt-1"
               />
-              <div className="nunitofont p-2 text-xl">A R K H E T</div>
+              <div className="p-2 text-xl">A R K H E T</div>
             </Link>
             <button
               id="hamburger-menu"
@@ -53,38 +53,22 @@ export default function Header() {
             id="main-nav"
             className={`${navVisible ? "visible" : ""} flex flex-col md:flex-row`}
           >
-            <Link
-              to="/howitworks"
-              className="nunitofont p-2 px-5"
-              onClick={slideToggle}
-            >
+            <Link to="/howitworks" className="p-2 px-5" onClick={slideToggle}>
               HOW IT WORKS
             </Link>
-            <Link
-              to="/benefits"
-              className="nunitofont p-2 px-5"
-              onClick={slideToggle}
-            >
+            <Link to="/benefits" className="p-2 px-5" onClick={slideToggle}>
               BENEFITS
             </Link>
-            <Link
-              to="/resources"
-              className="nunitofont p-2 px-5"
-              onClick={slideToggle}
-            >
+            <Link to="/resources" className="p-2 px-5" onClick={slideToggle}>
               RESOURCES
             </Link>
-            <Link
-              to="/pricing"
-              className="nunitofont p-2 px-5"
-              onClick={slideToggle}
-            >
+            <Link to="/pricing" className="p-2 px-5" onClick={slideToggle}>
               PRICING
             </Link>
             <div className="flex flex-col">
               <Link
                 to="/register"
-                className="xl:hidden nunitofont py-2 px-10 mx-10 rounded bg-[#9253E4]"
+                className="xl:hidden py-2 px-10 mx-10 rounded bg-[#9253E4]"
                 onClick={slideToggle}
               >
                 SIGN UP
@@ -94,13 +78,13 @@ export default function Header() {
           <div className="xl:flex">
             <a
               href="https://arkhet-pilot.fly.dev/"
-              className="hidden xl:block nunitofont p-2"
+              className="hidden xl:block p-2"
             >
               LOGIN
             </a>
             <Link
               to="/register"
-              className="hidden xl:block nunitofont py-2 px-10 mx-10 rounded bg-[#9253E4]"
+              className="hidden xl:block py-2 px-10 mx-10 rounded bg-[#9253E4]"
             >
               SIGN UP
             </Link>

@@ -12,13 +12,13 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
+        <div className=" tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
           PRICING
         </div>
       </div>
       <div className="text-center">
         <div className="">
-          <div className="text-2xl md:text-6xl font-bold">
+          <div className="workfont text-2xl md:text-6xl font-bold">
             Choose the plan that works best for you
           </div>
           <div
@@ -47,9 +47,10 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto">
         <div className="md:flex mx-auto">
           <div className="p-5 mb-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
-            <div className="nunitofont tracking-widest pb-2">STARTER</div>
+            <div className=" tracking-widest pb-2">STARTER</div>
             <div className="py-2 text-white">
-              <span className="text-5xl font-bold">$50</span>* /month per user
+              <span className="workfont text-5xl font-bold">$50</span>* /month
+              per user
             </div>
             <div className="h-[2px] bg-gradient-to-r from-white to-transparent"></div>
             <div className="py-2 italic">Explain who it's best for</div>
@@ -65,7 +66,7 @@ function RouteComponent() {
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">Another line of info</div>
             </div>
-            <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
+            <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
               GET STARTED
             </div>
           </div>
@@ -74,10 +75,10 @@ function RouteComponent() {
               MOST POPULAR
             </div>
             <div className="p-5 mb-5 md:mx-5 text-xl border-l border-r border-b rounded-b-lg bg-gradient-to-br from-[#545AB5] via-[#475DA0] via-55% to-[#423449] text-[#D9D9D9]">
-              <div className="nunitofont tracking-widest pb-2">STANDARD</div>
+              <div className=" tracking-widest pb-2">STANDARD</div>
               <div className="py-2 text-white">
-                <span className="text-5xl font-bold">$100</span>* /month per
-                user
+                <span className="workfont text-5xl font-bold">$100</span>*
+                /month per user
               </div>
               <div className="h-[2px] bg-gradient-to-r from-white to-transparent"></div>
               <div className="py-2 italic">Explain who it's best for</div>
@@ -93,15 +94,16 @@ function RouteComponent() {
                 <img src={rectangle} alt="" className="mr-2 w-[15px]" />
                 <div className="py-2">Downloadable react files</div>
               </div>
-              <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
+              <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
                 GET STARTED
               </div>
             </div>
           </div>
           <div className="p-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
-            <div className="nunitofont tracking-widest pb-2">BUSINESS</div>
+            <div className=" tracking-widest pb-2">BUSINESS</div>
             <div className="py-2 text-white">
-              <span className="text-5xl font-bold">$600</span>* /month per user
+              <span className="workfont text-5xl font-bold">$600</span>* /month
+              per user
             </div>
             <div className="h-[2px] bg-gradient-to-r from-white to-transparent"></div>
             <div className="py-2 italic">Explain who it's best for</div>
@@ -117,7 +119,7 @@ function RouteComponent() {
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">Downloadable react files</div>
             </div>
-            <div className="nunitofont py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
+            <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
               GET STARTED
             </div>
           </div>

@@ -11,11 +11,11 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] p-3 pt-[100px] text-[#D9D9D9] md:text-2xl">
       <div className="md:p-10 z-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0 z-10">
+        <div className="tracking-widest text-center text-xl pb-5 md:pb-0 z-10">
           JOIN
         </div>
       </div>
-      <div className="text-2xl md:text-6xl font-bold text-white text-center pb-0">
+      <div className="workfont text-2xl md:text-6xl font-bold text-white text-center pb-0">
         Join Arkhet
       </div>
       <img src={frame54} alt="" className="mx-auto" />
@@ -23,7 +23,7 @@ function RouteComponent() {
         <div className="mx-auto md:flex">
           <div className="md:mr-10">
             <div className="pb-10 md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
+              <div className="workfont text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Invest
               </div>
               <div className="flex">
@@ -35,7 +35,7 @@ function RouteComponent() {
               </div>
             </div>
             <div className="pb-10 md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
+              <div className="workfont text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Register
               </div>
               <div>
@@ -46,7 +46,7 @@ function RouteComponent() {
               </div>
             </div>
             <div className="pb-10 md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
+              <div className="workfont text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Mailing list
               </div>
               <div>
@@ -59,7 +59,7 @@ function RouteComponent() {
           </div>
           <div className="pb-10 md:ml-10">
             <div className="md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
+              <div className="workfont text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Media
               </div>
               <div className="flex">
@@ -71,7 +71,7 @@ function RouteComponent() {
               </div>
             </div>
             <div className="md:pb-20">
-              <div className="text-2xl md:text-6xl font-bold text-white md:pb-10">
+              <div className="workfont text-2xl md:text-6xl font-bold text-white md:pb-10">
                 Work at Arkhet
               </div>
               <div className="flex">

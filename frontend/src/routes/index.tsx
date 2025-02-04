@@ -23,12 +23,40 @@ import rectangle3 from "/homerectangle3.svg";
 import rectangle4 from "/homerectangle4.svg";
 import rectangle5 from "/homerectangle5.svg";
 import grid from "/homegrid.svg";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
+  useEffect(() => {
+    const images = [
+      largePlanet,
+      ship1,
+      purplePlanet,
+      bluePlanet,
+      blueCloud,
+      purpleCloud,
+      fadingborder,
+      canvas,
+      fadingbackground2,
+      ellipse,
+      frame,
+      layers,
+      cube,
+      homecubes,
+      styleguide,
+      floatingCubes,
+      ship2,
+      bluePlanet2,
+    ];
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <img src={blueCloud} alt="" className="absolute top-0 right-0" />
@@ -51,7 +79,7 @@ function RouteComponent() {
       </div>
       <div className="z-40 relative">
         <div className="text-center pb-40 md:pb-96 z-40">
-          <div className="text-3xl md:text-8xl font-bold py-5 md:py-10 md:pt-16 z-40">
+          <div className="workfont text-3xl md:text-8xl font-bold py-5 md:py-10 md:pt-16 z-40">
             <div className="z-40">From idea to prototype, in</div>
             <div>moments</div>
           </div>
@@ -75,7 +103,7 @@ function RouteComponent() {
           </div>
         </div>
         <div className="text-center pb-20">
-          <div className="text-2xl md:text-6xl font-bold z-40">
+          <div className="workfont text-2xl md:text-6xl font-bold z-40">
             <div className="z-40">Faster experiments, more time with</div>
             <div>customers</div>
           </div>
@@ -101,7 +129,7 @@ function RouteComponent() {
           </div>
         </div>
         <div className="pb-20">
-          <div className="text-center text-2xl md:text-6xl font-bold">
+          <div className="workfont text-center text-2xl md:text-6xl font-bold">
             <div>Prototypes that accurately simulate</div>
             <div>the product experience</div>
           </div>
@@ -121,7 +149,7 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={layers} alt="" className="absolute bottom-0 left-0" />
-                <div className="nunitofont lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
+                <div className="lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
                   Test real functionality that represents <br />
                   how the real interaction should work
                 </div>
@@ -138,7 +166,7 @@ function RouteComponent() {
                   alt=""
                   className="absolute bottom-24 left-24 md:left-28 md:bottom-36 2xl:left-36 w-[40%] 2xl:w-auto"
                 />
-                <div className="nunitofont lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
+                <div className="lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
                   Identifying pain points or friction in <br />
                   the prototype
                 </div>
@@ -151,7 +179,7 @@ function RouteComponent() {
                   className="absolute bottom-20 left-0"
                 />
                 <img src={homecubes} alt="" className="absolute top-0 left-0" />
-                <div className="nunitofont lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
+                <div className="lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 lg:bottom-10 lg:left-5 ">
                   Communicate the actual experience <br /> to get actionable
                   feedback
                 </div>
@@ -160,7 +188,7 @@ function RouteComponent() {
           </div>
         </div>
         <div className="text-center pb-20">
-          <div className="text-2xl md:text-6xl font-bold">
+          <div className="workfont text-2xl md:text-6xl font-bold">
             <div>Generate highly accurate prototypes that </div>
             <div>look like your product</div>
           </div>
@@ -182,7 +210,7 @@ function RouteComponent() {
           </div>
         </div>
         <div className="text-center pb-20">
-          <div className="text-2xl md:text-6xl font-bold">
+          <div className="workfont text-2xl md:text-6xl font-bold">
             <div>Build the wireframe. We take care of the rest</div>
           </div>
           <div className="py-7 md:text-2xl">
@@ -194,7 +222,7 @@ function RouteComponent() {
           <img src={frame} alt="" className="mx-auto" />
         </div>
         <div className="text-center pb-20">
-          <div className="text-2xl md:text-6xl font-bold">
+          <div className="workfont text-2xl md:text-6xl font-bold">
             <div>Increase your team's design capacity and output</div>
           </div>
           <div className="py-7 md:text-2xl">
@@ -207,7 +235,7 @@ function RouteComponent() {
           <img src={floatingCubes} alt="" className="mx-auto" />
         </div>
         <div className="text-center pb-40 z-30">
-          <div className="text-2xl md:text-6xl font-bold z-30">
+          <div className="workfont text-2xl md:text-6xl font-bold z-30">
             <div>Start prototyping with Arkhet </div>
           </div>
           <div className="py-7 md:text-2xl">
@@ -216,7 +244,7 @@ function RouteComponent() {
             </div>
           </div>
           <Link to="/register" className="z-30">
-            <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] py-3 w-[300px] rounded mx-auto z-30">
+            <div className="bg-gradient-to-r from-[#6654B7] to-[#B754B3] py-3 w-[300px] rounded mx-auto z-30">
               R E G I S T E R
             </div>
           </Link>

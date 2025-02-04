@@ -53,7 +53,7 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto md:p-10 z-20">
         <div className="md:flex mx-auto z-20">
           <div className="md:mr-20">
-            <div className="text-5xl font-bold">
+            <div className="workfont text-5xl font-bold">
               Want to see it in <br /> action?
             </div>
             <div className="text-xl my-3">

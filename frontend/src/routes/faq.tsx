@@ -9,12 +9,14 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] p-3 pt-[100px] text-[#D9D9D9] md:text-xl">
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
+        <div className="tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
           FAQ
         </div>
       </div>
       <div className="text-center">
-        <div className="text-2xl md:text-6xl font-bold">Common questions</div>
+        <div className="workfont text-2xl md:text-6xl font-bold">
+          Common questions
+        </div>
         <img src={takeoff} alt="" className="mx-auto" />
       </div>
       <div className="flex flex-col mx-auto">

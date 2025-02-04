@@ -39,7 +39,9 @@ function RouteComponent() {
       />
       <div className="z-10 pb-20">
         <img src={logo} alt="" className="mx-auto md:pt-32" />
-        <div className="text-center text-5xl py-2 z-20">Create an account</div>
+        <div className="workfont text-center text-5xl py-2 z-20">
+          Create an account
+        </div>
         <div className="text-center py-2">
           Accelerated Experimentation starts today
         </div>
@@ -71,7 +73,7 @@ function RouteComponent() {
             placeholder="Password"
             required
           />
-          <button className="nunitofont px-5 py-3 bg-[#9253E4] tracking-widest my-2 text-center z-20">
+          <button className="px-5 py-3 bg-[#9253E4] tracking-widest my-2 text-center z-20">
             CREATE
           </button>
           {window.innerWidth > 600 && (

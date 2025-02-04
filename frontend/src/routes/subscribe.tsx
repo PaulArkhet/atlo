@@ -27,7 +27,7 @@ function RouteComponent() {
       <img src={group17} alt="" className="absolute bottom-0 right-0 z-0" />
       <div className="flex flex-col mx-auto pb-96 z-10">
         <div className="md:pt-44 mx-auto">
-          <div className="text-5xl pb-12">
+          <div className="workfont text-5xl pb-12">
             Subscribe to get the latest updates
           </div>
           <form
@@ -42,7 +42,7 @@ function RouteComponent() {
               placeholder="Email*"
               required
             />
-            <button className="nunitofont text-center px-5 py-3 bg-[#9253E4] tracking-widest my-2 z-10">
+            <button className="text-center px-5 py-3 bg-[#9253E4] tracking-widest my-2 z-10">
               SUBSCRIBE
             </button>
           </form>

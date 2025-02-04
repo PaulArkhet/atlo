@@ -11,12 +11,33 @@ import saturn from "/hiwsaturn.svg";
 import ship from "/hiwship.svg";
 import eclipse from "/hiweclipse.svg";
 import bluePlanet from "/hiwblueplanet.svg";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/howitworks")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
+  useEffect(() => {
+    const images = [
+      background1,
+      capy1,
+      fadingborder,
+      background2,
+      step2img,
+      step3img,
+      redCloud,
+      saturn,
+      ship,
+      eclipse,
+      bluePlanet,
+    ];
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <img src={redCloud} alt="" className="absolute top-0 left-0 z-0" />
@@ -26,22 +47,22 @@ function RouteComponent() {
         className="absolute top-[44rem] md:left-32 z-0 w-[300px] md:w-auto"
       />
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-20 text-[#D9D9D9]">
+        <div className="tracking-widest text-center text-xl pb-5 md:pb-20 text-[#D9D9D9]">
           HOW IT WORKS
         </div>
         <div className="flex flex-col mx-auto z-10">
           <div className="relative 2xl:mb-20 mx-auto z-20">
             <img src={background1} alt="" className="mx-auto" />
-            <div className="nunitofont tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-10 lg:left-10 2xl:top-14 2xl:left-24 2xl:text-3xl text-[#D9D9D9]">
+            <div className="tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-10 lg:left-10 2xl:top-14 2xl:left-24 2xl:text-3xl text-[#D9D9D9]">
               STEP 1
             </div>
-            <div className="hidden lg:block absolute top-20 left-10 2xl:top-32 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
+            <div className="workfont hidden lg:block absolute top-20 left-10 2xl:top-32 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
               Design the{" "}
             </div>
-            <div className="hidden lg:block absolute top-32 left-10 2xl:top-48 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
+            <div className="workfont hidden lg:block absolute top-32 left-10 2xl:top-48 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
               interaction flow{" "}
             </div>
-            <div className="lg:hidden absolute top-12 left-5 font-bold">
+            <div className="workfont lg:hidden absolute top-12 left-5 font-bold">
               Design the interaction flow
             </div>
             <div className="lg:absolute top-48 left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
@@ -78,16 +99,16 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto z-10 md:p-10">
         <div className="relative 2xl:mb-20 mx-auto">
           <img src={background2} alt="" className="mx-auto" />
-          <div className="nunitofont tracking-[0.4rem] absolute top-5 right-[14.5rem] md:right-5 lg:top-10 text-sm 2xl:top-14 lg:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
+          <div className="tracking-[0.4rem] absolute top-5 right-[14.5rem] md:right-5 lg:top-10 text-sm 2xl:top-14 lg:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
             STEP 2
           </div>
-          <div className="hidden lg:block absolute top-20 right-[19rem] text-4xl 2xl:top-32 2xl:right-[12rem] 2xl:text-6xl font-bold">
+          <div className="workfont hidden lg:block absolute top-20 right-[19rem] text-4xl 2xl:top-32 2xl:right-[12rem] 2xl:text-6xl font-bold">
             Add your style{" "}
           </div>
-          <div className="hidden lg:block absolute top-32 right-[28.5rem] text-4xl 2xl:top-48 2xl:right-[28rem] 2xl:text-6xl font-bold">
+          <div className="workfont hidden lg:block absolute top-32 right-[28.5rem] text-4xl 2xl:top-48 2xl:right-[28rem] 2xl:text-6xl font-bold">
             guide{" "}
           </div>
-          <div className="lg:hidden absolute top-12 left-5 font-bold">
+          <div className="workfont lg:hidden absolute top-12 left-5 font-bold">
             Add your styleguide
           </div>
           <div className="lg:absolute top-48 right-[3rem] 2xl:right-[7rem] 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
@@ -129,16 +150,16 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto z-10 md:p-10">
         <div className="relative lg:mb-20 mx-auto">
           <img src={background1} alt="" className="mx-auto" />
-          <div className="nunitofont tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-10 lg:left-10 2xl:top-14 2xl:left-24 2xl:text-3xl text-[#D9D9D9]">
+          <div className="tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-10 lg:left-10 2xl:top-14 2xl:left-24 2xl:text-3xl text-[#D9D9D9]">
             STEP 3
           </div>
-          <div className="hidden lg:block absolute top-20 left-10 2xl:top-32 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
+          <div className="workfont hidden lg:block absolute top-20 left-10 2xl:top-32 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
             Generate{" "}
           </div>
-          <div className="hidden lg:block absolute top-32 left-10 2xl:top-48 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
+          <div className="workfont hidden lg:block absolute top-32 left-10 2xl:top-48 2xl:left-24 text-4xl 2xl:text-6xl font-bold">
             Prototype{" "}
           </div>
-          <div className="lg:hidden absolute top-12 left-5 font-bold">
+          <div className="workfont lg:hidden absolute top-12 left-5 font-bold">
             Generate Prototype
           </div>
           <div className="lg:absolute top-48 left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
@@ -176,10 +197,10 @@ function RouteComponent() {
       </div>
       <div className="relative text-center pb-48 lg:pb-52 2xl:pb-32 2xl:py-32">
         <div className="text-2xl md:text-6xl font-bold md:pb-10">
-          <div className="z-10">Start prototyping today</div>
+          <div className="workfont z-10">Start prototyping today</div>
         </div>
         <Link to="/register" className="z-10">
-          <div className="nunitofont bg-gradient-to-r from-[#6654B7] to-[#B754B3] text-xl py-5 my-10 w-[300px] rounded mx-auto">
+          <div className="bg-gradient-to-r from-[#6654B7] to-[#B754B3] text-xl py-5 my-10 w-[300px] rounded mx-auto">
             R E G I S T E R
           </div>
         </Link>

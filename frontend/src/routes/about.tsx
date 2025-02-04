@@ -23,12 +23,12 @@ function RouteComponent() {
   return (
     <main className="flex-1 bg-[#242424] p-3 pt-[100px] text-[#D9D9D9] md:text-2xl">
       <div className="md:p-10">
-        <div className="nunitofont tracking-widest text-center text-xl pb-5 md:pb-0">
+        <div className=" tracking-widest text-center text-xl pb-5 md:pb-0">
           ABOUT
         </div>
       </div>
       <div className="text-center pb-20">
-        <div className="text-2xl md:text-6xl font-bold text-white ">
+        <div className="workfont text-2xl md:text-6xl font-bold text-white ">
           <div>The humanity of design cannot be automated</div>
         </div>
         <div className="py-7 pb-10">
@@ -48,7 +48,7 @@ function RouteComponent() {
       </div>
       <div className="flex flex-col mx-auto">
         <div className="md:flex mx-auto">
-          <div className="text-4xl font-bold text-white md:mr-10">
+          <div className="workfont text-4xl font-bold text-white md:mr-10">
             Product leaders can now <br /> design and build <br /> software
             products like <br /> never before
           </div>
@@ -71,13 +71,13 @@ function RouteComponent() {
           </div>
         </div>
       </div>
-      <div className="py-20 text-3xl font-bold text-center">
+      <div className="workfont py-20 text-3xl font-bold text-center">
         Building great software is easier with better tools. <br /> Arkhet
         builds tools for builders.
       </div>
       <div className="h-[1px] bg-white md:w-[500px] mx-auto mb-20"></div>
-      <div className="nunitofont text-center py-10 tracking-widest">TEAM</div>
-      <div className="text-2xl md:text-6xl font-bold text-white text-center mb-20">
+      <div className=" text-center py-10 tracking-widest">TEAM</div>
+      <div className="workfont text-2xl md:text-6xl font-bold text-white text-center mb-20">
         We’re shaping the future of generative <br />
         software design with a mission-driven team
       </div>
@@ -91,16 +91,16 @@ function RouteComponent() {
               className="absolute top-2 left-[5.5rem] md:top-10 md:left-28 2xl:left-32 w-[50%] 2xl:w-auto"
             />
             <div className="absolute bottom-20 left-20 2xl:bottom-20 lg:left-28 2xl:left-32">
-              <div className="nunitofont text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
                 NATHAN NGAI
               </div>
-              <div className="nunitofont text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
                 Founder & CEO
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
                 Favourite question:
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
                 Answer to question
               </div>
             </div>
@@ -120,16 +120,16 @@ function RouteComponent() {
               className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
             />
             <div className="absolute bottom-20 left-16 md:left-24 2xl:bottom-20 2xl:left-32">
-              <div className="nunitofont text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
                 RANDALL HERD
               </div>
-              <div className="nunitofont text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
                 VP of Marketing
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
                 Favourite question:
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
                 Answer to question
               </div>
             </div>
@@ -149,16 +149,16 @@ function RouteComponent() {
               className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
             />
             <div className="absolute bottom-20 left-16 md:left-24 2xl:bottom-20 2xl:left-32">
-              <div className="nunitofont text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
                 VITOR AKIYAMA
               </div>
-              <div className="nunitofont text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
                 Founding Engineer
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
                 Favourite question:
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
                 Answer to question
               </div>
             </div>
@@ -181,16 +181,16 @@ function RouteComponent() {
               className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
             />
             <div className="absolute bottom-20 left-20 lg:left-24 2xl:bottom-20 2xl:left-32">
-              <div className="nunitofont text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
                 PAUL KIM
               </div>
-              <div className="nunitofont text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
                 Founding Engineer
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
                 Favourite question:
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
                 Answer to question
               </div>
             </div>
@@ -213,16 +213,16 @@ function RouteComponent() {
               className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
             />
             <div className="absolute bottom-20 left-20 lg:left-24 2xl:bottom-20 2xl:left-32">
-              <div className="nunitofont text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
                 SELINA PARK
               </div>
-              <div className="nunitofont text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
                 Founding Engineer
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
                 Favourite question:
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
                 Answer to question
               </div>
             </div>
@@ -242,16 +242,16 @@ function RouteComponent() {
               className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
             />
             <div className="absolute bottom-20 left-12 md:left-24 2xl:bottom-20 2xl:left-28">
-              <div className="nunitofont text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
                 STEPHANIE LOUIE
               </div>
-              <div className="nunitofont text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
                 Product Designer
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
                 Favourite question:
               </div>
-              <div className="nunitofont text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
                 Answer to question
               </div>
             </div>

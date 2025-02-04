@@ -3,7 +3,7 @@ import logo from "/arkhet-logo-white.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-black opacity-90 text-white p-10 text-center xl:text-left z-50">
+    <footer className="nunitofont bg-black opacity-90 text-white p-10 text-center xl:text-left z-50">
       <div className="xl:flex">
         <div className="pb-10 md:pb-0">
           <div className="flex">
@@ -12,7 +12,7 @@ export default function Footer() {
               alt="Arkhet logo"
               className="w-[30px] h-[30px] mt-1"
             />
-            <div className="nunitofont p-2 text-xl">A R K H E T</div>
+            <div className="p-2 text-xl">A R K H E T</div>
           </div>
           <div className="py-2">
             <div className="lg:w-[250px] 2xl:w-[350px]">
