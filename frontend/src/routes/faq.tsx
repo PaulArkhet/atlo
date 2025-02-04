@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import takeoff from "/faqtakeoff.svg";
 
 export const Route = createFileRoute("/faq")({
@@ -207,7 +207,7 @@ function RouteComponent() {
             <div className="text-white text-2xl pb-3 font-semibold">
               How do I get involved?{" "}
             </div>
-            <div>Tell us more</div>
+            <Link to="/join">Tell us more</Link>
           </div>
         </div>
       </div>

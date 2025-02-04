@@ -1,7 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import prev1 from "/blogprev1.svg";
-import prev2 from "/blogprev2.svg";
-import prev3 from "/blogprev3.svg";
 import background1 from "/background1.svg";
 import fadingBorder from "/resourcesfadingborder.svg";
 import blogImg from "/resourcesblog1img.svg";
