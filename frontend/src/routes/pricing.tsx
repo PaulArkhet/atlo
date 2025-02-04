@@ -1,5 +1,5 @@
 import { Switch } from "@/components/ui/switch";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import rectangle from "/pricingrectangle.svg";
 
@@ -81,9 +81,11 @@ function RouteComponent() {
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">Another line of info</div>
             </div>
-            <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
-              GET STARTED
-            </div>
+            <Link to="/register">
+              <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
+                GET STARTED
+              </div>
+            </Link>
           </div>
           <div>
             <div className="md:mx-5 bg-gradient-to-r from-[#FFB04F] to-[#8778D7] border-t border-l border-r rounded-t text-black text-center tracking-widest pt-1 font-semibold">
@@ -122,9 +124,11 @@ function RouteComponent() {
                 <img src={rectangle} alt="" className="mr-2 w-[15px]" />
                 <div className="py-2">Downloadable react files</div>
               </div>
-              <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
-                GET STARTED
-              </div>
+              <Link to="/register">
+                <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
+                  GET STARTED
+                </div>
+              </Link>
             </div>
           </div>
           <div className="p-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
@@ -148,10 +152,12 @@ function RouteComponent() {
             )}
             <div className="h-[2px] bg-gradient-to-r from-white to-transparent"></div>
             <div className="py-2 italic">Explain who it's best for</div>
+
             <div className="flex">
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">Up to # generations</div>
             </div>
+
             <div className="flex">
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">File hosted on arkhet.com/url</div>
@@ -160,9 +166,11 @@ function RouteComponent() {
               <img src={rectangle} alt="" className="mr-2 w-[15px]" />
               <div className="py-2">Downloadable react files</div>
             </div>
-            <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
-              GET STARTED
-            </div>
+            <a href="mailto:sales@arkhet.com">
+              <div className=" py-2 px-10 m-10 rounded bg-[#9253E4] text-sm tracking-widest w-[200px] md:w-auto text-center">
+                CONTACT SALES
+              </div>
+            </a>
           </div>
         </div>
         <div className="text-[#D9D9D9] text-center py-7 italic">

@@ -104,13 +104,36 @@ function RouteComponent() {
                 className="border border-[#8778D7] bg-[#242424] py-1 px-2 my-2"
                 placeholder="Your company/organization"
               />
-              <input
+              <select
                 name="userrole"
                 id="userrole"
-                type="text"
-                className="border border-[#8778D7] bg-[#242424] py-1 px-2 my-2"
-                placeholder="Your role"
-              />
+                className="border border-[#8778D7] bg-[#242424] py-1 px-2 my-2 text-gray-400"
+              >
+                <option value="" disabled selected>
+                  Your role
+                </option>
+                <option value="Design" className="text-[#8778D7]">
+                  Design
+                </option>
+                <option value="Engineering" className="text-[#8778D7]">
+                  Engineering
+                </option>
+                <option value="Development" className="text-[#8778D7]">
+                  Development
+                </option>
+                <option value="Product Management" className="text-[#8778D7]">
+                  Product Management
+                </option>
+                <option value="Leadership" className="text-[#8778D7]">
+                  Leadership
+                </option>
+                <option value="Investor" className="text-[#8778D7]">
+                  Investor
+                </option>
+                <option value="Other" className="text-[#8778D7]">
+                  Other
+                </option>
+              </select>
               <textarea
                 name="info"
                 id="info"

@@ -23,7 +23,7 @@ import rectangle3 from "/homerectangle3.svg";
 import rectangle4 from "/homerectangle4.svg";
 import rectangle5 from "/homerectangle5.svg";
 import grid from "/homegrid.svg";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
@@ -57,13 +57,48 @@ function RouteComponent() {
     });
   }, []);
 
+  const imgRef = useRef<HTMLImageElement | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!imgRef.current) return;
+
+      const rect = imgRef.current.getBoundingClientRect();
+      const startFade = 50; // When the image starts fading (px from top)
+      const endFade = 300; // When the image is fully faded (px from top)
+
+      const progress = Math.min(
+        Math.max(
+          (window.scrollY - rect.top + startFade) / (endFade - startFade),
+          0
+        ),
+        1
+      );
+
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <img src={blueCloud} alt="" className="absolute top-0 right-0" />
       <img src={purpleCloud} alt="" className="absolute top-0 left-0" />
       <div className="z-0 absolute top-28 md:top-56 left-0">
         <div className="relative pt-80 w-screen sm:w-[97vw] md:w-[98vw]">
-          <img src={ship1} alt="" className="mx-auto w-[40px] md:w-auto" />
+          <img
+            src={ship1}
+            alt=""
+            ref={imgRef}
+            className={`mx-auto w-[40px] md:w-auto`}
+            style={{
+              transform: `translateY(-${scrollProgress * 50}px)`,
+              opacity: 1 - scrollProgress,
+            }}
+          />
           <img
             src={largePlanet}
             alt=""

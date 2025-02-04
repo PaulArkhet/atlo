@@ -2,6 +2,7 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import logo from "/arkhet-logo-white.png";
 import rectangle from "/registerrectangle.svg";
 import group17 from "/subscribegroup17.svg";
+import arrowLeft from "/arrowleft.svg";
 import { useCreateRegistrationMutation } from "../lib/api/registrations";
 
 export const Route = createFileRoute("/register")({
@@ -30,7 +31,13 @@ function RouteComponent() {
   }
 
   return (
-    <main className="flex-1 bg-[#242424] text-white p-3 md:pt-[70px] relative overflow-hidden h-screen">
+    <main className="flex-1 bg-[#242424] text-white relative overflow-hidden h-screen">
+      <Link to="/" className="absolute top-5 left-5">
+        <div className="flex">
+          <img src={arrowLeft} alt="" />
+          <div className="ml-2">Go back</div>
+        </div>
+      </Link>
       <img
         src={group17}
         alt=""
