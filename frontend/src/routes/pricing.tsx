@@ -8,7 +8,7 @@ export const Route = createFileRoute("/pricing")({
 });
 
 function RouteComponent() {
-  const [isMonthly, setisMonthly] = useState(false);
+  const [isMonthly, setisMonthly] = useState(true);
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="md:p-10">
@@ -28,16 +28,18 @@ function RouteComponent() {
           >
             <span
               className={`absolute top-0 left-0 w-[175px] sm:w-[200px] h-[70px] bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] rounded-full transition-transform ${
-                isMonthly ? "translate-x-[160px] md:translate-x-[200px]" : ""
+                !isMonthly
+                  ? "translate-x-[160px] md:translate-x-[200px] bg-gradient-to-r from-[#6654B7] to-[#B754B3]"
+                  : ""
               }`}
             ></span>
             <span
-              className={`absolute top-[20px] left-[60px] text-xl ${!isMonthly ? "text-black font-bold" : "text-[#6454B7]"}`}
+              className={`absolute top-[20px] left-[60px] text-xl ${isMonthly ? "text-black font-bold" : "text-[#6454B7]"}`}
             >
               Monthly
             </span>
             <span
-              className={`absolute top-[20px] right-[4px] md:right-[20px] text-xl ${isMonthly ? "text-black font-bold" : "text-[#6454B7]"}`}
+              className={`absolute top-[20px] right-[4px] md:right-[20px] text-xl ${!isMonthly ? "text-white font-bold" : "text-[#6454B7]"}`}
             >
               Yearly (save 20%)
             </span>
@@ -48,10 +50,23 @@ function RouteComponent() {
         <div className="lg:flex mx-auto">
           <div className="p-5 mb-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
             <div className=" tracking-widest pb-2">STARTER</div>
-            <div className="py-2 text-white">
-              <span className="workfont text-5xl font-bold">$50</span>* /month
-              per user
-            </div>
+            {isMonthly && (
+              <div className="py-2 text-white">
+                <span className="workfont text-5xl font-bold">$50</span>* /month
+                per user
+              </div>
+            )}
+            {!isMonthly && (
+              <div>
+                <div className="py-2 text-white workfont text-5xl font-bold line-through">
+                  $40
+                </div>
+                <div className="py-2 text-[#33BCAC]">
+                  <span className="workfont text-5xl font-bold">$80</span>*
+                  /month per user
+                </div>
+              </div>
+            )}
             <div className="h-[2px] bg-gradient-to-r from-white to-transparent"></div>
             <div className="py-2 italic">Explain who it's best for</div>
             <div className="flex">
@@ -76,10 +91,23 @@ function RouteComponent() {
             </div>
             <div className="p-5 mb-5 md:mx-5 text-xl border-l border-r border-b rounded-b-lg bg-gradient-to-br from-[#545AB5] via-[#475DA0] via-55% to-[#423449] text-[#D9D9D9]">
               <div className=" tracking-widest pb-2">STANDARD</div>
-              <div className="py-2 text-white">
-                <span className="workfont text-5xl font-bold">$100</span>*
-                /month per user
-              </div>
+              {isMonthly && (
+                <div className="py-2 text-white">
+                  <span className="workfont text-5xl font-bold">$100</span>*
+                  /month per user
+                </div>
+              )}
+              {!isMonthly && (
+                <div>
+                  <div className="py-2 text-white workfont text-5xl font-bold line-through">
+                    $100
+                  </div>
+                  <div className="py-2 text-[#33BCAC]">
+                    <span className="workfont text-5xl font-bold">$80</span>*
+                    /month per user
+                  </div>
+                </div>
+              )}
               <div className="h-[2px] bg-gradient-to-r from-white to-transparent"></div>
               <div className="py-2 italic">Explain who it's best for</div>
               <div className="flex">
@@ -101,10 +129,23 @@ function RouteComponent() {
           </div>
           <div className="p-5 md:m-5 text-xl border rounded-lg bg-gradient-to-b from-[#373557] to-transparent text-[#D9D9D9]">
             <div className=" tracking-widest pb-2">BUSINESS</div>
-            <div className="py-2 text-white">
-              <span className="workfont text-5xl font-bold">$600</span>* /month
-              per user
-            </div>
+            {isMonthly && (
+              <div className="py-2 text-white">
+                <span className="workfont text-5xl font-bold">$600</span>*
+                /month per user
+              </div>
+            )}
+            {!isMonthly && (
+              <div>
+                <div className="py-2 text-white workfont text-5xl font-bold line-through">
+                  $600
+                </div>
+                <div className="py-2 text-[#33BCAC]">
+                  <span className="workfont text-5xl font-bold">$500</span>*
+                  /month per user
+                </div>
+              </div>
+            )}
             <div className="h-[2px] bg-gradient-to-r from-white to-transparent"></div>
             <div className="py-2 italic">Explain who it's best for</div>
             <div className="flex">
