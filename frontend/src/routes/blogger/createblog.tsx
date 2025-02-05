@@ -8,7 +8,7 @@ export const Route = createFileRoute("/blogger/createblog")({
   component: RouteComponent,
 });
 
-type Block = {
+export type Block = {
   id: string;
   type: "title" | "subtitle" | "paragraph" | "image";
   content: string;

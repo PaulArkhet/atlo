@@ -31,6 +31,7 @@ import { Route as IndexImport } from './routes/index'
 import { Route as BloggerLoginImport } from './routes/blogger/login'
 import { Route as BloggerDashboardImport } from './routes/blogger/dashboard'
 import { Route as BloggerCreateblogImport } from './routes/blogger/createblog'
+import { Route as BlogBlogIdImport } from './routes/blog/$blogId'
 
 // Create/Update Routes
 
@@ -151,6 +152,12 @@ const BloggerDashboardRoute = BloggerDashboardImport.update({
 const BloggerCreateblogRoute = BloggerCreateblogImport.update({
   id: '/blogger/createblog',
   path: '/blogger/createblog',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BlogBlogIdRoute = BlogBlogIdImport.update({
+  id: '/blog/$blogId',
+  path: '/blog/$blogId',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -277,6 +284,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThankyousubscribeImport
       parentRoute: typeof rootRoute
     }
+    '/blog/$blogId': {
+      id: '/blog/$blogId'
+      path: '/blog/$blogId'
+      fullPath: '/blog/$blogId'
+      preLoaderRoute: typeof BlogBlogIdImport
+      parentRoute: typeof rootRoute
+    }
     '/blogger/createblog': {
       id: '/blogger/createblog'
       path: '/blogger/createblog'
@@ -321,6 +335,7 @@ export interface FileRoutesByFullPath {
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
+  '/blog/$blogId': typeof BlogBlogIdRoute
   '/blogger/createblog': typeof BloggerCreateblogRoute
   '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
@@ -344,6 +359,7 @@ export interface FileRoutesByTo {
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
+  '/blog/$blogId': typeof BlogBlogIdRoute
   '/blogger/createblog': typeof BloggerCreateblogRoute
   '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
@@ -368,6 +384,7 @@ export interface FileRoutesById {
   '/thankyoudemo': typeof ThankyoudemoRoute
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
+  '/blog/$blogId': typeof BlogBlogIdRoute
   '/blogger/createblog': typeof BloggerCreateblogRoute
   '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
@@ -393,6 +410,7 @@ export interface FileRouteTypes {
     | '/thankyoudemo'
     | '/thankyouregister'
     | '/thankyousubscribe'
+    | '/blog/$blogId'
     | '/blogger/createblog'
     | '/blogger/dashboard'
     | '/blogger/login'
@@ -415,6 +433,7 @@ export interface FileRouteTypes {
     | '/thankyoudemo'
     | '/thankyouregister'
     | '/thankyousubscribe'
+    | '/blog/$blogId'
     | '/blogger/createblog'
     | '/blogger/dashboard'
     | '/blogger/login'
@@ -437,6 +456,7 @@ export interface FileRouteTypes {
     | '/thankyoudemo'
     | '/thankyouregister'
     | '/thankyousubscribe'
+    | '/blog/$blogId'
     | '/blogger/createblog'
     | '/blogger/dashboard'
     | '/blogger/login'
@@ -461,6 +481,7 @@ export interface RootRouteChildren {
   ThankyoudemoRoute: typeof ThankyoudemoRoute
   ThankyouregisterRoute: typeof ThankyouregisterRoute
   ThankyousubscribeRoute: typeof ThankyousubscribeRoute
+  BlogBlogIdRoute: typeof BlogBlogIdRoute
   BloggerCreateblogRoute: typeof BloggerCreateblogRoute
   BloggerDashboardRoute: typeof BloggerDashboardRoute
   BloggerLoginRoute: typeof BloggerLoginRoute
@@ -484,6 +505,7 @@ const rootRouteChildren: RootRouteChildren = {
   ThankyoudemoRoute: ThankyoudemoRoute,
   ThankyouregisterRoute: ThankyouregisterRoute,
   ThankyousubscribeRoute: ThankyousubscribeRoute,
+  BlogBlogIdRoute: BlogBlogIdRoute,
   BloggerCreateblogRoute: BloggerCreateblogRoute,
   BloggerDashboardRoute: BloggerDashboardRoute,
   BloggerLoginRoute: BloggerLoginRoute,
@@ -516,6 +538,7 @@ export const routeTree = rootRoute
         "/thankyoudemo",
         "/thankyouregister",
         "/thankyousubscribe",
+        "/blog/$blogId",
         "/blogger/createblog",
         "/blogger/dashboard",
         "/blogger/login"
@@ -571,6 +594,9 @@ export const routeTree = rootRoute
     },
     "/thankyousubscribe": {
       "filePath": "thankyousubscribe.tsx"
+    },
+    "/blog/$blogId": {
+      "filePath": "blog/$blogId.tsx"
     },
     "/blogger/createblog": {
       "filePath": "blogger/createblog.tsx"

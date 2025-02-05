@@ -4,10 +4,16 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Block } from "./createblog";
 import { getAllBlogsQueryOptions } from "@/lib/api/blog";
+import largeImage from "/bloglargeimg.svg";
 
 export const Route = createFileRoute("/blogger/dashboard")({
   component: RouteComponent,
 });
+
+type Blog = {
+  blogId: number;
+  content: string;
+};
 
 function RouteComponent() {
   const { isBloggerLoggedIn, setIsBloggerLoggedIn } = useAuthStore(
@@ -24,7 +30,7 @@ function RouteComponent() {
   if (isLoading) return <p>Loading blogs...</p>;
   if (error) return <p>Error fetching blogs</p>;
 
-  const parseBlogContent = (blog) => {
+  const parseBlogContent = (blog: Blog) => {
     const blocks = JSON.parse(blog.content); // Convert JSON string back to an array
     const titleBlock = blocks.find((block: Block) => block.type === "title");
     const imageBlock = blocks.find((block: Block) => block.type === "image");
@@ -95,21 +101,24 @@ function RouteComponent() {
           ))}
         </div> */}
         <div className="grid grid-cols-5">
-          {blogs.map((blog) => {
-            const { title, image, blogId } = parseBlogContent(blog);
-            return (
-              <Link to={`/blog/${blogId}`} key={blogId}>
-                <div className="bg-gray-800 p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition">
-                  <img
-                    src={image}
-                    alt={title}
-                    className="w-full h-40 object-cover rounded-md"
-                  />
-                  <h2 className="mt-2 text-white text-lg font-bold">{title}</h2>
-                </div>
-              </Link>
-            );
-          })}
+          {blogs &&
+            blogs.map((blog) => {
+              const { title, image, blogId } = parseBlogContent(blog);
+              return (
+                <Link to={`/blog/${blogId}`} key={blogId}>
+                  <div className="bg-gray-800 p-4 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition">
+                    <img
+                      src={image}
+                      alt={title}
+                      className="w-full h-40 object-cover rounded-md"
+                    />
+                    <h2 className="mt-2 text-white text-lg font-bold">
+                      {title}
+                    </h2>
+                  </div>
+                </Link>
+              );
+            })}
           <div className="border p-10 w-[250px] m-3">
             <div>Blog title</div>
             <div>picture</div>
