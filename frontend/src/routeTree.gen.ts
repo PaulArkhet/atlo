@@ -29,6 +29,7 @@ import { Route as BenefitsImport } from './routes/benefits'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 import { Route as BloggerLoginImport } from './routes/blogger/login'
+import { Route as BloggerDashboardImport } from './routes/blogger/dashboard'
 import { Route as BloggerCreateblogImport } from './routes/blogger/createblog'
 
 // Create/Update Routes
@@ -138,6 +139,12 @@ const IndexRoute = IndexImport.update({
 const BloggerLoginRoute = BloggerLoginImport.update({
   id: '/blogger/login',
   path: '/blogger/login',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BloggerDashboardRoute = BloggerDashboardImport.update({
+  id: '/blogger/dashboard',
+  path: '/blogger/dashboard',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -277,6 +284,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BloggerCreateblogImport
       parentRoute: typeof rootRoute
     }
+    '/blogger/dashboard': {
+      id: '/blogger/dashboard'
+      path: '/blogger/dashboard'
+      fullPath: '/blogger/dashboard'
+      preLoaderRoute: typeof BloggerDashboardImport
+      parentRoute: typeof rootRoute
+    }
     '/blogger/login': {
       id: '/blogger/login'
       path: '/blogger/login'
@@ -308,6 +322,7 @@ export interface FileRoutesByFullPath {
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
   '/blogger/createblog': typeof BloggerCreateblogRoute
+  '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
 }
 
@@ -330,6 +345,7 @@ export interface FileRoutesByTo {
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
   '/blogger/createblog': typeof BloggerCreateblogRoute
+  '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
 }
 
@@ -353,6 +369,7 @@ export interface FileRoutesById {
   '/thankyouregister': typeof ThankyouregisterRoute
   '/thankyousubscribe': typeof ThankyousubscribeRoute
   '/blogger/createblog': typeof BloggerCreateblogRoute
+  '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
 }
 
@@ -377,6 +394,7 @@ export interface FileRouteTypes {
     | '/thankyouregister'
     | '/thankyousubscribe'
     | '/blogger/createblog'
+    | '/blogger/dashboard'
     | '/blogger/login'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -398,6 +416,7 @@ export interface FileRouteTypes {
     | '/thankyouregister'
     | '/thankyousubscribe'
     | '/blogger/createblog'
+    | '/blogger/dashboard'
     | '/blogger/login'
   id:
     | '__root__'
@@ -419,6 +438,7 @@ export interface FileRouteTypes {
     | '/thankyouregister'
     | '/thankyousubscribe'
     | '/blogger/createblog'
+    | '/blogger/dashboard'
     | '/blogger/login'
   fileRoutesById: FileRoutesById
 }
@@ -442,6 +462,7 @@ export interface RootRouteChildren {
   ThankyouregisterRoute: typeof ThankyouregisterRoute
   ThankyousubscribeRoute: typeof ThankyousubscribeRoute
   BloggerCreateblogRoute: typeof BloggerCreateblogRoute
+  BloggerDashboardRoute: typeof BloggerDashboardRoute
   BloggerLoginRoute: typeof BloggerLoginRoute
 }
 
@@ -464,6 +485,7 @@ const rootRouteChildren: RootRouteChildren = {
   ThankyouregisterRoute: ThankyouregisterRoute,
   ThankyousubscribeRoute: ThankyousubscribeRoute,
   BloggerCreateblogRoute: BloggerCreateblogRoute,
+  BloggerDashboardRoute: BloggerDashboardRoute,
   BloggerLoginRoute: BloggerLoginRoute,
 }
 
@@ -495,6 +517,7 @@ export const routeTree = rootRoute
         "/thankyouregister",
         "/thankyousubscribe",
         "/blogger/createblog",
+        "/blogger/dashboard",
         "/blogger/login"
       ]
     },
@@ -551,6 +574,9 @@ export const routeTree = rootRoute
     },
     "/blogger/createblog": {
       "filePath": "blogger/createblog.tsx"
+    },
+    "/blogger/dashboard": {
+      "filePath": "blogger/dashboard.tsx"
     },
     "/blogger/login": {
       "filePath": "blogger/login.tsx"

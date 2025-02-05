@@ -18,7 +18,7 @@ function RouteComponent() {
     const username = (e.target as HTMLFormElement).username.value;
     const password = (e.target as HTMLFormElement).password.value;
     if (username === "randall" && password === "herd") {
-      navigate({ to: "/blogger/createblog" });
+      navigate({ to: "/blogger/dashboard" });
     } else {
       setMessage("Whoops, that's not it!");
     }

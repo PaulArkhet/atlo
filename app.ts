@@ -5,6 +5,7 @@ import { subscriptionRouter } from "./routes/subscriptions";
 import { cors } from "hono/cors";
 import { registrationRouter } from "./routes/registrations";
 import { bookingRouter } from "./routes/bookings";
+import { blogRouter } from "./routes/blogs";
 
 const app = new Hono();
 
@@ -15,7 +16,8 @@ const apiRoutes = app
   .basePath("/api/v0")
   .route("/subscriptions", subscriptionRouter)
   .route("/registrations", registrationRouter)
-  .route("/bookings", bookingRouter);
+  .route("/bookings", bookingRouter)
+  .route("/blogs", blogRouter);
 
 app.use("/*", serveStatic({ root: "./frontend/dist" }));
 app.get("/*", async (c) => {
