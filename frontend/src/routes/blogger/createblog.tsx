@@ -1,7 +1,8 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import arrowLeft from "/arrowleft.svg";
 import { useCreateBlogMutation } from "@/lib/api/blog";
+import useAuthStore from "@/store/AuthStore";
 
 export const Route = createFileRoute("/blogger/createblog")({
   component: RouteComponent,
@@ -16,6 +17,13 @@ type Block = {
 function RouteComponent() {
   const [blocks, setBlocks] = useState<Block[]>([]);
   const navigate = useNavigate();
+  const { isBloggerLoggedIn, setIsBloggerLoggedIn } = useAuthStore(
+    (state) => state
+  );
+
+  useEffect(() => {
+    if (!isBloggerLoggedIn) navigate({ to: "/blogger/login" });
+  }, []);
 
   const handleAddBlock = (type: Block["type"]) => {
     setBlocks([...blocks, { id: crypto.randomUUID(), type, content: "" }]);
@@ -53,13 +61,13 @@ function RouteComponent() {
     // Convert blocks into a string (or structured format)
     const formattedContent = JSON.stringify(blocks);
 
-    // createBlogMutation.mutate(
-    //   { content: formattedContent }, // <-- Sending the transformed data
-    //   {
-    //     onSuccess: () => navigate({ to: "/blogger/dashboard" }),
-    //     onError: (error) => console.error("Blogging failed:", error),
-    //   }
-    // );
+    createBlogMutation.mutate(
+      { content: formattedContent }, // <-- Sending the transformed data
+      {
+        onSuccess: () => navigate({ to: "/blogger/dashboard" }),
+        onError: (error) => console.error("Blogging failed:", error),
+      }
+    );
   };
 
   return (

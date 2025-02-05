@@ -8,6 +8,13 @@
       "when": 1738544822540,
       "tag": "0000_curved_madrox",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1738796382317,
+      "tag": "0001_bent_lorna_dane",
+      "breakpoints": true
     }
   ]
 }

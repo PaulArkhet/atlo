@@ -4,6 +4,7 @@ import rectangle from "/registerrectangle.svg";
 import group17 from "/subscribegroup17.svg";
 import arrowLeft from "/arrowleft.svg";
 import { useState } from "react";
+import useAuthStore from "@/store/AuthStore";
 
 export const Route = createFileRoute("/blogger/login")({
   component: RouteComponent,
@@ -12,12 +13,16 @@ export const Route = createFileRoute("/blogger/login")({
 function RouteComponent() {
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
+  const { isBloggerLoggedIn, setIsBloggerLoggedIn } = useAuthStore(
+    (state) => state
+  );
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const username = (e.target as HTMLFormElement).username.value;
     const password = (e.target as HTMLFormElement).password.value;
     if (username === "randall" && password === "herd") {
+      setIsBloggerLoggedIn(true);
       navigate({ to: "/blogger/dashboard" });
     } else {
       setMessage("Whoops, that's not it!");
