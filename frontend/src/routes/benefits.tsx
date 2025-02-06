@@ -70,12 +70,12 @@ function RouteComponent() {
               <img
                 src={layersVertical}
                 alt=""
-                className="absolute top-10 left-24 w-[100px] sm:left-32 sm:w-[250px] md:left-16 md:top-0 md:w-[200px] lg:left-32 lg:top-10 2xl:bottom-40 2xl:left-60  2xl:w-auto"
+                className="absolute top-2 left-[25%] w-[40vw] md:left-[20%] md:top-0 md:w-[25vw] xl:left-[30%] lg:w-auto"
               />
-              <div className="text-[20px] sm:text-[24px] xl:text-[40px] font-semibold">
+              <div className="text-[20px] sm:text-[30px] xl:text-[40px] font-semibold">
                 100% accurate to your design
               </div>
-              <div className="xl:text-[28px]">
+              <div className="sm:text-[20px] xl:text-[28px]">
                 Prototypes adhere to the requirements of your design, every
                 time. Import your own or try something new.
               </div>
@@ -87,12 +87,12 @@ function RouteComponent() {
               <img
                 src={calibrate}
                 alt=""
-                className="absolute top-14 left-14 w-[200px] sm:top-20 sm:left-20 sm:w-[400px] md:left-3 md:top-10 2xl:left-28 2xl:w-auto"
+                className="absolute top-[10%] left-[10%] w-[70vw] md:top-10 md:left-[5%] 2xl:left-28 lg:w-auto"
               />
-              <div className="text-[20px] sm:text-[24px] xl:text-[40px] font-semibold">
+              <div className="text-[20px] sm:text-[30px] xl:text-[40px] font-semibold">
                 Calibrate, visually
               </div>
-              <div className="xl:text-[28px] text-[#D9D9D9]">
+              <div className="sm:text-[20px] xl:text-[28px]">
                 Modify components, colours, and layout at any time. Then test
                 again.
               </div>
@@ -122,59 +122,58 @@ function RouteComponent() {
         </div>
       </div>
       <div className="flex flex-col mx-auto">
-        <div className="md:flex mx-auto">
-          <div className="relative mx-5 mb-3 md:mb-0">
-            <img src={frame} alt="" className="" />
-            <img
-              src={ellipseBlue}
-              alt=""
-              className="absolute top-5 md:left-7"
-            />
-            <img
-              src={realistic}
-              alt=""
-              className="absolute top-0 left-14 lg:left-0 lg:top-[-5%] 2xl:top-[-5%] 2xl:left-20 w-[200px] sm:w-auto"
-            />
-            <div
-              className="absolute text-[20px] left-4 bottom-32 sm:text-[25px] sm:bottom-60 md:left-7 lg:text-[20px] lg:bottom-24 lg:left-3 
-              2xl:text-[40px] 2xl:left-7 2xl:bottom-56 font-semibold"
-            >
-              Realistic experiments provide better data
-            </div>
-            <div className="absolute bottom-6 left-4 sm:bottom-40 lg:bottom-6 lg:left-3 2xl:left-7 2xl:bottom-10 2xl:text-[28px]">
-              Interactive prototypes are no longer exclusive to teams that can
-              afford to navigate the demands of regular prototyping.
+        <div className="md:grid grid-cols-3 gap-2 mx-auto">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+            <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
+              <img src={ellipseBlue} alt="" className="mx-auto " />
+              <img
+                src={realistic}
+                alt=""
+                className="absolute left-[15%] top-[-5%] w-[60vw] md:w-[27vw] lg:w-[20vw] 2xl:top-[-5%] 2xl:left-20 sm:w-auto"
+              />
+              <div
+                className=" text-[20px] sm:text-[25px] lg:text-[20px] 
+              2xl:text-[40px] font-semibold"
+              >
+                Realistic experiments provide better data
+              </div>
+              <div className="2xl:text-[28px]">
+                Interactive prototypes are no longer exclusive to teams that can
+                afford to navigate the demands of regular prototyping.
+              </div>
             </div>
           </div>
-          <div className="relative mx-5 mb-3 md:mb-0">
-            <img src={frame} alt="" className="" />
-            <img src={ellipseCyan} alt="" className="absolute top-5 left-7" />
-            <img
-              src={database}
-              alt=""
-              className="absolute top-7 left-6 sm:left-28 sm:top-20 lg:left-9 lg:top-7 2xl:left-24 w-[250px] sm:w-auto"
-            />
-            <div className="absolute bottom-20 left-3 sm:bottom-60 sm:text-[25px] lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
-              Your Data, Your Experiment
-            </div>
-            <div className="absolute bottom-6 left-3 sm:bottom-52 lg:bottom-20 2xl:bottom-32 lg:left-7 2xl:text-[28px]">
-              Import and test with your data during development, not after.
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+            <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
+              <img src={ellipseCyan} alt="" className="mx-auto" />
+              <img
+                src={database}
+                alt=""
+                className="absolute top-7 left-6 sm:left-28 sm:top-20 lg:left-9 lg:top-7 2xl:left-24 w-[250px] sm:w-auto"
+              />
+              <div className="sm:text-[25px] text-[20px] 2xl:text-[40px] font-semibold">
+                Your Data, Your Experiment
+              </div>
+              <div className="2xl:text-[28px]">
+                Import and test with your data during development, not after.
+              </div>
             </div>
           </div>
-          <div className="relative mx-5">
-            <img src={frame} alt="" className="" />
-            <img src={ellipsePink} alt="" className="absolute top-5 left-7" />
-            <img
-              src={visual}
-              alt=""
-              className="absolute top-4 left-10 sm:left-28 sm:top-20 lg:top-4 lg:left-10 2xl:left-28 w-[250px] sm:w-auto"
-            />
-            <div className="absolute bottom-20 left-2 sm:bottom-60 sm:text-[25px] lg:bottom-32 2xl:bottom-56 lg:left-7 text-[20px] 2xl:text-[40px] font-semibold">
-              Drag-and-Drop visual interface
-            </div>
-            <div className="absolute bottom-6 left-2 sm:bottom-44 lg:bottom-20 lg:left-7 2xl:text-[28px]">
-              Generate interactive prototypes without writing (or rewriting) a
-              single prompt.
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+            <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
+              <img src={ellipsePink} alt="" className="mx-auto" />
+              <img
+                src={visual}
+                alt=""
+                className="absolute top-4 left-10 sm:left-28 sm:top-20 lg:top-4 lg:left-10 2xl:left-28 w-[250px] sm:w-auto"
+              />
+              <div className="sm:text-[25px] text-[20px] 2xl:text-[40px] font-semibold">
+                Drag-and-Drop visual interface
+              </div>
+              <div className="2xl:text-[28px]">
+                Generate interactive prototypes without writing (or rewriting) a
+                single prompt.
+              </div>
             </div>
           </div>
         </div>
