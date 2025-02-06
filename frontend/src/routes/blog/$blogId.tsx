@@ -31,12 +31,14 @@ function RouteComponent() {
   };
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
-      <div className="max-w-2xl mx-auto p-5">
-        {blocks.map((block: Block, index: number) => (
-          <div key={index} className="mb-4">
-            {renderBlock(block)}
-          </div>
-        ))}
+      <div className="flex flex-col">
+        <div className="mx-auto">
+          {blocks.map((block: Block, index: number) => (
+            <div key={index} className="mb-4">
+              {renderBlock(block)}
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );

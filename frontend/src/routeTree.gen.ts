@@ -21,7 +21,6 @@ import { Route as ResourcesImport } from './routes/resources'
 import { Route as RegisterImport } from './routes/register'
 import { Route as PrivacypolicyImport } from './routes/privacypolicy'
 import { Route as PricingImport } from './routes/pricing'
-import { Route as LoginImport } from './routes/login'
 import { Route as JoinImport } from './routes/join'
 import { Route as HowitworksImport } from './routes/howitworks'
 import { Route as FaqImport } from './routes/faq'
@@ -92,12 +91,6 @@ const PrivacypolicyRoute = PrivacypolicyImport.update({
 const PricingRoute = PricingImport.update({
   id: '/pricing',
   path: '/pricing',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const LoginRoute = LoginImport.update({
-  id: '/login',
-  path: '/login',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -205,13 +198,6 @@ declare module '@tanstack/react-router' {
       path: '/join'
       fullPath: '/join'
       preLoaderRoute: typeof JoinImport
-      parentRoute: typeof rootRoute
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginImport
       parentRoute: typeof rootRoute
     }
     '/pricing': {
@@ -324,7 +310,6 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
   '/join': typeof JoinRoute
-  '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/privacypolicy': typeof PrivacypolicyRoute
   '/register': typeof RegisterRoute
@@ -348,7 +333,6 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
   '/join': typeof JoinRoute
-  '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/privacypolicy': typeof PrivacypolicyRoute
   '/register': typeof RegisterRoute
@@ -373,7 +357,6 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/howitworks': typeof HowitworksRoute
   '/join': typeof JoinRoute
-  '/login': typeof LoginRoute
   '/pricing': typeof PricingRoute
   '/privacypolicy': typeof PrivacypolicyRoute
   '/register': typeof RegisterRoute
@@ -399,7 +382,6 @@ export interface FileRouteTypes {
     | '/faq'
     | '/howitworks'
     | '/join'
-    | '/login'
     | '/pricing'
     | '/privacypolicy'
     | '/register'
@@ -422,7 +404,6 @@ export interface FileRouteTypes {
     | '/faq'
     | '/howitworks'
     | '/join'
-    | '/login'
     | '/pricing'
     | '/privacypolicy'
     | '/register'
@@ -445,7 +426,6 @@ export interface FileRouteTypes {
     | '/faq'
     | '/howitworks'
     | '/join'
-    | '/login'
     | '/pricing'
     | '/privacypolicy'
     | '/register'
@@ -470,7 +450,6 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   HowitworksRoute: typeof HowitworksRoute
   JoinRoute: typeof JoinRoute
-  LoginRoute: typeof LoginRoute
   PricingRoute: typeof PricingRoute
   PrivacypolicyRoute: typeof PrivacypolicyRoute
   RegisterRoute: typeof RegisterRoute
@@ -494,7 +473,6 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   HowitworksRoute: HowitworksRoute,
   JoinRoute: JoinRoute,
-  LoginRoute: LoginRoute,
   PricingRoute: PricingRoute,
   PrivacypolicyRoute: PrivacypolicyRoute,
   RegisterRoute: RegisterRoute,
@@ -527,7 +505,6 @@ export const routeTree = rootRoute
         "/faq",
         "/howitworks",
         "/join",
-        "/login",
         "/pricing",
         "/privacypolicy",
         "/register",
@@ -561,9 +538,6 @@ export const routeTree = rootRoute
     },
     "/join": {
       "filePath": "join.tsx"
-    },
-    "/login": {
-      "filePath": "login.tsx"
     },
     "/pricing": {
       "filePath": "pricing.tsx"
