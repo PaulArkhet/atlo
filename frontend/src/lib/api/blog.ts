@@ -58,3 +58,62 @@ export const getAllBlogsQueryOptions = queryOptions({
   queryKey: ["blogs"],
   queryFn: getAllBlogs,
 });
+
+async function getBlogById(BlogId: number) {
+  const res = await client.api.v0.blogs[":blogId"].$get({
+    param: { blogId: BlogId.toString() },
+  });
+
+  if (!res.ok) {
+    throw new Error("Error getting Blog by id");
+  }
+  const { blog } = await res.json();
+  return mapSerializedBlogToSchema(blog);
+}
+
+export const getBlogByIdQueryOptions = (BlogId: number) =>
+  queryOptions({
+    queryKey: ["Blogs", BlogId],
+    queryFn: () => getBlogById(BlogId),
+  });
+
+async function deleteBlogById(BlogId: number) {
+  const res = await client.api.v0.blogs[":blogId"].delete.$post({
+    param: { blogId: BlogId.toString() },
+  });
+  if (!res.ok) {
+    throw new Error("Error getting Blog by id");
+  }
+}
+
+export const useDeleteBlogMutation = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: deleteBlogById,
+    onSettled: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["Blogs"],
+      });
+    },
+    onMutate: async (args) => {
+      // Snapshot the previous value
+      const previousBlogs = queryClient.getQueryData(["Blogs"]) as Blog[];
+
+      const projToDeleteIndex = previousBlogs.findIndex(
+        (blog) => blog.blogId === args
+      );
+      if (projToDeleteIndex === -1) return;
+
+      const newBlogs = previousBlogs.toSpliced(projToDeleteIndex, 1);
+      // Optimistically update to the new value
+      queryClient.setQueryData(["Blogs"], newBlogs);
+
+      // Return a context with the previous and new todo
+      return { previousBlogs, newBlogs };
+    },
+    onError: (_err, _args, context) => {
+      if (!context) return;
+      queryClient.setQueryData(["Blogs"], context.previousBlogs);
+    },
+  });
+};

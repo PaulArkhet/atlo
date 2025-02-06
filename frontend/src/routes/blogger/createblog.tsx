@@ -84,6 +84,14 @@ function RouteComponent() {
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col mx-auto w-[800px]">
+        <div className="flex">
+          <input type="checkbox" className="" defaultChecked />
+          <div className="px-2 text-xs">main</div>
+        </div>
+        <div className="flex">
+          <input type="checkbox" className="" defaultChecked />
+          <div className="px-2 text-xs">featured</div>
+        </div>
         {blocks.map((block) => (
           <div key={block.id} className="relative my-3">
             {block.type === "title" && (

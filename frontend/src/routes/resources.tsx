@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import background1 from "/background1.svg";
 import fadingBorder from "/resourcesfadingborder.svg";
 import blogImg from "/resourcesblog1img.svg";
@@ -8,12 +8,44 @@ import largeImage from "/bloglargeimg.svg";
 import largeImage2 from "/bloglargeimg2.svg";
 import smallFrame from "/blogsmallframe.svg";
 import smallImage from "/blogsmallimage.svg";
+import useBlogStore from "@/store/BlogStore";
+import { useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { getAllBlogsQueryOptions } from "@/lib/api/blog";
+import { Blog } from "./blogger/dashboard";
+import { Block } from "./blogger/createblog";
 
 export const Route = createFileRoute("/resources")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
+  const { currentBlog, setCurrentBlog } = useBlogStore((state) => state);
+  const navigate = useNavigate();
+
+  const { data: blogs, isLoading, error } = useQuery(getAllBlogsQueryOptions);
+
+  if (isLoading) return <p>Loading blogs...</p>;
+  if (error) return <p>Error fetching blogs</p>;
+
+  const parseBlogContent = (blog: Blog) => {
+    const blocks = JSON.parse(blog.content); // Convert JSON string back to an array
+    const titleBlock = blocks.find((block: Block) => block.type === "title");
+    const imageBlock = blocks.find((block: Block) => block.type === "image");
+
+    return {
+      title: titleBlock ? titleBlock.content : "Untitled Blog",
+      image: imageBlock ? imageBlock.src : { largeImage }, // Fallback image
+      blogId: blog.blogId,
+    };
+  };
+
+  function clickedBlog(id: number) {
+    blogs?.forEach((blog) => {
+      if (blog.blogId === id) setCurrentBlog(blog);
+    });
+  }
+
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="md:p-10">
@@ -25,6 +57,29 @@ function RouteComponent() {
         <div className="workfont text-2xl md:text-6xl font-bold">
           <div>Blog</div>
         </div>
+      </div>
+      <div className="pb-10 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
+        {blogs &&
+          blogs.map((blog) => {
+            const { title, image, blogId } = parseBlogContent(blog);
+            return (
+              <Link
+                to={`/blog/${blogId}`}
+                key={blogId}
+                onClick={() => clickedBlog(blog.blogId)}
+              >
+                <div className="border p-10 shadow-lg cursor-pointer ">
+                  <img
+                    src={largeImage}
+                    alt={title}
+                    className="w-full h-40 object-cover rounded-md"
+                  />
+                  <h2 className="mt-2 text-white text-lg font-bold">{title}</h2>
+                  <p> Uploaded on: {blog.createdAt.toString()}</p>
+                </div>
+              </Link>
+            );
+          })}
       </div>
       <div
         className="md:hidden border-2 bg-gradient-to-r from-[#6F4B92] via-[#584F8F] to-[#404A8B] border-[#464071] 
