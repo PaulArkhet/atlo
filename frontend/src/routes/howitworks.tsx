@@ -83,14 +83,9 @@ function RouteComponent() {
                 <div className="ml-2 my-3">All you need is an idea.</div>
               </div>
             </div>
-            <div className="lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-20 md:mb-0">
-              <div className="relative top-0 right-0">
-                <img src={fadingborder} alt="" className="2xl:w-[1050px]" />
-                <img
-                  src={capy1}
-                  alt=""
-                  className="absolute top-3 left-4 md:left-5 md:top-6 w-[90%] 2xl:w-auto"
-                />
+            <div className="lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-20 md:mb-0 bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+              <div className="rounded-[8px] p-4 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] ">
+                <img src={capy1} alt="" className="" />
               </div>
             </div>
           </div>
@@ -183,14 +178,9 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-20 md:mb-0">
-            <div className="relative top-0 md:right-[-5%]">
-              <img src={fadingborder} alt="" className="2xl:w-[1050px]" />
-              <img
-                src={step3img}
-                alt=""
-                className="absolute top-3 left-4 md:top-6 md:left-5 w-[90%] 2xl:w-auto"
-              />
+          <div className="lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-20 md:mb-0 bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+            <div className="rounded-[8px] p-4 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] ">
+              <img src={step3img} alt="" className="" />
             </div>
           </div>
         </div>

@@ -153,13 +153,12 @@ function RouteComponent() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="relative mx-auto">
-              <img src={fadingborder} alt="" className="mx-auto" />
-              <img
-                src={canvas}
-                alt=""
-                className="absolute top-3 left-3 md:top-9 md:left-8 w-[92%] 2xl:w-auto"
-              />
+            <div className="mx-auto">
+              <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+                <div className="rounded-[8px] p-3 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] from-50%">
+                  <img src={canvas} alt="" className="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -234,13 +233,12 @@ function RouteComponent() {
             </div>
           </div>
           <div className="flex flex-col mx-auto">
-            <div className="relative mx-auto">
-              <img src={fadingborder} alt="" className="mx-auto" />
-              <img
-                src={styleguide}
-                alt=""
-                className="absolute top-3 left-3 md:top-9 md:left-10 w-[92%] 2xl:w-auto"
-              />
+            <div className="mx-auto">
+              <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+                <div className="rounded-[8px] pt-3 px-5 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] from-50%">
+                  <img src={styleguide} alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

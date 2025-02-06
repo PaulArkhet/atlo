@@ -68,14 +68,18 @@ function RouteComponent() {
                 key={blogId}
                 onClick={() => clickedBlog(blog.blogId)}
               >
-                <div className="border p-10 shadow-lg cursor-pointer ">
-                  <img
-                    src={largeImage}
-                    alt={title}
-                    className="w-full h-40 object-cover rounded-md"
-                  />
-                  <h2 className="mt-2 text-white text-lg font-bold">{title}</h2>
-                  <p> Uploaded on: {blog.createdAt.toString()}</p>
+                <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+                  <div className="rounded-[10px] p-10 bg-gradient-to-b from-black to-transparent bg-opacity-40 w-[99%] mt-[2px] mx-auto">
+                    <img
+                      src={largeImage}
+                      alt={title}
+                      className="w-full h-40 object-cover rounded-md"
+                    />
+                    <h2 className="mt-2 text-white text-lg font-bold">
+                      {title}
+                    </h2>
+                    <p> Uploaded on: {blog.createdAt.toString()}</p>
+                  </div>
                 </div>
               </Link>
             );

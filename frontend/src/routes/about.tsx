@@ -82,189 +82,179 @@ function RouteComponent() {
         software design with a mission-driven team
       </div>
       <div className="flex flex-col mx-auto pb-32">
-        <div className="md:grid grid-cols-3 gap-6 mx-auto">
-          <div className="relative">
-            <img src={frame} alt="" />
-            <img
-              src={nateImg}
-              alt=""
-              className="absolute top-2 left-[5.5rem] md:top-10 md:left-28 2xl:left-32 w-[50%] 2xl:w-auto"
-            />
-            <div className="absolute bottom-20 left-20 2xl:bottom-20 lg:left-28 2xl:left-32">
-              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
-                NATHAN NGAI
+        <div className="md:grid grid-cols-3 gap-6 lg:gap-9 mx-auto">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+            <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
+              <img src={nateImg} alt="" className="mx-auto py-5" />
+              <div className="pt-5">
+                <div className="text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2 lg:px-24">
+                  NATHAN NGAI
+                </div>
+                <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+                  Founder & CEO
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+                  Favourite question:
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+                  Answer to question
+                </div>
               </div>
-              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
-                Founder & CEO
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
-                Favourite question:
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
-                Answer to question
+              <div className="flex justify-between">
+                <div></div>
+                <a
+                  href="https://www.linkedin.com/in/ngainathan/"
+                  target="_blank"
+                >
+                  <img src={linkedIn} alt="" className="py-3" />
+                </a>
               </div>
             </div>
-            <a href="https://www.linkedin.com/in/ngainathan/" target="_blank">
-              <img
-                src={linkedIn}
-                alt=""
-                className="absolute bottom-7 right-6"
-              />
-            </a>
           </div>
-          <div className="relative">
-            <img src={frame} alt="" />
-            <img
-              src={randallImg}
-              alt=""
-              className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
-            />
-            <div className="absolute bottom-20 left-16 md:left-24 2xl:bottom-20 2xl:left-32">
-              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
-                RANDALL HERD
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+            <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
+              <img src={randallImg} alt="" className="mx-auto py-5" />
+              <div className="pt-5">
+                <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+                  RANDALL HERD
+                </div>
+                <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+                  VP of Marketing
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+                  Favourite question:
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+                  Answer to question
+                </div>
               </div>
-              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
-                VP of Marketing
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
-                Favourite question:
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
-                Answer to question
+              <div className="flex justify-between">
+                <div></div>
+                <a
+                  href="https://www.linkedin.com/in/randallherd/"
+                  target="_blank"
+                >
+                  <img src={linkedIn} alt="" className="py-3" />
+                </a>
               </div>
             </div>
-            <a href="https://www.linkedin.com/in/randallherd/" target="_blank">
-              <img
-                src={linkedIn}
-                alt=""
-                className="absolute bottom-7 right-6"
-              />
-            </a>
           </div>
-          <div className="relative">
-            <img src={frame} alt="" />
-            <img
-              src={vitorImg}
-              alt=""
-              className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
-            />
-            <div className="absolute bottom-20 left-16 md:left-24 2xl:bottom-20 2xl:left-32">
-              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
-                VITOR AKIYAMA
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+            <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
+              <img src={vitorImg} alt="" className="mx-auto py-5" />
+              <div className="pt-5">
+                <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+                  VITOR AKIYAMA
+                </div>
+                <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+                  Founding Engineer
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+                  Favourite question:
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+                  Answer to question
+                </div>
               </div>
-              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
-                Founding Engineer
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
-                Favourite question:
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
-                Answer to question
-              </div>
+              <a
+                href="https://www.linkedin.com/in/vitor-akiyama/"
+                target="_blank"
+              >
+                <div className="flex justify-between">
+                  <div></div>
+                  <a
+                    href="https://www.linkedin.com/in/vitor-akiyama/"
+                    target="_blank"
+                  >
+                    <img src={linkedIn} alt="" className="py-3" />
+                  </a>
+                </div>
+              </a>
             </div>
-            <a
-              href="https://www.linkedin.com/in/vitor-akiyama/"
-              target="_blank"
-            >
-              <img
-                src={linkedIn}
-                alt=""
-                className="absolute bottom-7 right-6"
-              />
-            </a>
           </div>
-          <div className="relative">
-            <img src={frame} alt="" />
-            <img
-              src={paulImg}
-              alt=""
-              className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
-            />
-            <div className="absolute bottom-20 left-20 lg:left-24 2xl:bottom-20 2xl:left-32">
-              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
-                PAUL KIM
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+            <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
+              <img src={paulImg} alt="" className="mx-auto py-5" />
+              <div className="pt-5">
+                <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+                  PAUL KIM
+                </div>
+                <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+                  Founding Engineer
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+                  Favourite question:
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+                  Answer to question
+                </div>
               </div>
-              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
-                Founding Engineer
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
-                Favourite question:
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
-                Answer to question
+              <div className="flex justify-between">
+                <div></div>
+                <a
+                  href="https://www.linkedin.com/in/paul-sunghun-kim/"
+                  target="_blank"
+                >
+                  <img src={linkedIn} alt="" className="py-3" />
+                </a>
               </div>
             </div>
-            <a
-              href="https://www.linkedin.com/in/paul-sunghun-kim/"
-              target="_blank"
-            >
-              <img
-                src={linkedIn}
-                alt=""
-                className="absolute bottom-7 right-6"
-              />
-            </a>
           </div>
-          <div className="relative">
-            <img src={frame} alt="" />
-            <img
-              src={selinaImg}
-              alt=""
-              className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
-            />
-            <div className="absolute bottom-20 left-20 lg:left-24 2xl:bottom-20 2xl:left-32">
-              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
-                SELINA PARK
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+            <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
+              <img src={selinaImg} alt="" className="mx-auto py-5" />
+              <div className="pt-5">
+                <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+                  SELINA PARK
+                </div>
+                <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+                  Founding Engineer
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+                  Favourite question:
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+                  Answer to question
+                </div>
               </div>
-              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
-                Founding Engineer
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
-                Favourite question:
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
-                Answer to question
+              <div className="flex justify-between">
+                <div></div>
+                <a
+                  href="https://www.linkedin.com/in/selinasein/"
+                  target="_blank"
+                >
+                  <img src={linkedIn} alt="" className="py-3" />
+                </a>
               </div>
             </div>
-            <a href="https://www.linkedin.com/in/selinasein/" target="_blank">
-              <img
-                src={linkedIn}
-                alt=""
-                className="absolute bottom-7 right-6"
-              />
-            </a>
           </div>
-          <div className="relative">
-            <img src={frame} alt="" />
-            <img
-              src={stephImg}
-              alt=""
-              className="absolute top-5 left-20 w-[50%] 2xl:w-auto md:top-10 md:left-28 2xl:left-32"
-            />
-            <div className="absolute bottom-20 left-12 md:left-24 2xl:bottom-20 2xl:left-28">
-              <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
-                STEPHANIE LOUIE
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+            <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
+              <img src={stephImg} alt="" className="mx-auto py-5" />
+              <div className="pt-5">
+                <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
+                  STEPHANIE LOUIE
+                </div>
+                <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
+                  Product Designer
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
+                  Favourite question:
+                </div>
+                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
+                  Answer to question
+                </div>
               </div>
-              <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
-                Product Designer
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
-                Favourite question:
-              </div>
-              <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
-                Answer to question
+              <div className="flex justify-between">
+                <div></div>
+                <a
+                  href="https://www.linkedin.com/in/stephanie-louie-71178a25/"
+                  target="_blank"
+                >
+                  <img src={linkedIn} alt="" className="py-3" />
+                </a>
               </div>
             </div>
-            <a
-              href="https://www.linkedin.com/in/stephanie-louie-71178a25/"
-              target="_blank"
-            >
-              <img
-                src={linkedIn}
-                alt=""
-                className="absolute bottom-7 right-6"
-              />
-            </a>
           </div>
         </div>
       </div>
