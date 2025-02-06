@@ -82,8 +82,9 @@ export function sendFowardEmail(
     });
 
     const mail_configs = {
-      from: "paul@arkhet.com",
+      from: "noreply@arkhet.com",
       to: "nate@arkhet.com",
+      cc: "randall@arkhet.com",
       subject: "Arkhet Incoming Booking",
       html: `<!DOCTYPE html>
     <html lang="en">
