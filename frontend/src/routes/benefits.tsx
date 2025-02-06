@@ -63,49 +63,39 @@ function RouteComponent() {
         </div>
       </div>
       <div className="flex flex-col">
-        <div className="md:flex mx-auto pt-10">
-          <div className="relative mx-5 mb-5 md:mb-0">
-            <img src={fadingbackground3} alt="" className="" />
-            <img
-              src={ellipse}
-              alt=""
-              className="absolute top-5 left-12 2xl:bottom-40 2xl:left-32 w-[200px] sm:w-[400px] 2xl:w-auto"
-            />
-            <img
-              src={layersVertical}
-              alt=""
-              className="absolute top-0 left-24 sm:left-32 2xl:bottom-40 2xl:left-60 w-[100px] sm:w-[250px] 2xl:w-auto"
-            />
-            <div className="sm:text-2xl 2xl:text-[40px] absolute bottom-20 2xl:bottom-28 left-2 sm:left-5 font-semibold">
-              100% accurate to your design
-            </div>
-            <div className="hidden 2xl:block absolute bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
-              Prototypes adhere to the requirements of your design, <br /> every
-              time. Import your own or try something new.
-            </div>
-            <div className="2xl:hidden absolute bottom-2 left-2 sm:left-5 sm:bottom-5">
-              Prototypes adhere to the requirements of your design, every time.
-              Import your own or try something new.
+        <div className="md:grid grid-cols-2 gap-5 mx-auto p-5 pt-10">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+            <div className="rounded-[8px] p-3 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] from-50% relative">
+              <img src={ellipse} alt="" className="mx-auto" />
+              <img
+                src={layersVertical}
+                alt=""
+                className="absolute top-10 left-24 w-[100px] sm:left-32 sm:w-[250px] md:left-16 md:top-0 md:w-[200px] lg:left-32 lg:top-10 2xl:bottom-40 2xl:left-60  2xl:w-auto"
+              />
+              <div className="text-[20px] sm:text-[24px] xl:text-[40px] font-semibold">
+                100% accurate to your design
+              </div>
+              <div className="xl:text-[28px]">
+                Prototypes adhere to the requirements of your design, every
+                time. Import your own or try something new.
+              </div>
             </div>
           </div>
-          <div className="relative mx-5 mb-5 md:mb-0">
-            <img src={fadingbackground3} alt="" className="" />
-            <img
-              src={ellipse}
-              alt=""
-              className="absolute top-5 left-20 2xl:bottom-40 2xl:left-32 w-[200px] sm:w-[400px] 2xl:w-auto"
-            />
-            <img
-              src={calibrate}
-              alt=""
-              className="absolute top-5 left-20 sm:top-10 2xl:left-28 w-[200px] sm:w-[400px] 2xl:w-auto"
-            />
-            <div className="sm:text-2xl 2xl:text-[40px] absolute bottom-16 lg:bottom-[5rem] 2xl:bottom-28 left-5 font-semibold">
-              Calibrate, visually
-            </div>
-            <div className="absolute bottom-3 sm:bottom-8 lg:bottom-12 2xl:bottom-5 left-5 2xl:text-[28px] text-[#D9D9D9]">
-              Modify components, colours, and layout at any time. Then test
-              again.
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+            <div className="rounded-[8px] p-3 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] from-50% relative">
+              <img src={ellipse} alt="" className="mx-auto" />
+              <img
+                src={calibrate}
+                alt=""
+                className="absolute top-14 left-14 w-[200px] sm:top-20 sm:left-20 sm:w-[400px] md:left-3 md:top-10 2xl:left-28 2xl:w-auto"
+              />
+              <div className="text-[20px] sm:text-[24px] xl:text-[40px] font-semibold">
+                Calibrate, visually
+              </div>
+              <div className="xl:text-[28px] text-[#D9D9D9]">
+                Modify components, colours, and layout at any time. Then test
+                again.
+              </div>
             </div>
           </div>
         </div>
