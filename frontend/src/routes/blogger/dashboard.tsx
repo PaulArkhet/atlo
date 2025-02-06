@@ -51,18 +51,6 @@ function RouteComponent() {
     });
   }
 
-  // const {
-  //   data: blog,
-  //   isLoading,
-  //   error,
-  // } = useQuery({
-  //   queryKey: ["blog", blogId], // Fetch a specific blog post
-  //   queryFn: () => client.api.v0.blogs.$get({ params: { blogId } }),
-  // });
-
-  // if (isLoading) return <p>Loading...</p>;
-  // if (error) return <p>Error loading blog</p>;
-
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="md:p-10">
