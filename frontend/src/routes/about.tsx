@@ -27,7 +27,7 @@ function RouteComponent() {
           ABOUT
         </div>
       </div>
-      <div className="text-center pb-20">
+      <div className="text-center pb-10 md:pb-20">
         <div className="workfont text-2xl md:text-6xl font-bold text-white ">
           <div>The humanity of design cannot be automated</div>
         </div>
@@ -48,7 +48,7 @@ function RouteComponent() {
       </div>
       <div className="flex flex-col mx-auto">
         <div className="md:flex mx-auto">
-          <div className="workfont text-4xl font-bold text-white md:mr-10">
+          <div className="workfont text-xl md:text-4xl font-bold text-white md:mr-10 pb-10 md:pb-0">
             Product leaders can now <br /> design and build <br /> software
             products like <br /> never before
           </div>
@@ -71,22 +71,22 @@ function RouteComponent() {
           </div>
         </div>
       </div>
-      <div className="workfont py-20 text-3xl font-bold text-center">
+      <div className="workfont py-10 md:py-20 text-xl md:text-3xl font-bold text-center">
         Building great software is easier with better tools. <br /> Arkhet
         builds tools for builders.
       </div>
-      <div className="h-[1px] bg-white md:w-[500px] mx-auto mb-20"></div>
+      <div className="h-[1px] bg-white md:w-[500px] mx-auto md:mb-20"></div>
       <div className=" text-center py-10 tracking-widest">TEAM</div>
-      <div className="workfont text-2xl md:text-6xl font-bold text-white text-center mb-20">
+      <div className="workfont text-xl md:text-6xl font-bold text-white text-center mb-5 md:mb-20">
         We’re shaping the future of generative <br />
         software design with a mission-driven team
       </div>
-      <div className="flex flex-col mx-auto pb-32">
+      <div className="flex flex-col mx-auto pb-16 md:pb-32">
         <div className="md:grid grid-cols-3 gap-6 lg:gap-9 mx-auto">
-          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
             <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
               <img src={nateImg} alt="" className="mx-auto py-5" />
-              <div className="pt-5">
+              <div className="md:pt-5">
                 <div className="text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2 lg:px-24">
                   NATHAN NGAI
                 </div>
@@ -111,7 +111,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
             <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
               <img src={randallImg} alt="" className="mx-auto py-5" />
               <div className="pt-5">
@@ -139,7 +139,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
             <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
               <img src={vitorImg} alt="" className="mx-auto py-5" />
               <div className="pt-5">
@@ -172,7 +172,7 @@ function RouteComponent() {
               </a>
             </div>
           </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
             <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
               <img src={paulImg} alt="" className="mx-auto py-5" />
               <div className="pt-5">
@@ -200,7 +200,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
             <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
               <img src={selinaImg} alt="" className="mx-auto py-5" />
               <div className="pt-5">
@@ -228,7 +228,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
             <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
               <img src={stephImg} alt="" className="mx-auto py-5" />
               <div className="pt-5">

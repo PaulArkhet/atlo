@@ -58,7 +58,7 @@ function RouteComponent() {
           <div>Blog</div>
         </div>
       </div>
-      <div className="pb-10 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
+      <div className="pb-10 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
         {blogs &&
           blogs.map((blog) => {
             const { title, image, blogId } = parseBlogContent(blog);
@@ -212,34 +212,36 @@ function RouteComponent() {
         <div className="mx-auto">
           <div className="text-5xl font-bold py-10">Featured</div>
           <div className="md:flex">
-            <div className="relative mx-2">
-              <img src={largeFrame} alt="" />
-              <img src={largeImage} alt="" className="absolute top-1 left-1" />
-              <div className="absolute bottom-52 2xl:bottom-64 left-8  tracking-[0.3rem] text-[24px]">
-                NOVEMBER 25, 2024
-              </div>
-              <div className="absolute bottom-40 2xl:bottom-44 left-8 text-[32px] 2xl:text-[48px] font-bold">
-                Previous blog posts go here
-              </div>
-              <div className="absolute bottom-16 2xl:bottom-10 left-8 text-[20px] 2xl:text-[28px]">
-                Add a quick summary of what the blog post is about. Clicking
-                this whole section takes user to the full blog post. Keep this
-                2-4 lines.
+            <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
+              <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
+                <img src={largeImage} alt="" className="rounded-[10px]" />
+                <div className="px-5 tracking-[0.3rem] text-[24px] pt-10 pb-3">
+                  NOVEMBER 25, 2024
+                </div>
+                <div className="px-5 text-[32px] 2xl:text-[48px] font-bold">
+                  Previous blog posts go here
+                </div>
+                <div className="px-5 text-[20px] pt-9 pb-20">
+                  Add a quick summary of what the blog post is about. Clicking
+                  this whole section <br /> takes user to the full blog post.
+                  Keep this 2-4 lines.
+                </div>
               </div>
             </div>
-            <div className="relative mx-2">
-              <img src={largeFrame} alt="" />
-              <img src={largeImage2} alt="" className="absolute top-1 left-1" />
-              <div className="absolute bottom-52 2xl:bottom-64 left-8  tracking-[0.3rem] text-[24px]">
-                NOVEMBER 25, 2024
-              </div>
-              <div className="absolute bottom-40 2xl:bottom-44 left-8 text-[32px] 2xl:text-[48px] font-bold">
-                Previous blog posts go here
-              </div>
-              <div className="absolute bottom-16 2xl:bottom-10 left-8 text-[20px] 2xl:text-[28px]">
-                Add a quick summary of what the blog post is about. Clicking
-                this whole section takes user to the full blog post. Keep this
-                2-4 lines.
+            <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
+              <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
+                <img src={largeImage2} alt="" className="rounded-[10px]" />
+                <div className="px-5 tracking-[0.3rem] text-[24px] pt-10 pb-3">
+                  NOVEMBER 25, 2024
+                </div>
+                <div className="px-5 text-[32px] 2xl:text-[48px] font-bold">
+                  Previous blog posts go here
+                </div>
+                <div className="px-5 text-[20px] pt-9 pb-20">
+                  Add a quick summary of what the blog post is about. Clicking
+                  this whole section <br /> takes user to the full blog post.
+                  Keep this 2-4 lines.
+                </div>
               </div>
             </div>
           </div>
@@ -247,55 +249,46 @@ function RouteComponent() {
         <div className="mx-auto">
           <div className="text-5xl font-bold py-10">All posts</div>
           <div className="md:flex">
-            <div className="relative mx-2">
-              <img src={smallFrame} alt="" className="" />
-              <img
-                src={smallImage}
-                alt=""
-                className="absolute top-[0.15rem] left-[0.15rem]"
-              />
-              <div className="absolute bottom-36 2xl:bottom-48 left-5  tracking-[0.3rem] text-xl 2xl:text-[24px]">
-                OCTOBER 15, 2024
-              </div>
-              <div className="absolute bottom-28 2xl:bottom-20 left-5 lg:text-[23px] 2xl:text-[40px] font-bold">
-                Previous blog posts go here
-              </div>
-              <div className="absolute bottom-20 md:bottom-16 2xl:bottom-10 left-5 2xl:text-[20px] ">
-                Add a quick summary of what the blog post is about.
+            <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
+              <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
+                <img src={smallImage} alt="" className="mx-auto" />
+                <div className="pt-8 px-5 tracking-[0.3rem] text-xl 2xl:text-[24px]">
+                  OCTOBER 15, 2024
+                </div>
+                <div className="px-5 text-4xl py-5 font-bold">
+                  Previous blog posts go here
+                </div>
+                <div className="pb-24 px-5 text-lg ">
+                  Add a quick summary of what the blog post is about.
+                </div>
               </div>
             </div>
-            <div className="relative mx-2">
-              <img src={smallFrame} alt="" className="" />
-              <img
-                src={smallImage}
-                alt=""
-                className="absolute top-[0.15rem] left-[0.15rem]"
-              />
-              <div className="absolute bottom-36 2xl:bottom-48 left-5  tracking-[0.3rem] text-xl 2xl:text-[24px]">
-                OCTOBER 15, 2024
-              </div>
-              <div className="absolute bottom-28 2xl:bottom-20 left-5 lg:text-[23px] 2xl:text-[40px] font-bold">
-                Previous blog posts go here
-              </div>
-              <div className="absolute bottom-20 md:bottom-16 2xl:bottom-10 left-5 2xl:text-[20px] ">
-                Add a quick summary of what the blog post is about.
+            <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
+              <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
+                <img src={smallImage} alt="" className="mx-auto" />
+                <div className="pt-8 px-5 tracking-[0.3rem] text-xl 2xl:text-[24px]">
+                  OCTOBER 15, 2024
+                </div>
+                <div className="px-5 text-4xl py-5 font-bold">
+                  Previous blog posts go here
+                </div>
+                <div className="pb-24 px-5 text-lg ">
+                  Add a quick summary of what the blog post is about.
+                </div>
               </div>
             </div>
-            <div className="relative mx-2">
-              <img src={smallFrame} alt="" className="" />
-              <img
-                src={smallImage}
-                alt=""
-                className="absolute top-[0.15rem] left-[0.15rem]"
-              />
-              <div className="absolute bottom-36 2xl:bottom-48 left-5  tracking-[0.3rem] text-xl 2xl:text-[24px]">
-                OCTOBER 15, 2024
-              </div>
-              <div className="absolute bottom-28 2xl:bottom-20 left-5 lg:text-[23px] 2xl:text-[40px] font-bold">
-                Previous blog posts go here
-              </div>
-              <div className="absolute bottom-20 md:bottom-16 2xl:bottom-10 left-5 2xl:text-[20px] ">
-                Add a quick summary of what the blog post is about.
+            <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
+              <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
+                <img src={smallImage} alt="" className="mx-auto" />
+                <div className="pt-8 px-5 tracking-[0.3rem] text-xl 2xl:text-[24px]">
+                  OCTOBER 15, 2024
+                </div>
+                <div className="px-5 text-4xl py-5 font-bold">
+                  Previous blog posts go here
+                </div>
+                <div className="pb-24 px-5 text-lg ">
+                  Add a quick summary of what the blog post is about.
+                </div>
               </div>
             </div>
           </div>

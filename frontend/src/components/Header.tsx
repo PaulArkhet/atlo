@@ -7,7 +7,7 @@ export default function Header() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth > 700) {
+      if (window.innerWidth > 760) {
         setNavVisible(true);
       } else {
         setNavVisible(false);
@@ -20,15 +20,15 @@ export default function Header() {
   }, []);
 
   function slideToggle() {
-    if (window.innerWidth < 721) setNavVisible(!navVisible);
+    if (window.innerWidth < 760) setNavVisible(!navVisible);
     console.log("toggle running");
   }
 
   return (
     <header className="fixed top-0 left-0 z-[99] nunitofont">
       <div className="bg-gradient-to-r from-[#8778D7] via-[#2F5D5D] to-[#2A3349] h-[70px] w-screen">
-        <div className="bg-[#242424] text-white p-3 xl:flex justify-between tracking-widest text-center">
-          <div className="flex justify-between xl:block">
+        <div className="bg-[#242424] text-white p-3 lg:flex justify-between tracking-widest text-center">
+          <div className="flex justify-between">
             <Link
               to="/"
               className="flex"
