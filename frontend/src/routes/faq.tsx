@@ -23,10 +23,10 @@ function RouteComponent() {
         <img src={takeoff} alt="" className="mx-auto" />
       </div>
       <div className="flex flex-col mx-auto">
-        <div className="hidden md:block fixed top-72 left-20 mr-10 pt-5">
+        <div className="hidden md:block fixed md:bottom-10 lg:left-10 xl:left-16 2xl:top-72 2xl:left-40 mr-10 pt-5">
           <div className="h-[2px] bg-white opacity-10 "></div>
           <div
-            className="py-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
+            className="p-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
             onClick={() =>
               document
                 .getElementById("getting-started")
@@ -37,7 +37,7 @@ function RouteComponent() {
           </div>
           <div className="h-[2px] bg-white opacity-10"></div>
           <div
-            className="py-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
+            className="p-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
             onClick={() =>
               document
                 .getElementById("prototype-section")
@@ -48,7 +48,7 @@ function RouteComponent() {
           </div>
           <div className="h-[2px] bg-white opacity-10"></div>
           <div
-            className="py-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
+            className="p-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
             onClick={() =>
               document
                 .getElementById("integrating")
@@ -59,7 +59,7 @@ function RouteComponent() {
           </div>
           <div className="h-[2px] bg-white opacity-10"></div>
           <div
-            className="py-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
+            className="p-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
             onClick={() =>
               document
                 .getElementById("security")
@@ -70,7 +70,7 @@ function RouteComponent() {
           </div>
           <div className="h-[2px] bg-white opacity-10"></div>
           <div
-            className="py-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
+            className="p-5 hover:bg-white hover:text-black ease-in-out duration-500 cursor-pointer"
             onClick={() =>
               document
                 .getElementById("involved")

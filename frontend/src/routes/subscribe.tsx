@@ -24,10 +24,14 @@ function RouteComponent() {
 
   return (
     <main className="flex-1 bg-[#242424] p-3 pt-[100px] text-[#D9D9D9] md:text-2xl overflow-hidden">
-      <img src={group17} alt="" className="absolute bottom-0 right-0 z-0" />
-      <div className="flex flex-col mx-auto pb-96 z-10">
-        <div className="md:pt-44 mx-auto">
-          <div className="workfont text-5xl pb-12">
+      <img
+        src={group17}
+        alt=""
+        className="absolute bottom-60 sm:bottom-40 md:bottom-10 lg:bottom-[-7%] xl:bottom-[-8%] right-0 z-0"
+      />
+      <div className="flex flex-col mx-auto pb-52 sm:pb-72 md:pb-96 z-10">
+        <div className="pt-10 md:pt-20 lg:pt-44 mx-auto">
+          <div className="workfont text-2xl pb-10 sm:text-3xl md:text-4xl md:pb-12 xl:text-5xl text-center">
             Subscribe to get the latest updates
           </div>
           <form

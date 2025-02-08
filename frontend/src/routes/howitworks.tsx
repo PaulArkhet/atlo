@@ -39,7 +39,7 @@ function RouteComponent() {
   }, []);
 
   return (
-    <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+    <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px] overflow-hidden">
       <img src={redCloud} alt="" className="absolute top-0 left-0 z-0" />
       <img
         src={saturn}

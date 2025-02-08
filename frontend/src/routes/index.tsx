@@ -199,7 +199,7 @@ function RouteComponent() {
                     alt=""
                     className="absolute top-[-5%] left-[27%] w-[40vw] md:w-[14vw] md:top-0 2xl:top-[-10%]"
                   />
-                  <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] 2xl:pb-2">
+                  <div className="sm:text-2xl md:pb-16 lg:pb-0 lg:text-xl 2xl:text-[28px] 2xl:pb-2">
                     Identifying pain points or friction in <br />
                     the prototype
                   </div>
@@ -213,7 +213,7 @@ function RouteComponent() {
                     alt=""
                     className="absolute top-0 left-[0%] 2xl:left-[10%]"
                   />
-                  <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] 2xl:pb-2">
+                  <div className="sm:text-2xl md:pb-8 lg:pb-0 lg:text-xl 2xl:text-[28px] 2xl:pb-2">
                     Communicate the actual experience <br /> to get actionable
                     feedback
                   </div>
@@ -287,12 +287,12 @@ function RouteComponent() {
           <img
             src={ship2}
             alt=""
-            className="absolute bottom-[-2%] sm:bottom-[-5%] 2xl:right-[15%]"
+            className="absolute bottom-[-2%] sm:bottom-[-5%] md:bottom-[-3%] md:right-[0%] lg:bottom-[-3%] xl:bottom-[0%] 2xl:right-[5%]"
           />
           <img
             src={bluePlanet2}
             alt=""
-            className="w-[30vw] absolute bottom-[-2%] left-[-3%] 2xl:left-[20%]"
+            className="w-[30vw] absolute bottom-[-2%] left-[-3%] xl:bottom-[-5%]"
           />
         </div>
       </div>

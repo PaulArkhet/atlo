@@ -27,7 +27,7 @@ function RouteComponent() {
           BENEFITS
         </div>
       </div>
-      <div className="text-center pb-20">
+      <div className="text-center pb-20 lg:pb-0">
         <div className="workfont text-2xl md:text-6xl font-bold">
           <div>Everyone has ideas. Now anyone can build.</div>
         </div>
@@ -39,16 +39,16 @@ function RouteComponent() {
         </div>
         <div className="flex flex-col mx-auto">
           <div className="relative mx-auto">
-            <img src={background1} alt="" className="mx-auto mb-40 md:mb-0" />
+            <img src={background1} alt="" className="mx-auto mb-40 lg:mb-0" />
             <img
               src={benefits}
               alt=""
-              className="absolute top-44 right-5 lg:top-4 lg:right-[4.3rem] 2xl:top-5 2xl:right-24 mx-auto"
+              className="absolute top-44 right-5 lg:top-4 lg:w-[60vw] lg:right-14 2xl:top-5 2xl:right-24 mx-auto"
             />
-            <div className="workfont absolute top-5 left-5 md:top-20 md:left-11 text-xl md:text-5xl font-bold">
+            <div className="workfont absolute top-5 left-5 lg:top-20 md:left-11 text-xl md:text-5xl font-bold">
               Benefits
             </div>
-            <div className="hidden md:block absolute top-10 left-5 md:top-40 md:left-11 text-left md:text-xl">
+            <div className="hidden md:block absolute top-10 left-5 md:top-20 lg:top-40 md:left-11 text-left md:text-xl">
               Produce higher quality prototypes in significantly less <br />{" "}
               time in a shift for the entire industry. Arkhet makes it <br />{" "}
               easier to conduct rapid prototyping with higher quality <br /> and
@@ -101,20 +101,20 @@ function RouteComponent() {
         </div>
       </div>
       <div className="flex flex-col mx-auto">
-        <div className="relative pt-10 mx-auto mb-52 lg:mb-16 2xl:mb-0">
+        <div className="relative pt-10 mx-auto mb-52 md:mb-16 2xl:mb-0">
           <img src={background2} alt="" className="mx-auto" />
           <img
             src={interactiveImg}
             alt=""
-            className="absolute top-[12.5rem] right-16 lg:right-24 md:top-14 2xl:right-[12rem] w-[200px] lg:w-[500px] 2xl:w-auto"
+            className="absolute w-[50vw] top-[12.5rem] right-[25%] md:w-[200px] md:right-24 lg:right-24 md:top-14 2xl:right-[12rem] lg:w-[500px] 2xl:w-auto"
           />
-          <div className="workfont absolute top-14 left-5 lg:top-20 md:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
+          <div className="workfont absolute top-14 left-5 md:top-20 md:left-14 text-xl md:text-5xl 2xl:text-[64px] font-bold">
             Interactive
           </div>
-          <div className="workfont absolute top-14 left-32 lg:top-36 2xl:top-40 lg:left-14 text-xl lg:text-5xl 2xl:text-[64px] font-bold">
+          <div className="workfont absolute top-14 left-[8.5rem] md:top-36 2xl:top-40 md:left-14 text-xl md:text-5xl 2xl:text-[64px] font-bold">
             Prototyping
           </div>
-          <div className="absolute top-24 left-5 lg:top-56 2xl:top-64 md:left-14 lg: text-lg 2xl:text-[28px] lg:w-[420px] 2xl:w-[650px]">
+          <div className="absolute top-24 left-5 md:top-56 2xl:top-64 md:left-14 lg: text-lg 2xl:text-[28px] lg:w-[420px] 2xl:w-[650px]">
             Design your user experience, visually. An intuitive drag-and-drop
             interface makes it easy to turn your ideas into an interactive
             prototype, in minutes.
@@ -133,7 +133,7 @@ function RouteComponent() {
               />
               <div
                 className="text-[20px] md:text-[21px] lg:text-[20px] 
-              2xl:text-[40px] font-semibold md:pt-4 lg:pt-6 2xl:pt-0"
+              2xl:text-[40px] font-semibold md:pt-4 lg:pt-6 xl:pt-8 2xl:pt-20"
               >
                 Realistic experiments provide better data
               </div>
@@ -144,7 +144,7 @@ function RouteComponent() {
             </div>
           </div>
           <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col my-2">
-            <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
+            <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative 2xl:pb-32">
               <img src={ellipseCyan} alt="" className="mx-auto" />
               <img
                 src={database}
@@ -163,7 +163,7 @@ function RouteComponent() {
             </div>
           </div>
           <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col my-2">
-            <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
+            <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative md:pb-8 lg:pb-[5.5rem] xl:pb-8 2xl:pb-24">
               <img src={ellipsePink} alt="" className="mx-auto" />
               <img
                 src={visual}

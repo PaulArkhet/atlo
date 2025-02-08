@@ -50,10 +50,10 @@ function RouteComponent() {
         alt=""
         className="hidden 2xl:block absolute bottom-[-10%] left-10 z-0 w-[90%] md:w-auto"
       />
-      <div className="flex flex-col mx-auto md:p-10 z-20">
-        <div className="md:flex mx-auto z-20">
-          <div className="md:mr-20">
-            <div className="workfont text-5xl font-bold">
+      <div className="flex flex-col mx-auto md:pl-5 md:pt-10 lg:p-10 z-20">
+        <div className="md:flex mx-auto z-20 md:pr-5 lg:pr-0">
+          <div className="lg:mr-20">
+            <div className="workfont text-5xl md:text-3xl font-bold">
               Want to see it in <br /> action?
             </div>
             <div className="text-xl my-3">
@@ -76,7 +76,7 @@ function RouteComponent() {
             </div>
             <img src={planet} alt="" className="" />
           </div>
-          <div className="md:ml-10 z-20">
+          <div className="lg:ml-10 z-20">
             <form
               onSubmit={handleSubmit}
               className="flex flex-col p-2 md:p-10 border border-[#837E98] rounded-lg w-[300px] md:w-[400px] mx-auto bg-gradient-to-br from-[#5B4874] via-[#42476D] to-[#45406D] bg-opacity-50"
