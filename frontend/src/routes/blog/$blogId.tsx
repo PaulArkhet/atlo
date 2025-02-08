@@ -1,46 +1,47 @@
-import useBlogStore from "@/store/BlogStore";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { Block } from "../blogger/createblog";
 import { z } from "zod";
-import { useQueryClient } from "@tanstack/react-query";
 import arrowLeft from "/arrowleft.svg";
+import { getBlogByIdQueryOptions } from "@/lib/api/blog";
 
 export const Route = createFileRoute("/blog/$blogId")({
   beforeLoad: async ({ context, params }) => {
     const { blogId: blogIdParam } = params;
     try {
       const blogId = z.coerce.number().int().parse(blogIdParam);
-      // const blog = await context.queryClient.fetchQuery({
-      //   ...getBlogByIdQueryOptions(blogId),
-      //   retry: 4,
-      // });
-
-      // return { blog };
+      const blog = await context.queryClient.fetchQuery({
+        ...getBlogByIdQueryOptions(blogId),
+        retry: 4,
+      });
+      return { blog };
     } catch (e) {
-      // throw redirect({ to: "/dashboard" });
+      console.error("Error fetching blog:", e);
+      throw redirect({ to: "/resources" });
     }
   },
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  // const {
-  //   data: blog,
-  //   isLoading,
-  //   error,
-  // } = useQuery({
-  //   queryKey: ["blog", blogId], // Fetch a specific blog post
-  //   queryFn: () => client.api.v0.blogs.$get({ params: { blogId } }),
-  // });
+  const { blog } = Route.useRouteContext(); // Get blog from beforeLoad
 
-  // if (isLoading) return <p>Loading...</p>;
-  // if (error) return <p>Error loading blog</p>;
-  const { currentBlog, setCurrentBlog } = useBlogStore((state) => state);
+  if (!blog) {
+    return <p className="text-center text-red-500">Error loading blog.</p>;
+  }
 
-  const blocks = JSON.parse(
-    currentBlog?.content ||
-      '[{"id":"8c7b1f53-907b-4171-9bcc-d84600487ff1","type":"title","content":"Whoops! Something went wrong loading the blog :("}]'
-  ); // Convert JSON string back to an array
+  // Safely parse the blog content
+  let blocks: Block[] = [];
+  try {
+    blocks = JSON.parse(blog.content || "[]");
+  } catch {
+    blocks = [
+      {
+        id: "error",
+        type: "title",
+        content: "Whoops! Something went wrong loading the blog :(",
+      },
+    ];
+  }
 
   const renderBlock = (block: Block) => {
     switch (block.type) {
@@ -60,12 +61,17 @@ function RouteComponent() {
         return <p className="nunitofont text-lg">{block.content}</p>;
       case "image":
         return (
-          <img src={block.content} alt={"Blog Image"} className="mx-auto" />
+          <img
+            src={block.content}
+            alt="Blog Image"
+            className="mx-auto rounded-lg"
+          />
         );
       default:
         return null;
     }
   };
+
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <Link to="/resources">
@@ -74,10 +80,16 @@ function RouteComponent() {
           <div className="ml-2">Go back</div>
         </div>
       </Link>
+
       <div className="flex flex-col">
         <div className="mx-auto md:w-[800px]">
-          <div>Posted on: {currentBlog?.createdAt.toString()}</div>
-          {blocks.map((block: Block, index: number) => (
+          <div>
+            Posted on:{" "}
+            {blog?.createdAt
+              ? new Date(blog.createdAt).toLocaleDateString()
+              : "Unknown"}
+          </div>
+          {blocks.map((block, index) => (
             <div key={index} className="mb-4">
               {renderBlock(block)}
             </div>
@@ -87,3 +99,5 @@ function RouteComponent() {
     </main>
   );
 }
+
+export default RouteComponent;

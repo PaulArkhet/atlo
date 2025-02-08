@@ -202,34 +202,6 @@ function RouteComponent() {
           </div>
           <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
             <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
-              <img src={selinaImg} alt="" className="mx-auto py-5" />
-              <div className="pt-5">
-                <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">
-                  SELINA PARK
-                </div>
-                <div className=" text-center lg:text-[18px] 2xl:text-[22px] text-[#B2B2B2] tracking-wider 2xl:mb-5">
-                  Founding Engineer
-                </div>
-                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] font-bold tracking-wider 2xl:mb-2">
-                  Favourite question:
-                </div>
-                <div className=" text-center lg:text-[20px] 2xl:text-[24px] text-[#B2B2B2] tracking-wider">
-                  Answer to question
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <div></div>
-                <a
-                  href="https://www.linkedin.com/in/selinasein/"
-                  target="_blank"
-                >
-                  <img src={linkedIn} alt="" className="py-3" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col my-2 lg:my-0">
-            <div className="rounded-[8px] pt-3 px-5 bg-[#161616] mt-[2px] mx-[2px] shadow-[0_2px_10px_0px_rgba(0,0,0,1)]">
               <img src={stephImg} alt="" className="mx-auto py-5" />
               <div className="pt-5">
                 <div className=" text-center text-2xl 2xl:text-[32px] font-bold tracking-wider 2xl:mb-2">

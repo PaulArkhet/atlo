@@ -73,7 +73,7 @@ async function getBlogById(BlogId: number) {
 
 export const getBlogByIdQueryOptions = (BlogId: number) =>
   queryOptions({
-    queryKey: ["Blogs", BlogId],
+    queryKey: ["blogs", BlogId],
     queryFn: () => getBlogById(BlogId),
   });
 
@@ -92,12 +92,12 @@ export const useDeleteBlogMutation = () => {
     mutationFn: deleteBlogById,
     onSettled: () => {
       queryClient.invalidateQueries({
-        queryKey: ["Blogs"],
+        queryKey: ["blogs"],
       });
     },
     onMutate: async (args) => {
       // Snapshot the previous value
-      const previousBlogs = queryClient.getQueryData(["Blogs"]) as Blog[];
+      const previousBlogs = queryClient.getQueryData(["blogs"]) as Blog[];
 
       const projToDeleteIndex = previousBlogs.findIndex(
         (blog) => blog.blogId === args
@@ -106,14 +106,14 @@ export const useDeleteBlogMutation = () => {
 
       const newBlogs = previousBlogs.toSpliced(projToDeleteIndex, 1);
       // Optimistically update to the new value
-      queryClient.setQueryData(["Blogs"], newBlogs);
+      queryClient.setQueryData(["blogs"], newBlogs);
 
       // Return a context with the previous and new todo
       return { previousBlogs, newBlogs };
     },
     onError: (_err, _args, context) => {
       if (!context) return;
-      queryClient.setQueryData(["Blogs"], context.previousBlogs);
+      queryClient.setQueryData(["blogs"], context.previousBlogs);
     },
   });
 };

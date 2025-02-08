@@ -2,13 +2,19 @@ import * as React from "react";
 import {
   Outlet,
   createRootRoute,
+  createRootRouteWithContext,
   useRouterState,
 } from "@tanstack/react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { ScrollToTop } from "../ScrollToTop";
+import { type QueryClient } from "@tanstack/react-query";
 
-export const Route = createRootRoute({
+interface RouterContext {
+  queryClient: QueryClient;
+}
+
+export const Route = createRootRouteWithContext<RouterContext>()({
   component: RootComponent,
 });
 

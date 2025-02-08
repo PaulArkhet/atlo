@@ -43,14 +43,12 @@ export const blogRouter = new Hono()
     const { result: blogQueryResult, error: blogQueryError } = await mightFail(
       db.select().from(blogsTable).where(eq(blogsTable.blogId, blogId))
     );
-
     if (blogQueryError) {
       throw new HTTPException(500, {
         message: "Error occurred when fetching blogs.",
         cause: blogQueryError,
       });
     }
-
     return c.json({ blog: blogQueryResult[0] });
   })
   .post(
