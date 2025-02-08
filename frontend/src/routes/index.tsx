@@ -87,7 +87,7 @@ function RouteComponent() {
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px] overflow-hidden">
       <img src={blueCloud} alt="" className="absolute top-0 right-0" />
       <img src={purpleCloud} alt="" className="absolute top-0 left-0" />
-      <div className="absolute top-[49%] left-[47%] sm:top-[40%] sm:left-[45%] md:top-[55%] md:left-[44%] xl:top-[60%] xl:left-[46%] 2xl:top-[65%] 2xl:left-[47%]">
+      <div className="absolute top-[450px] left-[47%] sm:top-[375px] sm:left-[45%] md:top-[435px] md:left-[44%] lg:top-[475px] xl:top-[60%] xl:left-[46%] 2xl:top-[65%] 2xl:left-[47%]">
         <img
           src={ship1}
           alt=""
@@ -102,17 +102,17 @@ function RouteComponent() {
       <img
         src={largePlanet}
         alt=""
-        className="absolute w-[95%] top-[55%] sm:top-[50%] md:top-[70%] z-0"
+        className="absolute w-[95%] top-[500px] sm:top-[475px] md:top-[70%] z-0"
       />
       <img
         src={purplePlanet}
         alt=""
-        className="absolute right-[5%] top-[47%] w-[20vw] sm:top-[40%] md:top-[47%] "
+        className="absolute right-[5%] top-[450px] w-[20vw] sm:top-[335px] md:top-[400px] "
       />
       <img
         src={bluePlanet}
         alt=""
-        className="absolute left-[10%] top-[49%] w-[20vw] sm:top-[44%] md:top-[55%] "
+        className="absolute left-[10%] top-[475px] w-[20vw] sm:top-[375px] md:top-[465px] "
       />
       <div className="z-40 relative">
         <div className="text-center pb-40 md:pb-96 z-40">
@@ -287,12 +287,12 @@ function RouteComponent() {
           <img
             src={ship2}
             alt=""
-            className="absolute bottom-[-2%] sm:bottom-[-5%] "
+            className="absolute bottom-[-2%] sm:bottom-[-5%] 2xl:right-[15%]"
           />
           <img
             src={bluePlanet2}
             alt=""
-            className="w-[30vw] absolute bottom-[-2%] left-[-3%]"
+            className="w-[30vw] absolute bottom-[-2%] left-[-3%] 2xl:left-[20%]"
           />
         </div>
       </div>
