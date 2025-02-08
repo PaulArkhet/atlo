@@ -51,7 +51,7 @@ function RouteComponent() {
           HOW IT WORKS
         </div>
         <div className="flex flex-col mx-auto z-10">
-          <div className="relative 2xl:mb-20 mx-auto z-20">
+          <div className="relative xl:mb-20 mx-auto z-20">
             <img src={background1} alt="" className="mx-auto" />
             <div className="tracking-[0.4rem] absolute top-5 left-5 text-sm lg:top-10 lg:left-10 2xl:top-14 2xl:left-24 2xl:text-3xl text-[#D9D9D9]">
               STEP 1
@@ -65,7 +65,7 @@ function RouteComponent() {
             <div className="workfont sm:text-4xl lg:hidden absolute top-12 left-5 font-bold">
               Design the interaction flow
             </div>
-            <div className="lg:absolute top-48 left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
+            <div className="sm:absolute top-28 left-5 lg:top-48 lg:left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
               <div className="flex">
                 <img src={checkmark} alt="" className="" />
                 <div className="ml-2 mb-3">
@@ -83,7 +83,7 @@ function RouteComponent() {
                 <div className="ml-2 my-3">All you need is an idea.</div>
               </div>
             </div>
-            <div className="lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-20 md:mb-0 bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+            <div className="sm:mt-20 md:mt-14 lg:mt-0 lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-10 lg:mb-20 md:mb-0 bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
               <div className="rounded-[8px] p-4 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] ">
                 <img src={capy1} alt="" className="" />
               </div>
@@ -92,21 +92,21 @@ function RouteComponent() {
         </div>
       </div>
       <div className="flex flex-col mx-auto z-10 md:p-10">
-        <div className="relative 2xl:mb-20 mx-auto">
+        <div className="relative mb-10 sm:mb-20 lg:mb-0 mx-auto">
           <img src={background2} alt="" className="mx-auto" />
-          <div className="tracking-[0.4rem] absolute top-5 right-[14.5rem] sm:right-[31rem] md:right-5 lg:top-10 text-sm 2xl:top-14 lg:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
+          <div className="tracking-[0.4rem] absolute top-5 right-[14.5rem] text-sm sm:right-[31rem] lg:right-[22.5rem] lg:top-10 2xl:top-14 xl:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
             STEP 2
           </div>
-          <div className="workfont hidden lg:block absolute top-20 right-[19rem] text-4xl 2xl:top-32 2xl:right-[12rem] 2xl:text-6xl font-bold">
+          <div className="workfont hidden lg:block text-4xl absolute top-20 right-[19rem] lg:right-48 xl:right-72 2xl:top-32 2xl:right-[12rem] 2xl:text-6xl font-bold">
             Add your style{" "}
           </div>
-          <div className="workfont hidden lg:block absolute top-32 right-[28.5rem] text-4xl 2xl:top-48 2xl:right-[28rem] 2xl:text-6xl font-bold">
+          <div className="workfont hidden lg:block text-4xl absolute top-32 right-[28.5rem] lg:right-[22rem] xl:right-[28rem] 2xl:top-48 2xl:right-[28rem] 2xl:text-6xl font-bold">
             guide{" "}
           </div>
           <div className="workfont sm:text-4xl lg:hidden absolute top-12 left-5 font-bold">
             Add your styleguide
           </div>
-          <div className="lg:absolute top-48 right-[3rem] 2xl:right-[7rem] 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
+          <div className="text-left sm:absolute top-28 right-[7.5rem] lg:top-48 lg:right-[-5%] xl:right-[3rem] 2xl:right-[7rem] 2xl:top-72 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
             <div className="flex">
               <img src={checkmark} alt="" className="" />
               <div className="ml-2 mb-3">
@@ -126,7 +126,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute top-[-5%] left-10 lg:left-[-3%] 2xl:left-[-5%] mb-20 md:mb-0">
+          <div className="sm:mt-20 md:mt-14 lg:mt-0 lg:absolute top-[-5%] left-10 lg:left-[-4%] mb-20 md:mb-0">
             <div className="relative top-0 right-0">
               <img
                 src={fadingborder}
@@ -157,7 +157,7 @@ function RouteComponent() {
           <div className="workfont sm:text-4xl lg:hidden absolute top-12 left-5 font-bold">
             Generate Prototype
           </div>
-          <div className="lg:absolute top-48 left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
+          <div className="sm:absolute top-28 left-5 lg:top-48 lg:left-10 2xl:left-24 2xl:top-72 text-left 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
             <div className="flex">
               <img src={checkmark} alt="" className="" />
               <div className="ml-2 mb-3">
@@ -178,7 +178,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-20 md:mb-0 bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+          <div className="sm:mt-20 md:mt-14 lg:mt-0 lg:absolute top-[-5%] left-[32rem] 2xl:left-[40rem] mb-20 md:mb-0 bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
             <div className="rounded-[8px] p-4 bg-gradient-to-b from-[#111111] to-transparent bg-opacity-40 mt-[2px] mx-[2px] ">
               <img src={step3img} alt="" className="" />
             </div>

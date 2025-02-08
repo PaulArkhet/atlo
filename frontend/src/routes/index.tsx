@@ -102,7 +102,7 @@ function RouteComponent() {
       <img
         src={largePlanet}
         alt=""
-        className="absolute w-[95%] top-[500px] sm:top-[475px] md:top-[70%] z-0"
+        className="absolute w-[95%] top-[500px] sm:top-[475px] md:top-[70%] z-10"
       />
       <img
         src={purplePlanet}

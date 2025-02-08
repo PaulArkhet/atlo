@@ -22,24 +22,24 @@ function RouteComponent() {
             Choose the plan that works best for you
           </div>
           <div
-            className="relative md:w-[400px] h-[70px] rounded-full cursor-pointer bg-[#DCDCDC]
+            className="relative w-[300px] md:w-[400px] h-[70px] rounded-full cursor-pointer bg-[#DCDCDC]
              mx-auto m-10"
             onClick={() => setisMonthly(!isMonthly)}
           >
             <span
-              className={`absolute top-0 left-0 w-[175px] sm:w-[200px] h-[70px] bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] rounded-full transition-transform ${
+              className={`absolute top-0 left-0 w-[150px] md:w-[200px] h-[70px] bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] rounded-full transition-transform ${
                 !isMonthly
-                  ? "translate-x-[160px] md:translate-x-[200px] bg-gradient-to-r from-[#6654B7] to-[#B754B3]"
+                  ? "translate-x-[150px] md:translate-x-[200px] bg-gradient-to-r from-[#6654B7] to-[#B754B3]"
                   : ""
               }`}
             ></span>
             <span
-              className={`absolute top-[20px] left-[60px] text-xl ${isMonthly ? "text-black font-bold" : "text-[#6454B7]"}`}
+              className={`absolute top-[20px] left-10 lg:left-[60px] text-xl ${isMonthly ? "text-black font-bold" : "text-[#6454B7]"}`}
             >
               Monthly
             </span>
             <span
-              className={`absolute top-[20px] right-[4px] md:right-[20px] text-xl ${!isMonthly ? "text-white font-bold" : "text-[#6454B7]"}`}
+              className={`absolute w-[150px] top-2 right-1 md:top-[20px] md:w-auto md:right-[20px] text-xl ${!isMonthly ? "text-white font-bold" : "text-[#6454B7]"}`}
             >
               Yearly (save 20%)
             </span>
