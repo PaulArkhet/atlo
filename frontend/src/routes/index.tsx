@@ -84,37 +84,39 @@ function RouteComponent() {
   }, []);
 
   return (
-    <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+    <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px] overflow-hidden">
       <img src={blueCloud} alt="" className="absolute top-0 right-0" />
       <img src={purpleCloud} alt="" className="absolute top-0 left-0" />
-      <div className="z-0 absolute top-28 md:top-56 left-0">
-        <div className="relative pt-80 w-screen sm:w-[97vw] md:w-[98vw]">
-          <img
-            src={ship1}
-            alt=""
-            ref={imgRef}
-            className={`mx-auto w-[40px] md:w-auto`}
-            style={{
-              transform: `translateY(-${scrollProgress * 50}px)`,
-              opacity: 1 - scrollProgress,
-            }}
-          />
-          <img
-            src={largePlanet}
-            alt=""
-            className="absolute top-96 w-screen z-90 sm:w-[98%]"
-          />
-          <img src={purplePlanet} alt="" className="absolute top-72 right-96" />
-          <img
-            src={bluePlanet}
-            alt=""
-            className="hidden md:block absolute top-80 md:left-96"
-          />
-        </div>
+      <div className="absolute top-[49%] left-[47%] sm:top-[40%] sm:left-[45%] md:top-[55%] md:left-[44%] xl:top-[60%] xl:left-[46%] 2xl:top-[65%] 2xl:left-[47%]">
+        <img
+          src={ship1}
+          alt=""
+          ref={imgRef}
+          className={`relative z-10 mx-auto w-[11vw] md:w-auto`}
+          style={{
+            transform: `translateY(-${scrollProgress * 50}px)`,
+            opacity: 1 - scrollProgress,
+          }}
+        />
       </div>
+      <img
+        src={largePlanet}
+        alt=""
+        className="absolute w-[95%] top-[55%] sm:top-[50%] md:top-[70%] z-0"
+      />
+      <img
+        src={purplePlanet}
+        alt=""
+        className="absolute right-[5%] top-[47%] w-[20vw] sm:top-[40%] md:top-[47%] "
+      />
+      <img
+        src={bluePlanet}
+        alt=""
+        className="absolute left-[10%] top-[49%] w-[20vw] sm:top-[44%] md:top-[55%] "
+      />
       <div className="z-40 relative">
         <div className="text-center pb-40 md:pb-96 z-40">
-          <div className="workfont text-3xl md:text-8xl font-bold py-5 md:py-10 md:pt-16 z-40">
+          <div className="workfont text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-bold py-5 md:py-10 md:pt-16 z-40">
             <div className="z-40">From idea to prototype, in</div>
             <div>moments</div>
           </div>
@@ -138,7 +140,7 @@ function RouteComponent() {
           </div>
         </div>
         <div className="text-center pb-20">
-          <div className="workfont text-2xl md:text-6xl font-bold z-40">
+          <div className="workfont text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-bold z-40">
             <div className="z-40">Faster experiments, more time with</div>
             <div>customers</div>
           </div>
@@ -174,48 +176,47 @@ function RouteComponent() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="md:flex mx-auto pt-10 ">
-              <div className="relative mx-5 mb-5 md:mb-0">
-                <img src={fadingbackground2} alt="" />
-                <img
-                  src={ellipse}
-                  alt=""
-                  className="absolute bottom-20 left-0"
-                />
-                <img src={layers} alt="" className="absolute bottom-0 left-0" />
-                <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 sm:left-16 lg:bottom-10 lg:left-5 ">
-                  Test real functionality that represents <br />
-                  how the real interaction should work
+            <div className="md:grid grid-cols-3 gap-3 mx-auto pt-10 ">
+              <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col relative">
+                <div className="rounded-[8px] p-3 bg-[#161616] mt-[2px] mx-[2px] from-50%">
+                  <img src={ellipse} alt="" className="mx-auto" />
+                  <img
+                    src={layers}
+                    alt=""
+                    className="absolute left-0 top-[-15%] md:top-[-5%] 2xl:left-[5%]"
+                  />
+                  <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] 2xl:pb-2">
+                    Test real functionality that represents how the real
+                    interaction should work
+                  </div>
                 </div>
               </div>
-              <div className="relative mx-5 mb-5 md:mb-0">
-                <img src={fadingbackground2} alt="" />
-                <img
-                  src={ellipse}
-                  alt=""
-                  className="absolute bottom-20 left-0"
-                />
-                <img
-                  src={cube}
-                  alt=""
-                  className="absolute bottom-24 left-24 sm:left-36 md:left-28 sm:bottom-36 2xl:left-36 w-[40%] 2xl:w-auto"
-                />
-                <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 sm:left-16 lg:bottom-10 lg:left-5 ">
-                  Identifying pain points or friction in <br />
-                  the prototype
+              <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col relative my-2 md:my-0">
+                <div className="rounded-[8px] p-3 bg-[#161616] mt-[2px] mx-[2px] from-50%">
+                  <img src={ellipse} alt="" className="mx-auto" />
+                  <img
+                    src={cube}
+                    alt=""
+                    className="absolute top-[-5%] left-[27%] w-[40vw] md:w-[14vw] md:top-0 2xl:top-[-10%]"
+                  />
+                  <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] 2xl:pb-2">
+                    Identifying pain points or friction in <br />
+                    the prototype
+                  </div>
                 </div>
               </div>
-              <div className="relative mx-5">
-                <img src={fadingbackground2} alt="" />
-                <img
-                  src={ellipse}
-                  alt=""
-                  className="absolute bottom-20 left-0"
-                />
-                <img src={homecubes} alt="" className="absolute top-0 left-0" />
-                <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] absolute bottom-6 left-3 sm:left-16 lg:bottom-10 lg:left-5 ">
-                  Communicate the actual experience <br /> to get actionable
-                  feedback
+              <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col relative">
+                <div className="rounded-[8px] p-3 bg-[#161616] mt-[2px] mx-[2px] from-50%">
+                  <img src={ellipse} alt="" className="mx-auto" />
+                  <img
+                    src={homecubes}
+                    alt=""
+                    className="absolute top-0 left-[0%] 2xl:left-[10%]"
+                  />
+                  <div className="sm:text-2xl lg:text-xl 2xl:text-[28px] 2xl:pb-2">
+                    Communicate the actual experience <br /> to get actionable
+                    feedback
+                  </div>
                 </div>
               </div>
             </div>
@@ -267,7 +268,7 @@ function RouteComponent() {
           </div>
           <img src={floatingCubes} alt="" className="mx-auto" />
         </div>
-        <div className="text-center pb-40 z-30">
+        <div className="relative text-center pb-40 z-30">
           <div className="workfont text-2xl md:text-6xl font-bold z-30">
             <div>Start prototyping with Arkhet </div>
           </div>
@@ -282,16 +283,18 @@ function RouteComponent() {
             </div>
           </Link>
         </div>
-        <img
-          src={ship2}
-          alt=""
-          className="absolute bottom-[-2%] sm:bottom-[-4%] lg:right-0 2xl:bottom-0 2xl:right-20 z-0"
-        />
-        <img
-          src={bluePlanet2}
-          alt=""
-          className="hidden md:block absolute bottom-[-4%] left-[-2%] z-0"
-        />
+        <div>
+          <img
+            src={ship2}
+            alt=""
+            className="absolute bottom-[-2%] sm:bottom-[-5%] "
+          />
+          <img
+            src={bluePlanet2}
+            alt=""
+            className="w-[30vw] absolute bottom-[-2%] left-[-3%]"
+          />
+        </div>
       </div>
     </main>
   );

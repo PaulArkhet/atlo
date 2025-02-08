@@ -123,17 +123,17 @@ function RouteComponent() {
       </div>
       <div className="flex flex-col mx-auto">
         <div className="md:grid grid-cols-3 gap-2 mx-auto">
-          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col my-2">
             <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
               <img src={ellipseBlue} alt="" className="mx-auto " />
               <img
                 src={realistic}
                 alt=""
-                className="absolute left-[15%] top-[-5%] w-[60vw] md:w-[27vw] lg:w-[20vw] 2xl:top-[-5%] 2xl:left-20 sm:w-auto"
+                className="absolute left-[15%] top-[-5%] w-[60vw] md:w-[25vw] md:left-[10%] lg:w-[20vw] lg:left-[20%] 2xl:top-[-5%] 2xl:left-20 sm:w-auto"
               />
               <div
-                className=" text-[20px] sm:text-[25px] lg:text-[20px] 
-              2xl:text-[40px] font-semibold"
+                className="text-[20px] md:text-[21px] lg:text-[20px] 
+              2xl:text-[40px] font-semibold md:pt-4 lg:pt-6 2xl:pt-0"
               >
                 Realistic experiments provide better data
               </div>
@@ -143,31 +143,37 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col my-2">
             <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
               <img src={ellipseCyan} alt="" className="mx-auto" />
               <img
                 src={database}
                 alt=""
-                className="absolute top-7 left-6 sm:left-28 sm:top-20 lg:left-9 lg:top-7 2xl:left-24 w-[250px] sm:w-auto"
+                className="absolute top-[10%] left-[20%] w-[50vw] md:w-[20vw] md:top-[5%] md:left-[20%]"
               />
-              <div className="sm:text-[25px] text-[20px] 2xl:text-[40px] font-semibold">
+              <div
+                className="text-[20px] md:text-[21px] lg:text-[20px] 
+              2xl:text-[40px] font-semibold"
+              >
                 Your Data, Your Experiment
               </div>
-              <div className="2xl:text-[28px]">
+              <div className="2xl:text-[28px] md:pb-[2.7rem] lg:pb-[4.7rem] xl:pb-5 2xl:pb-7">
                 Import and test with your data during development, not after.
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
+          <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col my-2">
             <div className="rounded-[8px] p-3 bg-[#111111] mt-[2px] mx-[2px] from-50% relative">
               <img src={ellipsePink} alt="" className="mx-auto" />
               <img
                 src={visual}
                 alt=""
-                className="absolute top-4 left-10 sm:left-28 sm:top-20 lg:top-4 lg:left-10 2xl:left-28 w-[250px] sm:w-auto"
+                className="absolute top-[5%] left-[20%] w-[50vw] md:w-[20vw] md:top-[2%]"
               />
-              <div className="sm:text-[25px] text-[20px] 2xl:text-[40px] font-semibold">
+              <div
+                className="text-[20px] md:text-[21px] lg:text-[20px] 
+              2xl:text-[40px] font-semibold"
+              >
                 Drag-and-Drop visual interface
               </div>
               <div className="2xl:text-[28px]">

@@ -3,13 +3,10 @@ import background1 from "/background1.svg";
 import fadingBorder from "/resourcesfadingborder.svg";
 import blogImg from "/resourcesblog1img.svg";
 import clock from "/clock.svg";
-import largeFrame from "/bloglargeframe.svg";
 import largeImage from "/bloglargeimg.svg";
 import largeImage2 from "/bloglargeimg2.svg";
-import smallFrame from "/blogsmallframe.svg";
 import smallImage from "/blogsmallimage.svg";
 import useBlogStore from "@/store/BlogStore";
-import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getAllBlogsQueryOptions } from "@/lib/api/blog";
 import { Blog } from "./blogger/dashboard";
@@ -64,7 +61,8 @@ function RouteComponent() {
             const { title, image, blogId } = parseBlogContent(blog);
             return (
               <Link
-                to={`/blog/${blogId}`}
+                to={`/blog/$blogId`}
+                params={{ blogId: blogId.toString() }}
                 key={blogId}
                 onClick={() => clickedBlog(blog.blogId)}
               >
