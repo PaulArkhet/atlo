@@ -7,6 +7,7 @@ import { getAllBlogsQueryOptions } from "@/lib/api/blog";
 import largeImage from "/bloglargeimg.svg";
 import useBlogStore from "@/store/BlogStore";
 import { Blog } from "../../../../schemas/blogs";
+import BlogComponent from "@/components/BlogComponent";
 
 export const Route = createFileRoute("/blogger/dashboard")({
   component: RouteComponent,
@@ -40,7 +41,7 @@ function RouteComponent() {
     };
   };
 
-  function clickedBlog(id: number) {
+  function deleteBlog(id: number) {
     blogs?.forEach((blog) => {
       if (blog.blogId === id) setCurrentBlog(blog);
     });
@@ -66,29 +67,7 @@ function RouteComponent() {
           {blogs &&
             blogs.map((blog) => {
               const { title, image, blogId } = parseBlogContent(blog);
-              return (
-                <div key={blogId} onClick={() => clickedBlog(blog.blogId)}>
-                  <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
-                    <div className="rounded-[10px] p-10 bg-gradient-to-b from-black to-transparent bg-opacity-40 w-[99%] mt-[2px] mx-auto">
-                      <img
-                        src={largeImage}
-                        alt={title}
-                        className="w-full h-40 object-cover rounded-md"
-                      />
-                      <h2 className="mt-2 text-white text-lg font-bold">
-                        {title}
-                      </h2>
-                      <p> Uploaded on: {blog.createdAt.toString()}</p>
-                      <div className="border p-5 m-3 text-center cursor-pointer">
-                        EDIT
-                      </div>
-                      <div className="border p-5 m-3 text-red-400 text-center cursor-pointer">
-                        DELETE
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
+              return <BlogComponent blog={blog} key={blogId} />;
             })}
         </div>
       </div>

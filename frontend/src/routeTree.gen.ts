@@ -31,6 +31,7 @@ import { Route as BloggerLoginImport } from './routes/blogger/login'
 import { Route as BloggerDashboardImport } from './routes/blogger/dashboard'
 import { Route as BloggerCreateblogImport } from './routes/blogger/createblog'
 import { Route as BlogBlogIdImport } from './routes/blog/$blogId'
+import { Route as BloggerEditBlogIdImport } from './routes/blogger/edit/$blogId'
 
 // Create/Update Routes
 
@@ -151,6 +152,12 @@ const BloggerCreateblogRoute = BloggerCreateblogImport.update({
 const BlogBlogIdRoute = BlogBlogIdImport.update({
   id: '/blog/$blogId',
   path: '/blog/$blogId',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BloggerEditBlogIdRoute = BloggerEditBlogIdImport.update({
+  id: '/blogger/edit/$blogId',
+  path: '/blogger/edit/$blogId',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -298,6 +305,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BloggerLoginImport
       parentRoute: typeof rootRoute
     }
+    '/blogger/edit/$blogId': {
+      id: '/blogger/edit/$blogId'
+      path: '/blogger/edit/$blogId'
+      fullPath: '/blogger/edit/$blogId'
+      preLoaderRoute: typeof BloggerEditBlogIdImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -324,6 +338,7 @@ export interface FileRoutesByFullPath {
   '/blogger/createblog': typeof BloggerCreateblogRoute
   '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
+  '/blogger/edit/$blogId': typeof BloggerEditBlogIdRoute
 }
 
 export interface FileRoutesByTo {
@@ -347,6 +362,7 @@ export interface FileRoutesByTo {
   '/blogger/createblog': typeof BloggerCreateblogRoute
   '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
+  '/blogger/edit/$blogId': typeof BloggerEditBlogIdRoute
 }
 
 export interface FileRoutesById {
@@ -371,6 +387,7 @@ export interface FileRoutesById {
   '/blogger/createblog': typeof BloggerCreateblogRoute
   '/blogger/dashboard': typeof BloggerDashboardRoute
   '/blogger/login': typeof BloggerLoginRoute
+  '/blogger/edit/$blogId': typeof BloggerEditBlogIdRoute
 }
 
 export interface FileRouteTypes {
@@ -396,6 +413,7 @@ export interface FileRouteTypes {
     | '/blogger/createblog'
     | '/blogger/dashboard'
     | '/blogger/login'
+    | '/blogger/edit/$blogId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -418,6 +436,7 @@ export interface FileRouteTypes {
     | '/blogger/createblog'
     | '/blogger/dashboard'
     | '/blogger/login'
+    | '/blogger/edit/$blogId'
   id:
     | '__root__'
     | '/'
@@ -440,6 +459,7 @@ export interface FileRouteTypes {
     | '/blogger/createblog'
     | '/blogger/dashboard'
     | '/blogger/login'
+    | '/blogger/edit/$blogId'
   fileRoutesById: FileRoutesById
 }
 
@@ -464,6 +484,7 @@ export interface RootRouteChildren {
   BloggerCreateblogRoute: typeof BloggerCreateblogRoute
   BloggerDashboardRoute: typeof BloggerDashboardRoute
   BloggerLoginRoute: typeof BloggerLoginRoute
+  BloggerEditBlogIdRoute: typeof BloggerEditBlogIdRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -487,6 +508,7 @@ const rootRouteChildren: RootRouteChildren = {
   BloggerCreateblogRoute: BloggerCreateblogRoute,
   BloggerDashboardRoute: BloggerDashboardRoute,
   BloggerLoginRoute: BloggerLoginRoute,
+  BloggerEditBlogIdRoute: BloggerEditBlogIdRoute,
 }
 
 export const routeTree = rootRoute
@@ -518,7 +540,8 @@ export const routeTree = rootRoute
         "/blog/$blogId",
         "/blogger/createblog",
         "/blogger/dashboard",
-        "/blogger/login"
+        "/blogger/login",
+        "/blogger/edit/$blogId"
       ]
     },
     "/": {
@@ -580,6 +603,9 @@ export const routeTree = rootRoute
     },
     "/blogger/login": {
       "filePath": "blogger/login.tsx"
+    },
+    "/blogger/edit/$blogId": {
+      "filePath": "blogger/edit/$blogId.tsx"
     }
   }
 }
