@@ -82,7 +82,7 @@ async function deleteBlogById(BlogId: number) {
     param: { blogId: BlogId.toString() },
   });
   if (!res.ok) {
-    throw new Error("Error getting Blog by id");
+    throw new Error("Error deleting blog by id");
   }
 }
 
@@ -99,12 +99,12 @@ export const useDeleteBlogMutation = () => {
       // Snapshot the previous value
       const previousBlogs = queryClient.getQueryData(["blogs"]) as Blog[];
 
-      const projToDeleteIndex = previousBlogs.findIndex(
+      const blogToDeleteIndex = previousBlogs.findIndex(
         (blog) => blog.blogId === args
       );
-      if (projToDeleteIndex === -1) return;
+      if (blogToDeleteIndex === -1) return;
 
-      const newBlogs = previousBlogs.toSpliced(projToDeleteIndex, 1);
+      const newBlogs = previousBlogs.toSpliced(blogToDeleteIndex, 1);
       // Optimistically update to the new value
       queryClient.setQueryData(["blogs"], newBlogs);
 

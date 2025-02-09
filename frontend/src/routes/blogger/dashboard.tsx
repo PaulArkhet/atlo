@@ -6,16 +6,11 @@ import { Block } from "./createblog";
 import { getAllBlogsQueryOptions } from "@/lib/api/blog";
 import largeImage from "/bloglargeimg.svg";
 import useBlogStore from "@/store/BlogStore";
+import { Blog } from "../../../../schemas/blogs";
 
 export const Route = createFileRoute("/blogger/dashboard")({
   component: RouteComponent,
 });
-
-export type Blog = {
-  blogId: number;
-  content: string;
-  createdAt: Date;
-};
 
 function RouteComponent() {
   const { isBloggerLoggedIn, setIsBloggerLoggedIn } = useAuthStore(

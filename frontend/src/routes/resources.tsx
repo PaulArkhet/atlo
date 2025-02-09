@@ -9,8 +9,8 @@ import smallImage from "/blogsmallimage.svg";
 import useBlogStore from "@/store/BlogStore";
 import { useQuery } from "@tanstack/react-query";
 import { getAllBlogsQueryOptions } from "@/lib/api/blog";
-import { Blog } from "./blogger/dashboard";
 import { Block } from "./blogger/createblog";
+import { Blog } from "../../../schemas/blogs";
 
 export const Route = createFileRoute("/resources")({
   component: RouteComponent,
