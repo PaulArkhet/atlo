@@ -8,6 +8,7 @@ import largeImage from "/bloglargeimg.svg";
 import useBlogStore from "@/store/BlogStore";
 import { Blog } from "../../../../schemas/blogs";
 import BlogComponent from "@/components/BlogComponent";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export const Route = createFileRoute("/blogger/dashboard")({
   component: RouteComponent,
@@ -26,8 +27,32 @@ function RouteComponent() {
 
   const { data: blogs, isLoading, error } = useQuery(getAllBlogsQueryOptions);
 
-  if (isLoading) return <p>Loading blogs...</p>;
-  if (error) return <p>Error fetching blogs</p>;
+  if (isLoading)
+    return (
+      <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+        <div className="md:p-10">
+          <div className=" tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
+            Hello, Randall!
+          </div>
+        </div>
+        <p className="text-center">Loading blogs...</p>
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
+          <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
+          <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
+          <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
+          <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
+        </div>
+      </main>
+    );
+  if (error)
+    return (
+      <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+        <p className="text-center">
+          Whoops! Something went wrong getting the Blogs 😮
+        </p>
+        <p className="text-center">We'll look into that ASAP</p>
+      </main>
+    );
 
   const parseBlogContent = (blog: Blog) => {
     const blocks = JSON.parse(blog.content); // Convert JSON string back to an array
