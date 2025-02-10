@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
-import { createInsertSchema } from "drizzle-zod";
+import { createInsertSchema, createUpdateSchema } from "drizzle-zod";
 import { blogs as blogsTable } from "../schemas/blogs";
 import { mightFail, mightFailSync } from "might-fail";
 import { db } from "../db";
@@ -96,4 +96,36 @@ export const blogRouter = new Hono()
     }
 
     return c.json({}, 200);
-  });
+  })
+  .post(
+    "/:blogId/update",
+    zValidator(
+      "json",
+      createUpdateSchema(blogsTable).omit({
+        createdAt: true,
+      })
+    ),
+    async (c) => {
+      const { blogId: blogIdString } = c.req.param();
+      const blogId = assertIsParsableInt(blogIdString);
+
+      const updateValues = c.req.valid("json");
+
+      const { error: queryError, result: newBlogResult } = await mightFail(
+        db
+          .update(blogsTable)
+          .set({ ...updateValues })
+          .where(eq(blogsTable.blogId, blogId))
+          .returning()
+      );
+
+      if (queryError) {
+        throw new HTTPException(500, {
+          message: "Error updating blogs table",
+          cause: queryError,
+        });
+      }
+
+      return c.json({ newBlog: newBlogResult[0] }, 200);
+    }
+  );

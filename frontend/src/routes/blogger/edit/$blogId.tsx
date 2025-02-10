@@ -7,7 +7,11 @@ import {
 import { useEffect, useState } from "react";
 import { Block } from "../createblog";
 import useAuthStore from "@/store/AuthStore";
-import { getBlogByIdQueryOptions, useCreateBlogMutation } from "@/lib/api/blog";
+import {
+  getBlogByIdQueryOptions,
+  useCreateBlogMutation,
+  useUpdateBlogMutation,
+} from "@/lib/api/blog";
 import arrowLeft from "/arrowleft.svg";
 import { z } from "zod";
 
@@ -87,21 +91,20 @@ function RouteComponent() {
     }
   };
 
-  const createBlogMutation = useCreateBlogMutation();
+  const { mutate: updateBlog, isPending: mutateProjectPending } =
+    useUpdateBlogMutation();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("blog created");
+    if (mutateProjectPending) return;
     // Convert blocks into a string (or structured format)
     const formattedContent = JSON.stringify(blocks);
 
-    createBlogMutation.mutate(
-      { content: formattedContent }, // <-- Sending the transformed data
-      {
-        onSuccess: () => navigate({ to: "/blogger/dashboard" }),
-        onError: (error) => console.error("Blogging failed:", error),
-      }
-    );
+    updateBlog({
+      blogId: blog.blogId,
+      content: formattedContent,
+    });
+    navigate({ to: "/blogger/dashboard" });
   };
 
   return (

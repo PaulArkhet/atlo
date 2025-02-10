@@ -10,6 +10,12 @@ type CreateBlogArgs = ArgumentTypes<
   typeof client.api.v0.blogs.$post
 >[0]["json"];
 
+const updateFunc = client.api.v0.blogs[":blogId"].update.$post;
+
+type UpdateBlogArgs = ArgumentTypes<typeof updateFunc>[0]["json"] & {
+  blogId: number;
+};
+
 type SerializedBlog = ExtractData<
   Awaited<ReturnType<typeof client.api.v0.blogs.$get>>
 >["blogs"][number];
@@ -113,6 +119,76 @@ export const useDeleteBlogMutation = () => {
     },
     onError: (_err, _args, context) => {
       if (!context) return;
+      queryClient.setQueryData(["blogs"], context.previousBlogs);
+    },
+  });
+};
+
+async function updateBlog(args: UpdateBlogArgs) {
+  const res = await client.api.v0.blogs[":blogId"].update.$post({
+    param: { blogId: args.blogId.toString() },
+    json: args,
+  });
+  if (!res.ok) {
+    throw new Error("Error creating Blog.");
+  }
+  const { newBlog } = await res.json();
+  return newBlog;
+}
+
+export const useUpdateBlogMutation = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: updateBlog,
+    onMutate: async (newBlog) => {
+      // Cancel any outgoing refetches
+      // (so they don't overwrite our optimistic update)
+      await queryClient.cancelQueries({
+        queryKey: ["blogs", newBlog.blogId],
+      });
+
+      // Snapshot the previous value
+      const previousBlog = queryClient.getQueryData(["blogs", newBlog.blogId]);
+
+      const previousBlogs = queryClient.getQueryData(["blogs"]) as Blog[];
+
+      const newBlogUpdateResult: Blog = {
+        ...(previousBlog as Blog),
+        ...newBlog,
+      };
+
+      // Optimistically update to the new value
+      queryClient.setQueryData(["blogs", newBlog.blogId], newBlogUpdateResult);
+
+      const projToUpdateIndex = previousBlogs.findIndex(
+        (proj) => proj.blogId === newBlog.blogId
+      );
+      if (projToUpdateIndex === -1) return;
+
+      const newBlogs = previousBlogs.toSpliced(
+        projToUpdateIndex,
+        1,
+        newBlogUpdateResult
+      );
+
+      queryClient.setQueryData(["blogs"], newBlogs);
+
+      // Return a context with the previous and new todo
+      return { previousBlog, previousBlogs };
+    },
+    onSettled: (newBlog) => {
+      if (!newBlog) return;
+      queryClient.invalidateQueries({
+        queryKey: ["blogs", newBlog.blogId],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ["blogs"],
+      });
+    },
+    onError: (_err, vars, context) => {
+      if (!context) return;
+      queryClient.setQueryData(["blogs", vars.blogId], context.previousBlog);
+
       queryClient.setQueryData(["blogs"], context.previousBlogs);
     },
   });
