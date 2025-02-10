@@ -41,6 +41,7 @@ function RouteComponent() {
           <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
           <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
           <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
+          <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
         </div>
       </main>
     );

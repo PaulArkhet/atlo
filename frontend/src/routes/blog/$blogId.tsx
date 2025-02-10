@@ -3,6 +3,7 @@ import { Block } from "../blogger/createblog";
 import { z } from "zod";
 import arrowLeft from "/arrowleft.svg";
 import { getBlogByIdQueryOptions } from "@/lib/api/blog";
+import DOMPurify from "dompurify";
 
 export const Route = createFileRoute("/blog/$blogId")({
   beforeLoad: async ({ context, params }) => {
@@ -58,7 +59,14 @@ function RouteComponent() {
           </h2>
         );
       case "paragraph":
-        return <p className="nunitofont text-lg">{block.content}</p>;
+        return (
+          <p
+            className="nunitofont text-lg"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(block.content),
+            }}
+          ></p>
+        );
       case "image":
         return (
           <img

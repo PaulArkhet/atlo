@@ -117,7 +117,7 @@ function RouteComponent() {
       </Link>
 
       <div className="md:p-10 text-center text-xl pb-5 text-[#D9D9D9]">
-        CREATE NEW BLOG
+        UPDATE BLOG
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col mx-auto w-[800px]">
@@ -153,11 +153,31 @@ function RouteComponent() {
             {block.type === "image" && (
               <div className="w-full">
                 {block.content ? (
-                  <img
-                    src={block.content}
-                    alt="Uploaded"
-                    className="max-w-full rounded-lg shadow-lg"
-                  />
+                  <div className="relative">
+                    <img
+                      src={block.content}
+                      alt="Uploaded"
+                      className="max-w-full rounded-lg shadow-lg"
+                    />
+                    <div className="flex gap-2 mt-3">
+                      <label className="cursor-pointer bg-[#9253E4] px-3 py-2 text-white">
+                        Replace Image
+                        <input
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          onChange={(e) => handleImageUpload(block.id, e)}
+                        />
+                      </label>
+                      <button
+                        type="button"
+                        onClick={() => handleChange(block.id, "")}
+                        className="bg-red-500 px-3 py-2 text-white"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
                 ) : (
                   <label className="cursor-pointer text-center block bg-[#9253E4] py-2 px-3 my-2">
                     Upload Image

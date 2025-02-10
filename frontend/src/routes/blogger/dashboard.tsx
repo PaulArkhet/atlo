@@ -35,8 +35,9 @@ function RouteComponent() {
             Hello, Randall!
           </div>
         </div>
-        <p className="text-center">Loading blogs...</p>
+        <p className="text-center">Loading your blogs...</p>
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2">
+          <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
           <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
           <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
           <Skeleton className="w-full h-[300px] rounded-lg mt-4" />
