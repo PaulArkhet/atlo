@@ -19,12 +19,12 @@ export type Block = {
 function RouteComponent() {
   const [blocks, setBlocks] = useState<Block[]>([]);
   const navigate = useNavigate();
-  const { isBloggerLoggedIn, setIsBloggerLoggedIn } = useAuthStore(
+  const { isBloggerLoggedIn, setIsBloggerLoggedIn, user } = useAuthStore(
     (state) => state
   );
 
   useEffect(() => {
-    if (!isBloggerLoggedIn) navigate({ to: "/blogger/login" });
+    if (!user) navigate({ to: "/blogger/login" });
   }, []);
 
   const handleAddBlock = (type: Block["type"]) => {

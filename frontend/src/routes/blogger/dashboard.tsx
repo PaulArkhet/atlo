@@ -9,21 +9,26 @@ import useBlogStore from "@/store/BlogStore";
 import { Blog } from "../../../../schemas/blogs";
 import BlogComponent from "@/components/BlogComponent";
 import { Skeleton } from "@/components/ui/skeleton";
+import arrowLeft from "/arrowleft.svg";
 
 export const Route = createFileRoute("/blogger/dashboard")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  const { isBloggerLoggedIn, setIsBloggerLoggedIn } = useAuthStore(
-    (state) => state
-  );
+  const { isBloggerLoggedIn, setIsBloggerLoggedIn, logoutService, user } =
+    useAuthStore((state) => state);
   const { currentBlog, setCurrentBlog } = useBlogStore((state) => state);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isBloggerLoggedIn) navigate({ to: "/blogger/login" });
+    if (!user) navigate({ to: "/blogger/login" });
   }, []);
+
+  function handleLogout() {
+    logoutService();
+    navigate({ to: "/blogger/login" });
+  }
 
   const { data: blogs, isLoading, error } = useQuery(getAllBlogsQueryOptions);
 
@@ -75,6 +80,10 @@ function RouteComponent() {
 
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+      <div className="ml-10 flex cursor-pointer" onClick={handleLogout}>
+        <img src={arrowLeft} alt="" />
+        <div className="ml-2">Logout</div>
+      </div>
       <div className="md:p-10">
         <div className=" tracking-widest text-center text-xl pb-5 md:pb-0 text-[#D9D9D9]">
           Hello, Randall!

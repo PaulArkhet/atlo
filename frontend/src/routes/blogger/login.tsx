@@ -3,7 +3,7 @@ import logo from "/arkhet-logo-white.png";
 import rectangle from "/registerrectangle.svg";
 import group17 from "/subscribegroup17.svg";
 import arrowLeft from "/arrowleft.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAuthStore from "@/store/AuthStore";
 
 export const Route = createFileRoute("/blogger/login")({
@@ -12,20 +12,32 @@ export const Route = createFileRoute("/blogger/login")({
 
 function RouteComponent() {
   const navigate = useNavigate();
+  const [loadingMessage, setLoadingMessage] = useState("");
   const [message, setMessage] = useState("");
-  const { isBloggerLoggedIn, setIsBloggerLoggedIn } = useAuthStore(
-    (state) => state
-  );
+  const {
+    isBloggerLoggedIn,
+    setIsBloggerLoggedIn,
+    loginService,
+    authLoading,
+    user,
+  } = useAuthStore((state) => state);
+
+  useEffect(() => {
+    if (!!user) {
+      navigate({ to: "/blogger/dashboard" });
+    }
+  }, [user]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const username = (e.target as HTMLFormElement).username.value;
     const password = (e.target as HTMLFormElement).password.value;
-    if (username === "randall" && password === "herd") {
-      setIsBloggerLoggedIn(true);
-      navigate({ to: "/blogger/dashboard" });
-    } else {
-      setMessage("Whoops, that's not it!");
+    loginService(username, password);
+    if (authLoading) setLoadingMessage("Loading...");
+    if (!user) {
+      setTimeout(() => {
+        setMessage("Whoops, that's not it!");
+      }, 700);
     }
   }
 
@@ -73,6 +85,7 @@ function RouteComponent() {
           <button className="px-5 py-3 bg-[#9253E4] tracking-widest my-2 text-center z-20">
             LOGIN
           </button>
+          <div className="text-center z-20">{loadingMessage}</div>
           <div className="text-center z-20 text-red-400">{message}</div>
         </form>
       </div>

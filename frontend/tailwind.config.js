@@ -7,6 +7,8 @@ export default {
     "text-green-500",
     "text-blue-500",
     "font-bold",
+    "italic",
+    "underline",
     "text-2xl",
   ],
   theme: {
