@@ -105,7 +105,13 @@ function RouteComponent() {
                   <div className="hidden md:block relative mb-32 xl:mb-20 mx-auto">
                     <img src={background1} alt="" className="mx-auto" />
                     <div className=" tracking-[0.4rem] absolute top-8 left-8 text-sm lg:top-14 lg:left-11 2xl:text-3xl text-[#D9D9D9]">
-                      DECEMBER 11, 2024
+                      {new Date(blog.createdAt)
+                        .toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                        .toUpperCase()}
                     </div>
                     <div className="absolute top-16 left-8 text-2xl lg:left-11 lg:top-20 2xl:top-32 w-[30%] lg:text-3xl 2xl:text-6xl font-bold lg:w-[25%] xl:w-[25%] 2xl:w-[37%]">
                       {title}
@@ -153,7 +159,13 @@ function RouteComponent() {
                   <img src={blogImg} alt="" />
                   <div className="p-5">
                     <div className="tracking-[0.4rem] py-1">
-                      DECEMBER 11, 2024
+                      {new Date(blog.createdAt)
+                        .toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                        .toUpperCase()}
                     </div>
                     <div className="workfont text-2xl py-1 font-bold">
                       {title}
@@ -192,7 +204,13 @@ function RouteComponent() {
                   <img src={largeImage} alt="" />
                   <div className="p-5">
                     <div className=" tracking-[0.4rem] py-1">
-                      NOVEMBER 25, 2024
+                      {new Date(blog.createdAt)
+                        .toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                        .toUpperCase()}
                     </div>
                     <div className="workfont text-2xl py-1 font-bold">
                       {title}
@@ -224,7 +242,13 @@ function RouteComponent() {
                   <img src={smallImage} alt="" />
                   <div className="p-5">
                     <div className=" tracking-[0.4rem] py-1">
-                      OCTOBER 15, 2024
+                      {new Date(blog.createdAt)
+                        .toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                        .toUpperCase()}
                     </div>
                     <div className="workfont text-2xl py-1 font-bold">
                       {title}
@@ -268,7 +292,13 @@ function RouteComponent() {
                             className="rounded-[10px]"
                           />
                           <div className="px-5 tracking-[0.3rem] text-[24px] pt-10 pb-3">
-                            NOVEMBER 25, 2024
+                            {new Date(blog.createdAt)
+                              .toLocaleDateString("en-US", {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                              })
+                              .toUpperCase()}
                           </div>
                           <div className="px-5 text-[32px] 2xl:text-[48px] font-bold">
                             {title}
@@ -302,7 +332,13 @@ function RouteComponent() {
                         <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
                           <img src={smallImage} alt="" className="mx-auto" />
                           <div className="pt-8 px-5 tracking-[0.3rem] text-xl 2xl:text-[24px]">
-                            OCTOBER 15, 2024
+                            {new Date(blog.createdAt)
+                              .toLocaleDateString("en-US", {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                              })
+                              .toUpperCase()}
                           </div>
                           <div className="px-5 text-4xl py-5 font-bold">
                             {title}
