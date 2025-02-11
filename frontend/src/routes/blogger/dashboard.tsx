@@ -93,7 +93,21 @@ function RouteComponent() {
           {blogs &&
             blogs.map((blog) => {
               const { title, image, blogId } = parseBlogContent(blog);
-              return <BlogComponent blog={blog} key={blogId} />;
+              return (
+                <div>
+                  {blog.main ? (
+                    <div className="text-green-500">Current Main</div>
+                  ) : (
+                    ""
+                  )}
+                  {blog.featured ? (
+                    <div className="text-yellow-500">Current Featured</div>
+                  ) : (
+                    ""
+                  )}
+                  <BlogComponent blog={blog} key={blogId} />
+                </div>
+              );
             })}
         </div>
       </div>
