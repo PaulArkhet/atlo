@@ -1,9 +1,19 @@
-import { pgTable, varchar, serial, timestamp } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  varchar,
+  serial,
+  timestamp,
+  boolean,
+} from "drizzle-orm/pg-core";
 import type { InferSelectModel } from "drizzle-orm";
 
 export const blogs = pgTable("blogs", {
   blogId: serial("blog_id").primaryKey(),
   content: varchar("content").notNull(),
+  thumbnail: varchar("thumbnail"),
+  main: boolean("main"),
+  featured: boolean("featured"),
+  editedAt: timestamp("edited_at").defaultNow().notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

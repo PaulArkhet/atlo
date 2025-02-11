@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { Block } from "./createblog";
 import { getAllBlogsQueryOptions } from "@/lib/api/blog";
 import largeImage from "/bloglargeimg.svg";
-import useBlogStore from "@/store/BlogStore";
 import { Blog } from "../../../../schemas/blogs";
 import BlogComponent from "@/components/BlogComponent";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -16,9 +15,7 @@ export const Route = createFileRoute("/blogger/dashboard")({
 });
 
 function RouteComponent() {
-  const { isBloggerLoggedIn, setIsBloggerLoggedIn, logoutService, user } =
-    useAuthStore((state) => state);
-  const { currentBlog, setCurrentBlog } = useBlogStore((state) => state);
+  const { logoutService, user } = useAuthStore((state) => state);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -71,12 +68,6 @@ function RouteComponent() {
       blogId: blog.blogId,
     };
   };
-
-  function deleteBlog(id: number) {
-    blogs?.forEach((blog) => {
-      if (blog.blogId === id) setCurrentBlog(blog);
-    });
-  }
 
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">

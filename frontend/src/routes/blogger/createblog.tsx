@@ -22,6 +22,7 @@ function RouteComponent() {
   const { isBloggerLoggedIn, setIsBloggerLoggedIn, user } = useAuthStore(
     (state) => state
   );
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
 
   useEffect(() => {
     if (!user) navigate({ to: "/blogger/login" });
@@ -81,6 +82,19 @@ function RouteComponent() {
     );
   };
 
+  const handleThumbnailUpload = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setThumbnail(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const createBlogMutation = useCreateBlogMutation();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -90,7 +104,7 @@ function RouteComponent() {
     const formattedContent = JSON.stringify(blocks);
 
     createBlogMutation.mutate(
-      { content: formattedContent }, // <-- Sending the transformed data
+      { content: formattedContent, thumbnail: thumbnail }, // <-- Sending the transformed data
       {
         onSuccess: () => navigate({ to: "/blogger/dashboard" }),
         onError: (error) => console.error("Blogging failed:", error),
@@ -110,8 +124,46 @@ function RouteComponent() {
       <div className="md:p-10 text-center text-xl pb-5 text-[#D9D9D9]">
         CREATE NEW BLOG
       </div>
-
       <form onSubmit={handleSubmit} className="flex flex-col mx-auto w-[800px]">
+        <div className="w-full">
+          {thumbnail ? (
+            <div className="relative">
+              <img
+                src={thumbnail}
+                alt="Thumbnail"
+                className="mx-auto rounded-lg shadow-lg"
+              />
+              <div className="flex gap-2 mt-3">
+                <label className="cursor-pointer bg-[#559246] px-3 py-2 text-white">
+                  Replace Thumbnail
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleThumbnailUpload}
+                  />
+                </label>
+                <button
+                  type="button"
+                  onClick={() => setThumbnail(null)}
+                  className="bg-red-500 px-3 py-2 text-white"
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          ) : (
+            <label className="cursor-pointer text-center bg-[#559246] py-2 px-3 my-2">
+              Upload Thumbnail
+              <input
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={handleThumbnailUpload}
+              />
+            </label>
+          )}
+        </div>
         {blocks.map((block, index) => (
           <div key={block.id} className="relative my-3">
             {block.type === "title" && (
