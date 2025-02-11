@@ -117,11 +117,7 @@ function RouteComponent() {
                       {title}
                     </div>
                     <div className="text-[#D9D9D9] absolute top-32 left-6 lg:left-11 text-left lg:text-xl lg:top-44 2xl:top-72 2xl:text-3xl w-[33%] lg:w-[25%] xl:w-[30%] 2xl:w-[37%]">
-                      <div className="ml-2 mb-3">
-                        Add a quick summary of what the blog post is about.
-                        Clicking this whole section takes user to the full blog
-                        post. Keep this 2-4 lines.
-                      </div>
+                      <div className="ml-2 mb-3">{blog.summary}</div>
                       <div className="flex mt-5">
                         <img src={clock} alt="" />
                         <div className="text-xl 2xl:text-[24px]">

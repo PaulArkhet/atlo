@@ -41,6 +41,7 @@ function RouteComponent() {
   }
 
   const [thumbnail, setThumbnail] = useState<string | null>(blog.thumbnail);
+  const [summaryMessage, setSummaryMessage] = useState("");
 
   // Safely parse the blog content
   let prevBlogs: Block[] = [];
@@ -142,6 +143,10 @@ function RouteComponent() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (mutateProjectPending) return;
+    const formData = new FormData(event.currentTarget);
+    const summary = formData.get("summary") as string;
+    console.log(summary);
+    if (summary.length > 300) return;
     // Convert blocks into a string (or structured format)
     const formattedContent = JSON.stringify(blocks);
 
@@ -149,6 +154,7 @@ function RouteComponent() {
       blogId: blog.blogId,
       content: formattedContent,
       thumbnail,
+      summary,
     });
     navigate({ to: "/blogger/dashboard" });
   };
@@ -204,6 +210,15 @@ function RouteComponent() {
             />
           </label>
         )}
+        <textarea
+          rows={4}
+          placeholder="Write a summary"
+          name="summary"
+          id="summary"
+          className="w-[300px] border border-[#8778D7] bg-[#242424] py-2 px-3 my-3"
+          required
+        />
+        <div className="">{summaryMessage}</div>
         {blocks.map((block, index) => (
           <div key={block.id} className="relative my-3">
             {block.type === "title" && (

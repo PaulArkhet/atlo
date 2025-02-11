@@ -99,12 +99,12 @@ function RouteComponent() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("blog created");
     // Convert blocks into a string (or structured format)
     const formattedContent = JSON.stringify(blocks);
-
+    const formData = new FormData(event.currentTarget);
+    const summary = formData.get("summary") as string;
     createBlogMutation.mutate(
-      { content: formattedContent, thumbnail: thumbnail }, // <-- Sending the transformed data
+      { content: formattedContent, thumbnail: thumbnail, summary: summary },
       {
         onSuccess: () => navigate({ to: "/blogger/dashboard" }),
         onError: (error) => console.error("Blogging failed:", error),
@@ -164,6 +164,13 @@ function RouteComponent() {
             </label>
           )}
         </div>
+        <textarea
+          rows={4}
+          placeholder="Write a summary"
+          name="summary"
+          className="w-[300px] border border-[#8778D7] bg-[#242424] py-2 px-3 my-3"
+          required
+        />
         {blocks.map((block, index) => (
           <div key={block.id} className="relative my-3">
             {block.type === "title" && (
