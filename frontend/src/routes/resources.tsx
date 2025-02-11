@@ -259,7 +259,11 @@ function RouteComponent() {
                       <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
                         <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
                           <img
-                            src={largeImage}
+                            src={
+                              blog.thumbnail == undefined
+                                ? largeImage
+                                : `${blog.thumbnail}`
+                            }
                             alt=""
                             className="rounded-[10px]"
                           />
