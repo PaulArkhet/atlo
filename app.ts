@@ -6,6 +6,8 @@ import { cors } from "hono/cors";
 import { registrationRouter } from "./routes/registrations";
 import { bookingRouter } from "./routes/bookings";
 import { blogRouter } from "./routes/blogs";
+import { usersRouter } from "./routes/users";
+import { userRouter } from "./routes/user";
 
 const app = new Hono();
 
@@ -17,7 +19,9 @@ const apiRoutes = app
   .route("/subscriptions", subscriptionRouter)
   .route("/registrations", registrationRouter)
   .route("/bookings", bookingRouter)
-  .route("/blogs", blogRouter);
+  .route("/blogs", blogRouter)
+  .route("/users", usersRouter)
+  .route("/user", userRouter);
 
 app.use("/*", serveStatic({ root: "./frontend/dist" }));
 app.get("/*", async (c) => {
