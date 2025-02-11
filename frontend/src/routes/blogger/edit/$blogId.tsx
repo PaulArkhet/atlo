@@ -41,6 +41,7 @@ function RouteComponent() {
   }
 
   const [thumbnail, setThumbnail] = useState<string | null>(blog.thumbnail);
+  const [summary, setSummary] = useState(blog.summary ? blog.summary : "");
   const [summaryMessage, setSummaryMessage] = useState("");
 
   // Safely parse the blog content
@@ -143,10 +144,11 @@ function RouteComponent() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (mutateProjectPending) return;
-    const formData = new FormData(event.currentTarget);
-    const summary = formData.get("summary") as string;
     console.log(summary);
-    if (summary.length > 300) return;
+    if (summary!.length > 200)
+      return setSummaryMessage(
+        "Whoops! Summary is too long, should be below 200 characters"
+      );
     // Convert blocks into a string (or structured format)
     const formattedContent = JSON.stringify(blocks);
 
@@ -154,7 +156,7 @@ function RouteComponent() {
       blogId: blog.blogId,
       content: formattedContent,
       thumbnail,
-      summary,
+      summary: summary,
     });
     navigate({ to: "/blogger/dashboard" });
   };
@@ -213,12 +215,11 @@ function RouteComponent() {
         <textarea
           rows={4}
           placeholder="Write a summary"
-          name="summary"
-          id="summary"
+          value={summary}
+          onChange={(e) => setSummary(e.target.value)}
           className="w-[300px] border border-[#8778D7] bg-[#242424] py-2 px-3 my-3"
           required
         />
-        <div className="">{summaryMessage}</div>
         {blocks.map((block, index) => (
           <div key={block.id} className="relative my-3">
             {block.type === "title" && (
@@ -370,7 +371,7 @@ function RouteComponent() {
             + Image
           </button>
         </div>
-
+        <div className="text-orange-300">{summaryMessage}</div>
         <button className="text-center px-5 py-3 bg-[#9253E4] tracking-widest">
           UPDATE
         </button>

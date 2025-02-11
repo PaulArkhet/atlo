@@ -73,6 +73,22 @@ function RouteComponent() {
     });
   }
 
+  const calculateReadingTime = (content: string) => {
+    try {
+      const blocks: Block[] = JSON.parse(content); // Parse the JSON string
+      const paragraphText = blocks
+        .filter((block) => block.type === "paragraph") // Get only paragraph blocks
+        .map((block) => block.content) // Extract text content
+        .join(" "); // Join paragraphs into a single string
+
+      const words = paragraphText.trim().split(/\s+/).length; // Count words
+      return Math.max(1, Math.ceil(words / 230)); // Ensure at least 1 min
+    } catch (error) {
+      console.error("Error parsing blog content:", error);
+      return 3; // Default to 3 minutes in case of error
+    }
+  };
+
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]  overflow-x-hidden">
       {/* <iframe
@@ -121,7 +137,7 @@ function RouteComponent() {
                       <div className="flex mt-5">
                         <img src={clock} alt="" />
                         <div className="text-xl 2xl:text-[24px]">
-                          3 minute read
+                          {calculateReadingTime(blog.content)} minute read
                         </div>
                       </div>
                     </div>
@@ -145,7 +161,7 @@ function RouteComponent() {
               <Link
                 to={`/blog/$blogId`}
                 params={{ blogId: blogId.toString() }}
-                key={blogId}
+                key={"mobile" + blogId}
                 onClick={() => clickedBlog(blog.blogId)}
               >
                 <div
@@ -166,11 +182,7 @@ function RouteComponent() {
                     <div className="workfont text-2xl py-1 font-bold">
                       {title}
                     </div>
-                    <div className="py-1">
-                      Add a quick summary of what the blog post is about.
-                      Clicking this whole section takes user to the full blog
-                      post. Keep this 2-4 lines.
-                    </div>
+                    <div className="py-1">{blog.summary}</div>
                     <div className="flex mt-2">
                       <img src={clock} alt="" className="w-[23px]" />
                       <div className="">3 minute read</div>
@@ -211,11 +223,7 @@ function RouteComponent() {
                     <div className="workfont text-2xl py-1 font-bold">
                       {title}
                     </div>
-                    <div className="py-1">
-                      Add a quick summary of what the blog post is about.
-                      Clicking this whole section takes user to the full blog
-                      post. Keep this 2-4 lines.
-                    </div>
+                    <div className="py-1">{blog.summary}</div>
                   </div>
                 </div>
               </Link>
@@ -231,7 +239,7 @@ function RouteComponent() {
               <Link
                 to={`/blog/$blogId`}
                 params={{ blogId: blogId.toString() }}
-                key={blogId}
+                key={"mobile" + blogId}
                 onClick={() => clickedBlog(blog.blogId)}
               >
                 <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
@@ -249,11 +257,7 @@ function RouteComponent() {
                     <div className="workfont text-2xl py-1 font-bold">
                       {title}
                     </div>
-                    <div className="py-1">
-                      Add a quick summary of what the blog post is about.
-                      Clicking this whole section takes user to the full blog
-                      post. Keep this 2-4 lines.
-                    </div>
+                    <div className="py-1">{blog.summary}</div>
                   </div>
                 </div>
               </Link>
@@ -300,9 +304,7 @@ function RouteComponent() {
                             {title}
                           </div>
                           <div className="px-5 text-[20px] pt-9 pb-20">
-                            Add a quick summary of what the blog post is about.
-                            Clicking this whole section <br /> takes user to the
-                            full blog post. Keep this 2-4 lines.
+                            {blog.summary}
                           </div>
                         </div>
                       </div>
@@ -321,7 +323,7 @@ function RouteComponent() {
                     <Link
                       to={`/blog/$blogId`}
                       params={{ blogId: blogId.toString() }}
-                      key={blogId}
+                      key={"mobile" + blogId}
                       onClick={() => clickedBlog(blog.blogId)}
                     >
                       <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
@@ -340,7 +342,7 @@ function RouteComponent() {
                             {title}
                           </div>
                           <div className="pb-24 px-5 text-lg ">
-                            Add a quick summary of what the blog post is about.
+                            {blog.summary}
                           </div>
                         </div>
                       </div>

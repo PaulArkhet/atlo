@@ -19,10 +19,10 @@ export type Block = {
 function RouteComponent() {
   const [blocks, setBlocks] = useState<Block[]>([]);
   const navigate = useNavigate();
-  const { isBloggerLoggedIn, setIsBloggerLoggedIn, user } = useAuthStore(
-    (state) => state
-  );
+  const { user } = useAuthStore((state) => state);
   const [thumbnail, setThumbnail] = useState<string | null>(null);
+  const [summary, setSummary] = useState("");
+  const [summaryMessage, setSummaryMessage] = useState("");
 
   useEffect(() => {
     if (!user) navigate({ to: "/blogger/login" });
@@ -101,8 +101,10 @@ function RouteComponent() {
     event.preventDefault();
     // Convert blocks into a string (or structured format)
     const formattedContent = JSON.stringify(blocks);
-    const formData = new FormData(event.currentTarget);
-    const summary = formData.get("summary") as string;
+    if (summary.length > 200)
+      return setSummaryMessage(
+        "Whoops! Summary is too long, should be below 200 characters"
+      );
     createBlogMutation.mutate(
       { content: formattedContent, thumbnail: thumbnail, summary: summary },
       {
@@ -167,7 +169,8 @@ function RouteComponent() {
         <textarea
           rows={4}
           placeholder="Write a summary"
-          name="summary"
+          value={summary}
+          onChange={(e) => setSummary(e.target.value)}
           className="w-[300px] border border-[#8778D7] bg-[#242424] py-2 px-3 my-3"
           required
         />
