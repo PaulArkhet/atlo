@@ -23,6 +23,8 @@ function RouteComponent() {
   const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [summary, setSummary] = useState("");
   const [summaryMessage, setSummaryMessage] = useState("");
+  const [main, setMain] = useState(false);
+  const [featured, setFeatured] = useState(false);
 
   useEffect(() => {
     if (!user) navigate({ to: "/blogger/login" });
@@ -95,6 +97,24 @@ function RouteComponent() {
     }
   };
 
+  function handleClickedMain() {
+    setMain(true);
+    setFeatured(false);
+  }
+
+  function handleCancelledMain() {
+    setMain(false);
+  }
+
+  function handleClickedFeatured() {
+    setMain(false);
+    setFeatured(true);
+  }
+
+  function handleCancelledFeatured() {
+    setFeatured(false);
+  }
+
   const createBlogMutation = useCreateBlogMutation();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -106,7 +126,13 @@ function RouteComponent() {
         "Whoops! Summary is too long, should be below 200 characters"
       );
     createBlogMutation.mutate(
-      { content: formattedContent, thumbnail: thumbnail, summary: summary },
+      {
+        content: formattedContent,
+        thumbnail: thumbnail,
+        summary: summary,
+        main: main,
+        featured: featured,
+      },
       {
         onSuccess: () => navigate({ to: "/blogger/dashboard" }),
         onError: (error) => console.error("Blogging failed:", error),
@@ -127,6 +153,48 @@ function RouteComponent() {
         CREATE NEW BLOG
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col mx-auto w-[800px]">
+        {!main && (
+          <div
+            className="cursor-pointer text-center bg-[#b028ff] py-2 px-3 mb-5 w-[159px]"
+            onClick={handleClickedMain}
+          >
+            Set as Main
+          </div>
+        )}
+        {main && (
+          <div className="flex">
+            <div
+              className="cursor-pointer text-center bg-[#8d3434] py-2 px-3 mb-5 w-[159px]"
+              onClick={handleCancelledMain}
+            >
+              Cancel Main
+            </div>
+            <div className="ml-2 text-green-600">
+              This is now the main article!
+            </div>
+          </div>
+        )}
+        {!featured && (
+          <div
+            className="cursor-pointer text-center bg-[#467492] py-2 px-3 mb-5 w-[159px]"
+            onClick={handleClickedFeatured}
+          >
+            Set as Featured
+          </div>
+        )}
+        {featured && (
+          <div className="flex">
+            <div
+              className="cursor-pointer text-center bg-[#8d3434] py-2 px-3 mb-5 w-[159px]"
+              onClick={handleCancelledFeatured}
+            >
+              Cancel Featured
+            </div>
+            <div className="ml-2 text-green-600">
+              This is now a featured article!
+            </div>
+          </div>
+        )}
         <div className="w-full">
           {thumbnail ? (
             <div className="relative">
@@ -155,15 +223,17 @@ function RouteComponent() {
               </div>
             </div>
           ) : (
-            <label className="cursor-pointer text-center bg-[#559246] py-2 px-3 my-2">
-              Upload Thumbnail
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={handleThumbnailUpload}
-              />
-            </label>
+            <div className="mb-5">
+              <label className="cursor-pointer text-center bg-[#559246] py-2 px-3 ">
+                Upload Thumbnail
+                <input
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={handleThumbnailUpload}
+                />
+              </label>
+            </div>
           )}
         </div>
         <textarea
@@ -171,7 +241,7 @@ function RouteComponent() {
           placeholder="Write a summary"
           value={summary}
           onChange={(e) => setSummary(e.target.value)}
-          className="w-[300px] border border-[#8778D7] bg-[#242424] py-2 px-3 my-3"
+          className="w-[300px] border border-[#8778D7] bg-[#242424] py-2 px-3"
           required
         />
         {blocks.map((block, index) => (
@@ -311,7 +381,7 @@ function RouteComponent() {
             + Image
           </button>
         </div>
-
+        <div className="text-orange-300">{summaryMessage}</div>
         <button className="text-center px-5 py-3 bg-[#9253E4] tracking-widest">
           CREATE
         </button>

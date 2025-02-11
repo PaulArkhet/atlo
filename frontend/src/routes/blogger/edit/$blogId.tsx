@@ -43,6 +43,10 @@ function RouteComponent() {
   const [thumbnail, setThumbnail] = useState<string | null>(blog.thumbnail);
   const [summary, setSummary] = useState(blog.summary ? blog.summary : "");
   const [summaryMessage, setSummaryMessage] = useState("");
+  const [main, setMain] = useState(blog.main ? blog.main : false);
+  const [featured, setFeatured] = useState(
+    blog.featured ? blog.featured : false
+  );
 
   // Safely parse the blog content
   let prevBlogs: Block[] = [];
@@ -138,6 +142,24 @@ function RouteComponent() {
     }
   };
 
+  function handleClickedMain() {
+    setMain(true);
+    setFeatured(false);
+  }
+
+  function handleCancelledMain() {
+    setMain(false);
+  }
+
+  function handleClickedFeatured() {
+    setMain(false);
+    setFeatured(true);
+  }
+
+  function handleCancelledFeatured() {
+    setFeatured(false);
+  }
+
   const { mutate: updateBlog, isPending: mutateProjectPending } =
     useUpdateBlogMutation();
 
@@ -156,6 +178,8 @@ function RouteComponent() {
       blogId: blog.blogId,
       content: formattedContent,
       thumbnail,
+      main,
+      featured,
       summary: summary,
     });
     navigate({ to: "/blogger/dashboard" });
@@ -175,6 +199,48 @@ function RouteComponent() {
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col mx-auto w-[800px]">
+        {!main && (
+          <div
+            className="cursor-pointer text-center bg-[#b028ff] py-2 px-3 mb-5 w-[159px]"
+            onClick={handleClickedMain}
+          >
+            Set as Main
+          </div>
+        )}
+        {main && (
+          <div className="flex">
+            <div
+              className="cursor-pointer text-center bg-[#8d3434] py-2 px-3 mb-5 w-[159px]"
+              onClick={handleCancelledMain}
+            >
+              Cancel Main
+            </div>
+            <div className="ml-2 text-green-600">
+              This is now the main article!
+            </div>
+          </div>
+        )}
+        {!featured && (
+          <div
+            className="cursor-pointer text-center bg-[#467492] py-2 px-3 mb-5 w-[159px]"
+            onClick={handleClickedFeatured}
+          >
+            Set as Featured
+          </div>
+        )}
+        {featured && (
+          <div className="flex">
+            <div
+              className="cursor-pointer text-center bg-[#8d3434] py-2 px-3 mb-5 w-[159px]"
+              onClick={handleCancelledFeatured}
+            >
+              Cancel Featured
+            </div>
+            <div className="ml-2 text-green-600">
+              This is now a featured article!
+            </div>
+          </div>
+        )}
         {thumbnail ? (
           <div className="relative">
             <img

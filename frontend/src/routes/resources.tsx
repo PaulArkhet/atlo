@@ -109,7 +109,7 @@ function RouteComponent() {
       {blogs &&
         blogs.map((blog, index) => {
           const { title, image, blogId } = parseBlogContent(blog);
-          return index === 0 ? (
+          return blog.main ? (
             <div>
               <Link
                 to={`/blog/$blogId`}
@@ -185,7 +185,9 @@ function RouteComponent() {
                     <div className="py-1">{blog.summary}</div>
                     <div className="flex mt-2">
                       <img src={clock} alt="" className="w-[23px]" />
-                      <div className="">3 minute read</div>
+                      <div className="">
+                        {calculateReadingTime(blog.content)} minute read
+                      </div>
                     </div>
                   </div>
                 </div>

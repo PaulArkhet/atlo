@@ -62,6 +62,22 @@ export const blogRouter = new Hono()
     ),
     async (c) => {
       const insertValues = c.req.valid("json");
+      if (insertValues.main === true) {
+        const { error: queryError } = await mightFail(
+          db
+            .update(blogsTable)
+            .set({ main: false })
+            .where(eq(blogsTable.main, true))
+            .returning()
+        );
+        if (queryError) {
+          console.error("Error while updating main blog status:", queryError);
+          throw new HTTPException(500, {
+            message: "Failed to update main blog status",
+            cause: queryError,
+          });
+        }
+      }
       const { error: blogInsertError, result: blogInsertResult } =
         await mightFail(
           db
