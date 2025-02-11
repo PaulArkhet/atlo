@@ -31,7 +31,7 @@ function RootComponent() {
   const hideLayout = currentPath === "/register";
 
   return (
-    <div className="flex flex-col min-h-screen nunitofont">
+    <div className="flex flex-col min-h-screen nunitofont bg-[#242424]">
       <ScrollToTop />
       {!hideLayout && <Header />}
       <Outlet />

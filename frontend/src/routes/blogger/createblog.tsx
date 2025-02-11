@@ -12,6 +12,8 @@ export type Block = {
   id: string;
   type: "title" | "subtitle" | "paragraph" | "image";
   content: string;
+  alt?: string;
+  caption?: string;
 };
 
 function RouteComponent() {
@@ -53,6 +55,32 @@ function RouteComponent() {
     }
   };
 
+  const handleMoveBlock = (id: string, direction: "up" | "down") => {
+    setBlocks((prevBlocks) => {
+      const index = prevBlocks.findIndex((block) => block.id === id);
+      if (index === -1) return prevBlocks;
+
+      const newBlocks = [...prevBlocks];
+      const targetIndex = direction === "up" ? index - 1 : index + 1;
+
+      // Ensure it's within valid bounds
+      if (targetIndex < 0 || targetIndex >= newBlocks.length) return prevBlocks;
+
+      // Swap elements
+      [newBlocks[index], newBlocks[targetIndex]] = [
+        newBlocks[targetIndex],
+        newBlocks[index],
+      ];
+      return newBlocks;
+    });
+  };
+
+  const handleAltChange = (id: string, alt: string) => {
+    setBlocks(
+      blocks.map((block) => (block.id === id ? { ...block, alt } : block))
+    );
+  };
+
   const createBlogMutation = useCreateBlogMutation();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -84,7 +112,7 @@ function RouteComponent() {
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col mx-auto w-[800px]">
-        {blocks.map((block) => (
+        {blocks.map((block, index) => (
           <div key={block.id} className="relative my-3">
             {block.type === "title" && (
               <input
@@ -119,8 +147,17 @@ function RouteComponent() {
                   <div className="relative">
                     <img
                       src={block.content}
-                      alt="Uploaded"
+                      alt={block.alt || "Image"}
                       className="max-w-full rounded-lg shadow-lg"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Set alt text (description for image)"
+                      value={block.alt || ""}
+                      onChange={(e) =>
+                        handleAltChange(block.id, e.target.value)
+                      }
+                      className="mt-2 w-full border border-[#8778D7] bg-[#242424] py-1 px-2 text-white text-sm"
                     />
                     <div className="flex gap-2 mt-3">
                       <label className="cursor-pointer bg-[#9253E4] px-3 py-2 text-white">
@@ -154,6 +191,24 @@ function RouteComponent() {
                 )}
               </div>
             )}
+            <div className="absolute right-[-40px] top-[10px] flex flex-col gap-1">
+              <button
+                type="button"
+                disabled={index === 0}
+                onClick={() => handleMoveBlock(block.id, "up")}
+                className="bg-gray-600 px-2 py-1 text-white text-sm disabled:opacity-50"
+              >
+                ▲
+              </button>
+              <button
+                type="button"
+                disabled={index === blocks.length - 1}
+                onClick={() => handleMoveBlock(block.id, "down")}
+                className="bg-gray-600 px-2 py-1 text-white text-sm disabled:opacity-50"
+              >
+                ▼
+              </button>
+            </div>
             <button
               type="button"
               onClick={() => handleRemoveBlock(block.id)}

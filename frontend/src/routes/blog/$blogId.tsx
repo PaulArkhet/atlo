@@ -4,6 +4,7 @@ import { z } from "zod";
 import arrowLeft from "/arrowleft.svg";
 import { getBlogByIdQueryOptions } from "@/lib/api/blog";
 import DOMPurify from "dompurify";
+import { useQuery } from "@tanstack/react-query";
 
 export const Route = createFileRoute("/blog/$blogId")({
   beforeLoad: async ({ context, params }) => {
@@ -27,7 +28,11 @@ function RouteComponent() {
   const { blog } = Route.useRouteContext(); // Get blog from beforeLoad
 
   if (!blog) {
-    return <p className="text-center text-red-500">Error loading blog.</p>;
+    return (
+      <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+        <p className="text-center">Loading Blog...</p>
+      </main>
+    );
   }
 
   // Safely parse the blog content
@@ -69,11 +74,18 @@ function RouteComponent() {
         );
       case "image":
         return (
-          <img
-            src={block.content}
-            alt="Blog Image"
-            className="mx-auto rounded-lg"
-          />
+          <figure>
+            <img
+              src={block.content}
+              alt="Blog Image"
+              className="mx-auto rounded-lg"
+            />
+            {block.caption && (
+              <figcaption className="text-center mt-2">
+                {block.caption}
+              </figcaption>
+            )}
+          </figure>
         );
       default:
         return null;
