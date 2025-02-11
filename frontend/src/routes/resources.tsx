@@ -202,8 +202,7 @@ function RouteComponent() {
         blogs.map((blog, index) => {
           const { title, image, blogId } = parseBlogContent(blog);
           return (
-            index > 0 &&
-            index < 3 && (
+            blog.featured && (
               <Link
                 to={`/blog/$blogId`}
                 params={{ blogId: blogId.toString() }}
@@ -234,38 +233,44 @@ function RouteComponent() {
         })}
       <div className="md:hidden text-4xl font-bold pt-5">All Posts</div>
       {blogs &&
-        blogs.map((blog, index) => {
-          const { title, image, blogId } = parseBlogContent(blog);
-          return (
-            index > 2 && (
-              <Link
-                to={`/blog/$blogId`}
-                params={{ blogId: blogId.toString() }}
-                key={"mobile" + blogId}
-                onClick={() => clickedBlog(blog.blogId)}
-              >
-                <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
-                  <img src={smallImage} alt="" />
-                  <div className="p-5">
-                    <div className=" tracking-[0.4rem] py-1">
-                      {new Date(blog.createdAt)
-                        .toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })
-                        .toUpperCase()}
+        [...blogs] // Clone the array to avoid mutating state
+          .sort(
+            (a, b) =>
+              new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          ) // Sort by createdAt (descending)
+          .map((blog, index) => {
+            const { title, image, blogId } = parseBlogContent(blog);
+            return (
+              !blog.main &&
+              !blog.featured && (
+                <Link
+                  to={`/blog/$blogId`}
+                  params={{ blogId: blogId.toString() }}
+                  key={"mobile" + blogId}
+                  onClick={() => clickedBlog(blog.blogId)}
+                >
+                  <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
+                    <img src={smallImage} alt="" />
+                    <div className="p-5">
+                      <div className=" tracking-[0.4rem] py-1">
+                        {new Date(blog.createdAt)
+                          .toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })
+                          .toUpperCase()}
+                      </div>
+                      <div className="workfont text-2xl py-1 font-bold">
+                        {title}
+                      </div>
+                      <div className="py-1">{blog.summary}</div>
                     </div>
-                    <div className="workfont text-2xl py-1 font-bold">
-                      {title}
-                    </div>
-                    <div className="py-1">{blog.summary}</div>
                   </div>
-                </div>
-              </Link>
-            )
-          );
-        })}
+                </Link>
+              )
+            );
+          })}
       <div className="hidden md:flex flex-col mx-auto pb-32">
         <div className="mx-auto">
           <div className="text-5xl font-bold py-10">Featured</div>
@@ -274,8 +279,7 @@ function RouteComponent() {
               blogs.map((blog, index) => {
                 const { title, image, blogId } = parseBlogContent(blog);
                 return (
-                  index > 0 &&
-                  index < 3 && (
+                  blog.featured && (
                     <Link
                       to={`/blog/$blogId`}
                       params={{ blogId: blogId.toString() }}
@@ -318,40 +322,47 @@ function RouteComponent() {
           <div className="text-5xl font-bold py-10">All posts</div>
           <div className="grid grid-cols-3 gap-2">
             {blogs &&
-              blogs.map((blog, index) => {
-                const { title, image, blogId } = parseBlogContent(blog);
-                return (
-                  index > 2 && (
-                    <Link
-                      to={`/blog/$blogId`}
-                      params={{ blogId: blogId.toString() }}
-                      key={"mobile" + blogId}
-                      onClick={() => clickedBlog(blog.blogId)}
-                    >
-                      <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
-                        <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
-                          <img src={smallImage} alt="" className="mx-auto" />
-                          <div className="pt-8 px-5 tracking-[0.3rem] text-xl 2xl:text-[24px]">
-                            {new Date(blog.createdAt)
-                              .toLocaleDateString("en-US", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                              })
-                              .toUpperCase()}
-                          </div>
-                          <div className="px-5 text-4xl py-5 font-bold">
-                            {title}
-                          </div>
-                          <div className="pb-24 px-5 text-lg ">
-                            {blog.summary}
+              [...blogs] // Clone the array to avoid mutating state
+                .sort(
+                  (a, b) =>
+                    new Date(b.createdAt).getTime() -
+                    new Date(a.createdAt).getTime()
+                ) // Sort by createdAt (descending)
+                .map((blog, index) => {
+                  const { title, image, blogId } = parseBlogContent(blog);
+                  return (
+                    !blog.main &&
+                    !blog.featured && (
+                      <Link
+                        to={`/blog/$blogId`}
+                        params={{ blogId: blogId.toString() }}
+                        key={"mobile" + blogId}
+                        onClick={() => clickedBlog(blog.blogId)}
+                      >
+                        <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
+                          <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
+                            <img src={smallImage} alt="" className="mx-auto" />
+                            <div className="pt-8 px-5 tracking-[0.3rem] text-xl 2xl:text-[24px]">
+                              {new Date(blog.createdAt)
+                                .toLocaleDateString("en-US", {
+                                  year: "numeric",
+                                  month: "long",
+                                  day: "numeric",
+                                })
+                                .toUpperCase()}
+                            </div>
+                            <div className="px-5 text-4xl py-5 font-bold">
+                              {title}
+                            </div>
+                            <div className="pb-24 px-5 text-lg ">
+                              {blog.summary}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  )
-                );
-              })}
+                      </Link>
+                    )
+                  );
+                })}
           </div>
         </div>
       </div>
