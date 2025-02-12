@@ -172,7 +172,14 @@ function RouteComponent() {
                   className="md:hidden border-2 bg-gradient-to-r from-[#6F4B92] via-[#584F8F] to-[#404A8B] border-[#464071] 
             rounded-[10px]"
                 >
-                  <img src={blogImg} alt="" />
+                  <img
+                    src={
+                      blog.thumbnail == undefined
+                        ? blogImg
+                        : `${blog.thumbnail}`
+                    }
+                    alt=""
+                  />
                   <div className="p-5">
                     <div className="tracking-[0.4rem] py-1">
                       {new Date(blog.createdAt)
@@ -214,7 +221,14 @@ function RouteComponent() {
                 onClick={() => clickedBlog(blog.blogId)}
               >
                 <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
-                  <img src={largeImage} alt="" />
+                  <img
+                    src={
+                      blog.thumbnail == undefined
+                        ? largeImage
+                        : `${blog.thumbnail}`
+                    }
+                    alt=""
+                  />
                   <div className="p-5">
                     <div className=" tracking-[0.4rem] py-1">
                       {new Date(blog.createdAt)
@@ -254,7 +268,14 @@ function RouteComponent() {
                   onClick={() => clickedBlog(blog.blogId)}
                 >
                   <div className="md:hidden border-2 bg-[#040404] border-[#464071] rounded-[10px] my-3">
-                    <img src={smallImage} alt="" />
+                    <img
+                      src={
+                        blog.thumbnail == undefined
+                          ? smallImage
+                          : `${blog.thumbnail}`
+                      }
+                      alt=""
+                    />
                     <div className="p-5">
                       <div className=" tracking-[0.4rem] py-1">
                         {new Date(blog.createdAt)
@@ -345,7 +366,15 @@ function RouteComponent() {
                       >
                         <div className="bg-gradient-to-b rounded-[10px] from-[#9080eb] to-[#232323] flex flex-col mx-1">
                           <div className="rounded-[8px] bg-[#161616] mt-[2px] mx-[2px]">
-                            <img src={smallImage} alt="" className="mx-auto" />
+                            <img
+                              src={
+                                blog.thumbnail == undefined
+                                  ? smallImage
+                                  : `${blog.thumbnail}`
+                              }
+                              alt=""
+                              className="mx-auto"
+                            />
                             <div className="pt-8 px-5 tracking-[0.3rem] text-xl 2xl:text-[24px]">
                               {new Date(blog.createdAt)
                                 .toLocaleDateString("en-US", {
