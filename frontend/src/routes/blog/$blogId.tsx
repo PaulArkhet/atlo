@@ -109,14 +109,14 @@ function RouteComponent() {
         alt=""
         className="hidden lg:block absolute left-[-2%] top-[475px] w-[20vw] sm:top-[375px] md:top-[365px] z-0"
       />
-      <Link to="/resources">
+      <Link to="/resources" className="relative w-[300px] z-10">
         <div className="mb-5 xl:mb-0 flex lg:pl-5">
           <img src={arrowLeft} alt="Back" />
           <div className="ml-2">Go back</div>
         </div>
       </Link>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col relative z-10">
         <div className="mx-auto md:w-[800px]">
           <div>
             Posted on:{" "}
