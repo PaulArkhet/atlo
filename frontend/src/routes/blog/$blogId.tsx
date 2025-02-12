@@ -4,7 +4,10 @@ import { z } from "zod";
 import arrowLeft from "/arrowleft.svg";
 import { getBlogByIdQueryOptions } from "@/lib/api/blog";
 import DOMPurify from "dompurify";
-import { useQuery } from "@tanstack/react-query";
+import blueCloud from "/homebluecloud.svg";
+import purpleCloud from "/homepurplecloud.svg";
+import purplePlanet from "/homepurpleplanet.png";
+import bluePlanet from "/homeblueplanet.png";
 
 export const Route = createFileRoute("/blog/$blogId")({
   beforeLoad: async ({ context, params }) => {
@@ -94,8 +97,20 @@ function RouteComponent() {
 
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
+      <img src={blueCloud} alt="" className="absolute top-0 right-0" />
+      <img src={purpleCloud} alt="" className="absolute top-0 left-0" />
+      <img
+        src={purplePlanet}
+        alt=""
+        className="hidden lg:block absolute right-[0%] top-[450px] w-[20vw] sm:top-[335px] md:top-[100px] z-0"
+      />
+      <img
+        src={bluePlanet}
+        alt=""
+        className="hidden lg:block absolute left-[-2%] top-[475px] w-[20vw] sm:top-[375px] md:top-[365px] z-0"
+      />
       <Link to="/resources">
-        <div className="flex pl-5">
+        <div className="mb-5 xl:mb-0 flex lg:pl-5">
           <img src={arrowLeft} alt="Back" />
           <div className="ml-2">Go back</div>
         </div>
@@ -110,7 +125,7 @@ function RouteComponent() {
               : "Unknown"}
           </div>
           {blocks.map((block, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 relative z-10">
               {renderBlock(block)}
             </div>
           ))}
