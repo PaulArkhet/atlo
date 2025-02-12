@@ -149,7 +149,11 @@ function RouteComponent() {
                           className="w-[50%] lg:w-[70%] 2xl:w-[90%]"
                         />
                         <img
-                          src={blogImg}
+                          src={
+                            blog.thumbnail == undefined
+                              ? blogImg
+                              : `${blog.thumbnail}`
+                          }
                           alt=""
                           className="absolute top-4 left-0 md:left-4 w-[46%] lg:w-[67%] 2xl:w-[87%]"
                         />

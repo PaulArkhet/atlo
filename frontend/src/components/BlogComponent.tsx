@@ -77,7 +77,11 @@ export default function BlogComponent(props: { blog: Blog }) {
       <div className="bg-gradient-to-b rounded-[10px] from-[#4B4378] to-transparent flex flex-col">
         <div className="rounded-[10px] p-10 bg-gradient-to-b from-black to-transparent bg-opacity-40 w-[99%] mt-[2px] mx-auto">
           <img
-            src={largeImage}
+            src={
+              props.blog.thumbnail == undefined
+                ? largeImage
+                : `${props.blog.thumbnail}`
+            }
             alt={title}
             className="w-full h-40 object-cover rounded-md"
           />
