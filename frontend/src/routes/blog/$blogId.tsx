@@ -121,7 +121,11 @@ function RouteComponent() {
           <div>
             Posted on:{" "}
             {blog?.createdAt
-              ? new Date(blog.createdAt).toLocaleDateString()
+              ? new Date(blog.createdAt).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
               : "Unknown"}
           </div>
           {blocks.map((block, index) => (
