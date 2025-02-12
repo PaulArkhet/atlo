@@ -65,9 +65,9 @@ export default function Header() {
             <Link to="/resources" className="p-2 xl:px-5" onClick={slideToggle}>
               RESOURCES
             </Link>
-            <Link to="/pricing" className="p-2 xl:px-5" onClick={slideToggle}>
+            {/* <Link to="/pricing" className="p-2 xl:px-5" onClick={slideToggle}>
               PRICING
-            </Link>
+            </Link> */}
             <Link to="/register" onClick={slideToggle}>
               <div className="lg:hidden py-2 px-5 lg:px-10 rounded bg-[#9253E4]">
                 SIGN UP

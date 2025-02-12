@@ -1,6 +1,6 @@
 import { Switch } from "@/components/ui/switch";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import rectangle from "/pricingrectangle.svg";
 
 export const Route = createFileRoute("/pricing")({
@@ -9,6 +9,12 @@ export const Route = createFileRoute("/pricing")({
 
 function RouteComponent() {
   const [isMonthly, setisMonthly] = useState(true);
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate({ to: "/" });
+  }, []);
+
   return (
     <main className="flex-1 bg-[#242424] text-white p-3 pt-[100px]">
       <div className="md:p-10">

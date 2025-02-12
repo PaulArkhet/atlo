@@ -34,11 +34,11 @@ export default function Footer() {
               Book a Demo
             </Link>
           </div>
-          <div className="py-2">
+          {/* <div className="py-2">
             <Link to="/pricing" className="py-2">
               Pricing
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="pb-10 md:pb-0 lg:px-10 2xl:px-20">
           <div className="font-bold py-2">Resources</div>
