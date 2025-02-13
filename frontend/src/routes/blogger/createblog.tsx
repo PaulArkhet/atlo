@@ -84,6 +84,12 @@ function RouteComponent() {
     );
   };
 
+  const handleCaptionChange = (id: string, caption: string) => {
+    setBlocks(
+      blocks.map((block) => (block.id === id ? { ...block, caption } : block))
+    );
+  };
+
   const handleThumbnailUpload = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -291,6 +297,20 @@ function RouteComponent() {
                       }
                       className="mt-2 w-full border border-[#8778D7] bg-[#242424] py-1 px-2 text-white text-sm"
                     />
+                    <input
+                      type="text"
+                      placeholder="Add caption for image"
+                      value={block.caption || ""}
+                      onChange={(e) =>
+                        handleCaptionChange(block.id, e.target.value)
+                      }
+                      className="mt-2 w-full border border-[#8778D7] bg-[#242424] py-1 px-2 text-white text-sm"
+                    />
+                    {block.caption && (
+                      <figcaption className="mt-2 text-center text-sm text-gray-300">
+                        {block.caption}
+                      </figcaption>
+                    )}
                     <div className="flex gap-2 mt-3">
                       <label className="cursor-pointer bg-[#9253E4] px-3 py-2 text-white">
                         Replace Image
