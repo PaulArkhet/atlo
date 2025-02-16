@@ -94,7 +94,10 @@ function RouteComponent() {
       <div className="flex flex-col mx-auto z-10 md:p-10">
         <div className="relative mb-10 sm:mb-20 lg:mb-0 mx-auto">
           <img src={background2} alt="" className="mx-auto" />
-          <div className="tracking-[0.4rem] absolute top-5 right-[14.5rem] text-sm sm:right-[31rem] lg:right-[22.5rem] lg:top-10 2xl:top-14 xl:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
+          <div className="lg:hidden tracking-[0.4rem] absolute top-5 left-5 text-sm 2xl:text-3xl text-[#D9D9D9]">
+            STEP 2
+          </div>
+          <div className="hidden lg:block tracking-[0.4rem] absolute top-5 right-[14.5rem] text-sm sm:right-[31rem] lg:right-[22.5rem] lg:top-10 2xl:top-14 xl:right-[29rem] 2xl:text-3xl text-[#D9D9D9]">
             STEP 2
           </div>
           <div className="workfont hidden lg:block text-4xl absolute top-20 right-[19rem] lg:right-48 xl:right-72 2xl:top-32 2xl:right-[12rem] 2xl:text-6xl font-bold">
@@ -106,7 +109,27 @@ function RouteComponent() {
           <div className="workfont sm:text-4xl lg:hidden absolute top-12 left-5 font-bold">
             Add your styleguide
           </div>
-          <div className="text-left sm:absolute top-28 right-[7.5rem] lg:top-48 lg:right-[-5%] xl:right-[3rem] 2xl:right-[7rem] 2xl:top-72 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
+          <div className="hidden lg:block text-left sm:absolute top-28 right-[7.5rem] lg:top-48 lg:right-[-5%] xl:right-[3rem] 2xl:right-[7rem] 2xl:top-72 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
+            <div className="flex">
+              <img src={checkmark} alt="" className="" />
+              <div className="ml-2 mb-3">
+                Upload your design system or build a new one.
+              </div>
+            </div>
+            <div className="flex">
+              <img src={checkmark} alt="" className="" />
+              <div className="ml-2 my-3">
+                Adjust components and attributes to suit your objectives.
+              </div>
+            </div>
+            <div className="flex">
+              <img src={checkmark} alt="" className="" />
+              <div className="ml-2 my-3">
+                Prototypes are generated to the specifications of your design.
+              </div>
+            </div>
+          </div>
+          <div className="lg:hidden text-left absolute top-28 left-5 lg:top-48 lg:right-[-5%] xl:right-[3rem] 2xl:right-[7rem] 2xl:top-72 2xl:text-3xl text-[#D9D9D9] lg:w-[500px]">
             <div className="flex">
               <img src={checkmark} alt="" className="" />
               <div className="ml-2 mb-3">
